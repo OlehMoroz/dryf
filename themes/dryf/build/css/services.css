@@ -1,0 +1,555 @@
+/* 
+    Font size
+
+ ---------------------------*/
+/* base font */
+/* 
+    Color
+
+ ---------------------------*/
+.relax-main_section {
+  width: 100%;
+  min-height: 110vh;
+  box-sizing: border-box;
+  padding: 0 9%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin-bottom: -10vh;
+  overflow: hidden;
+  position: relative;
+}
+.relax-main_section::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 35%;
+  position: absolute;
+  left: 0;
+  bottom: calc(-10vh - 1px);
+  background: linear-gradient(180deg, rgba(50, 71, 86, 0) 0, #324756 93.23%);
+}
+.relax-main_section h1 {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5.2083333333vw;
+  line-height: 106.8%;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+.relax-main_section p {
+  max-width: 34%;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.0940919037vw;
+  line-height: 1.25vw;
+  color: #fff;
+}
+.relax-main_section .relax-price_wrap {
+  padding-left: 1.0940919037vw;
+  margin-top: 6.4rem;
+  border-left: 1px solid #B1BAC1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  position: relative;
+  z-index: 1;
+}
+.relax-main_section .relax-price_wrap .relax-price_block {
+  margin-right: 3rem;
+}
+.relax-main_section .relax-price_wrap .relax-price_block p {
+  width: 100%;
+  max-width: 100%;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #fff;
+}
+.relax-main_section .relax-price_wrap .relax-price_block h3 {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.25vw;
+  line-height: 106.8%;
+  color: #fff;
+}
+.relax-main_section .relax-price_wrap .relax-price_block h3 b,
+.relax-main_section .relax-price_wrap .relax-price_block h3 span {
+  font-weight: 400;
+  font-size: 2.4431818182vw;
+}
+
+.relax-about_section {
+  position: relative;
+  z-index: 0;
+}
+.relax-about_section h2 {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.3333333333vw;
+  line-height: 109%;
+  text-transform: uppercase;
+  color: #fff;
+  max-width: 80%;
+  margin-bottom: 3.3333333333vw;
+}
+.relax-about_section .relax-about_col {
+  -ms-flex: 0 1 100%;
+      flex: 0 1 100%;
+  padding-right: 10%;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.relax-about_section .relax-about_col p {
+  max-width: 70%;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9372071228vw;
+  line-height: 150%;
+  color: #fff;
+}
+.relax-about_section .relax-about_col img {
+  max-width: 100%;
+  object-fit: cover;
+  margin-top: 3.3333333333vw;
+}
+.relax-about_section .relax-about_image {
+  max-width: 55%;
+  margin-top: 11.3538737894vw;
+  -ms-flex: 0 1 100%;
+      flex: 0 1 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  position: relative;
+  z-index: 0;
+}
+.relax-about_section .relax-about_image img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.relax-price-list_section {
+  width: 100%;
+  position: relative;
+  margin: 7.0265151515vw 0 2%;
+  box-sizing: border-box;
+  padding: 0 0 0 10%;
+}
+.relax-price-list_section h2 {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.3333333333vw;
+  line-height: 109%;
+  text-transform: uppercase;
+  color: #fff;
+  max-width: 80%;
+  margin-bottom: 3.3333333333vw;
+}
+.relax-price-list_section .relax-price-list_row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: stretch;
+      align-items: stretch;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  width: 100%;
+  margin: 8.3rem 0 4.8rem;
+}
+.relax-price-list_section .relax-price-list_row .relax-price-list_item {
+  background: #4D687A;
+  padding: 3.7rem 1.7rem 3.6rem 3.8rem;
+  margin-right: 2%;
+  max-width: 27.5%;
+}
+.relax-price-list_section .relax-price-list_row .relax-price-list_item:last-child {
+  max-width: 45%;
+  margin-right: 0;
+}
+.relax-price-list_section .relax-price-list_row .relax-price-list_item .relax-price-list_icon {
+  margin-bottom: 1.7rem;
+}
+.relax-price-list_section .relax-price-list_row .relax-price-list_item .relax-price-list_title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25vw;
+  line-height: 150%;
+  color: #fff;
+  margin-bottom: 2.2rem;
+}
+.relax-price-list_section .relax-price-list_row .relax-price-list_item .relax-price-list_description {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.0940919037vw;
+  line-height: 150%;
+  color: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.relax-price-list_section .relax-price-list_row .relax-price-list_item .relax-price-list_description p {
+  width: 100%;
+  margin-top: 2.2rem;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25vw;
+  line-height: 120%;
+  color: #F8C98B;
+}
+.relax-price-list_section .relax-price-list_row .relax-price-list_item .relax-price-list_description div {
+  width: 49%;
+}
+.relax-price-list_section .relax-price-list_row .relax-price-list_item .relax-price-list_description span {
+  margin-top: 2.2rem;
+  font-size: 0.83rem;
+  line-height: 100%;
+  color: #B1BAC1;
+}
+.relax-price-list_section .relax-booking_row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+}
+.relax-price-list_section .relax-booking_row p {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9372071228vw;
+  line-height: 150%;
+  color: #FFFFFF;
+  max-width: 25%;
+  margin-right: 3%;
+}
+
+.additional-service_section {
+  position: relative;
+  z-index: 0;
+  padding-top: 8%;
+}
+.additional-service_section h2 {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.3333333333vw;
+  line-height: 109%;
+  text-transform: uppercase;
+  color: #fff;
+  max-width: 80%;
+  margin-bottom: 3.3333333333vw;
+}
+.additional-service_section .relax-about_col {
+  -ms-flex: 0 1 100%;
+      flex: 0 1 100%;
+  padding-right: 10%;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.additional-service_section .relax-about_col h3 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25vw;
+  line-height: 150%;
+  color: #fff;
+  margin-bottom: 40px;
+}
+.additional-service_section .relax-about_col p {
+  max-width: 70%;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9372071228vw;
+  line-height: 150%;
+  color: #fff;
+}
+.additional-service_section .relax-about_col img {
+  max-width: 100%;
+  object-fit: cover;
+  margin-top: 3.3333333333vw;
+}
+.additional-service_section .relax-about_col .relax-price_block h3 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25vw;
+  line-height: 150%;
+  color: #F8C98B;
+  margin: 1.6rem 0 2.5rem;
+}
+.additional-service_section .relax-about_image {
+  max-width: 55%;
+  margin-top: 0.9372071228vw;
+  -ms-flex: 0 1 100%;
+      flex: 0 1 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  position: relative;
+  z-index: 0;
+}
+.additional-service_section .relax-about_image img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.relax-before_text {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16.5104166667vw;
+  line-height: 150%;
+  color: #3f5464;
+  position: absolute;
+  right: 0;
+  bottom: -50%;
+  z-index: -1;
+  transition: all 0.4s ease-out;
+  transition-delay: 0.2s;
+}
+
+.additional-service_section .relax-before_text {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16.5104166667vw;
+  line-height: 150%;
+  color: #3f5464;
+  position: absolute;
+  right: 0;
+  bottom: -50%;
+  z-index: -1;
+  transition: all 0.4s ease-out;
+  transition-delay: 0.2s;
+}
+
+@media screen and (max-width: 1100px) {
+  /* base font */
+  .relax-main_section h1 {
+    font-size: 5.4545454545vw;
+  }
+  .relax-main_section p {
+    font-size: 1.9090909091vw;
+    line-height: 2.1818181818vw;
+    max-width: 100%;
+  }
+  .relax-main_section .relax-price_wrap {
+    padding-left: 1.9090909091vw;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .relax-main_section .relax-price_wrap .relax-price_block {
+    margin-bottom: 1rem;
+  }
+  .relax-main_section .relax-price_wrap .relax-price_block p {
+    font-size: 1.6363636364vw;
+  }
+  .relax-main_section .relax-price_wrap .relax-price_block h3 {
+    font-size: 2.1818181818vw;
+  }
+  .relax-main_section .relax-price_wrap .relax-price_block h3 b,
+.relax-main_section .relax-price_wrap .relax-price_block h3 span {
+    font-size: 3vw;
+  }
+  .relax-about_section .container .row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .relax-about_section h2 {
+    font-size: 3.4909090909vw;
+    margin-bottom: 3.4909090909vw;
+  }
+  .relax-about_section .relax-about_col p {
+    max-width: 100%;
+    font-size: 1.6363636364vw;
+  }
+  .relax-about_section .relax-about_col img {
+    margin-top: 3.4909090909vw;
+  }
+  .relax-about_section .relax-about_image {
+    max-width: 100%;
+    margin-top: 3rem;
+  }
+  .relax-price-list_section {
+    margin: 7.2727272727vw 0 2%;
+  }
+  .relax-price-list_section h2 {
+    font-size: 3.4909090909vw;
+  }
+  .relax-price-list_section .relax-price-list_row .relax-price-list_item .relax-price-list_title {
+    font-size: 2.1818181818vw;
+  }
+  .relax-price-list_section .relax-price-list_row .relax-price-list_item .relax-price-list_description {
+    font-size: 1.9090909091vw;
+  }
+  .relax-price-list_section .relax-price-list_row .relax-price-list_item .relax-price-list_description p {
+    font-size: 2.1818181818vw;
+  }
+  .relax-price-list_section .relax-booking_row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .relax-price-list_section .relax-booking_row p {
+    max-width: 100%;
+    margin-bottom: 2rem;
+    font-size: 1.6363636364vw;
+  }
+  .additional-service_section h2 {
+    font-size: 3.4909090909vw;
+    margin-bottom: 3.4909090909vw;
+  }
+  .additional-service_section .relax-about_col h3 {
+    font-size: 2.1818181818vw;
+  }
+  .additional-service_section .relax-about_col p {
+    max-width: 100%;
+    font-size: 1.6363636364vw;
+  }
+  .additional-service_section .relax-about_col img {
+    margin-top: 3.4909090909vw;
+  }
+  .additional-service_section .relax-about_col .relax-price_block h3 {
+    font-size: 2.1818181818vw;
+  }
+  .additional-service_section .relax-about_image {
+    max-width: 100%;
+    margin-top: 3rem;
+  }
+  .relax-before_text {
+    font-size: 7.3636363636vw;
+    bottom: -15%;
+  }
+  .additional-service_section .relax-before_text {
+    font-size: 7.3636363636vw;
+    bottom: -15%;
+  }
+}
+@media screen and (max-width: 850px) {
+  /* base font */
+  .relax-main_section h1 {
+    font-size: 11.875vw;
+  }
+  .relax-main_section p {
+    font-size: 6.5625vw;
+    line-height: 7.5vw;
+    max-width: 100%;
+  }
+  .relax-main_section .relax-price_wrap {
+    padding-left: 6.5625vw;
+  }
+  .relax-main_section .relax-price_wrap .relax-price_block {
+    margin-bottom: 2rem;
+  }
+  .relax-main_section .relax-price_wrap .relax-price_block p {
+    font-size: 3.75vw;
+  }
+  .relax-main_section .relax-price_wrap .relax-price_block h3 {
+    font-size: 7.5vw;
+  }
+  .relax-main_section .relax-price_wrap .relax-price_block h3 b,
+.relax-main_section .relax-price_wrap .relax-price_block h3 span {
+    font-size: 9.375vw;
+  }
+  .relax-about_section h2 {
+    font-size: 9.6875vw;
+    margin-bottom: 9.6875vw;
+  }
+  .relax-about_section .relax-about_col p {
+    font-size: 3.75vw;
+  }
+  .relax-about_section .relax-about_col img {
+    margin-top: 9.6875vw;
+  }
+  .relax-about_section .relax-about_image {
+    margin-top: 27.5vw;
+  }
+  .relax-price-list_section {
+    margin: 13.6931818182vw 0 2%;
+  }
+  .relax-price-list_section h2 {
+    font-size: 9.6875vw;
+  }
+  .relax-price-list_section .relax-price-list_row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .relax-price-list_section .relax-price-list_row .relax-price-list_item {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  .relax-price-list_section .relax-price-list_row .relax-price-list_item:last-child {
+    max-width: 100%;
+  }
+  .relax-price-list_section .relax-price-list_row .relax-price-list_item .relax-price-list_title {
+    font-size: 7.5vw;
+  }
+  .relax-price-list_section .relax-price-list_row .relax-price-list_item .relax-price-list_description {
+    font-size: 6.5625vw;
+  }
+  .relax-price-list_section .relax-price-list_row .relax-price-list_item .relax-price-list_description p {
+    font-size: 7.5vw;
+  }
+  .relax-price-list_section .relax-price-list_row .relax-price-list_item .relax-price-list_description div {
+    width: 100%;
+  }
+  .relax-price-list_section .relax-booking_row p {
+    font-size: 3.75vw;
+  }
+  .additional-service_section .container .row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .additional-service_section h2 {
+    font-size: 9.6875vw;
+    margin-bottom: 9.6875vw;
+  }
+  .additional-service_section .relax-about_col h3 {
+    font-size: 7.5vw;
+  }
+  .additional-service_section .relax-about_col p {
+    font-size: 3.75vw;
+  }
+  .additional-service_section .relax-about_col img {
+    margin-top: 9.6875vw;
+  }
+  .additional-service_section .relax-about_col .relax-price_block h3 {
+    font-size: 7.5vw;
+  }
+  .relax-before_text {
+    font-size: 18.4375vw;
+  }
+  .additional-service_section .relax-before_text {
+    font-size: 18.4375vw;
+  }
+}
