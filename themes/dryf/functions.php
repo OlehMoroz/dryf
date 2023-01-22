@@ -78,8 +78,68 @@ function my_custom_init()
 		'menu_position'      => 4,
 		'supports'           => array('title', 'thumbnail', 'excerpt', 'editor'),
 		'menu_icon'			 => 'dashicons-open-folder',
-		'taxonomies'         => array('')
+		'taxonomies'         => array('animal_category', '')
 	));
+
+	register_taxonomy('animal_category', ['animal'], [
+		'label' => __('Category', 'txtdomain'),
+		'hierarchical' => false,
+		'rewrite'      =>  array('slug' => '/animal-category', 'with_front' => false),
+		'show_admin_column' => true,
+		'has_archive'       =>  true,
+		'public'            =>  true,
+        'publicly_queryable'=>  true,
+        'show_ui'           =>  true, 
+        'query_var'         =>  true,
+        'show_in_nav_menus' =>  false,
+        'capability_type'   =>  'animal',
+        'hierarchical'      =>  false,
+		'labels' => [
+			'singular_name' => __('Category', 'txtdomain'),
+			'all_items' => __('All Category', 'txtdomain'),
+			'edit_item' => __('Edit Category', 'txtdomain'),
+			'view_item' => __('View Category', 'txtdomain'),
+			'update_item' => __('Update Category', 'txtdomain'),
+			'add_new_item' => __('Add New Category', 'txtdomain'),
+			'new_item_name' => __('New Category Name', 'txtdomain'),
+			'search_items' => __('Search Category', 'txtdomain'),
+			'popular_items' => __('Popular Category', 'txtdomain'),
+			'separate_items_with_commas' => __('Separate authors with comma', 'txtdomain'),
+			'choose_from_most_used' => __('Choose from most used Authors', 'txtdomain'),
+			'not_found' => __('No Authors found', 'txtdomain'),
+		]
+	]);
+	register_taxonomy_for_object_type('animal_category', 'services');
+
+	register_taxonomy('animal_category_new', ['animal'], [
+		'label' => __('Category', 'txtdomain'),
+		'hierarchical' => false,
+		'rewrite'      =>  array('slug' => '/animal-category', 'with_front' => false),
+		'show_admin_column' => true,
+		'has_archive'       =>  true,
+		'public'            =>  true,
+        'publicly_queryable'=>  true,
+        'show_ui'           =>  true, 
+        'query_var'         =>  true,
+        'show_in_nav_menus' =>  false,
+        'capability_type'   =>  'animal',
+        'hierarchical'      =>  false,
+		'labels' => [
+			'singular_name' => __('Category', 'txtdomain'),
+			'all_items' => __('All Category', 'txtdomain'),
+			'edit_item' => __('Edit Category', 'txtdomain'),
+			'view_item' => __('View Category', 'txtdomain'),
+			'update_item' => __('Update Category', 'txtdomain'),
+			'add_new_item' => __('Add New Category', 'txtdomain'),
+			'new_item_name' => __('New Category Name', 'txtdomain'),
+			'search_items' => __('Search Category', 'txtdomain'),
+			'popular_items' => __('Popular Category', 'txtdomain'),
+			'separate_items_with_commas' => __('Separate authors with comma', 'txtdomain'),
+			'choose_from_most_used' => __('Choose from most used Authors', 'txtdomain'),
+			'not_found' => __('No Authors found', 'txtdomain'),
+		]
+	]);
+	register_taxonomy_for_object_type('animal_category_new', 'services');
 }
 
 add_theme_support('post-thumbnails', array('post', 'services',));
@@ -90,7 +150,7 @@ add_theme_support('custom-logo', [
 	'width'       => 137,
 	'flex-width'  => false,
 	'flex-height' => false,
-	'header-text' => 'Nashe relax',
+	'header-text' => 'Dryf',
 ]);
 
 
@@ -179,4 +239,80 @@ if (!function_exists('twentysixteen_child_cf7_button_handler')) {
 		$html = sprintf('<button class="base-btn">%2$s</button>', $atts, $value);
 		return $html;
 	}
+}
+
+
+add_action('wp_ajax_myfilter', 'misha_filter_function'); // wp_ajax_{ACTION HERE} 
+add_action('wp_ajax_nopriv_myfilter', 'misha_filter_function');
+
+function misha_filter_function(){
+	$args = array(
+		'post_type'   => 'services',
+		'orderby' => 'date', // we will sort posts by date
+		'order'	=> $_POST['date'] // ASC or DESC
+	);
+
+	// for taxonomies / categories
+	if( isset( $_POST['categoryfilter'] ) )
+		$args['tax_query'] = array(
+			array(
+				'taxonomy' => 'animal_category',
+				'field' => 'id',
+				'terms' => $_POST['categoryfilter']
+			)
+		);
+
+	// create $args['meta_query'] array if one of the following fields is filled
+	if( isset( $_POST['price_min'] ) && $_POST['price_min'] || isset( $_POST['price_max'] ) && $_POST['price_max'] || isset( $_POST['featured_image'] ) && $_POST['featured_image'] == 'on' )
+		$args['meta_query'] = array( 'relation'=>'AND' ); // AND means that all conditions of meta_query should be true
+
+	// if both minimum price and maximum price are specified we will use BETWEEN comparison
+	if( isset( $_POST['price_min'] ) && $_POST['price_min'] && isset( $_POST['price_max'] ) && $_POST['price_max'] ) {
+		$args['meta_query'][] = array(
+			'key' => '_price',
+			'value' => array( $_POST['price_min'], $_POST['price_max'] ),
+			'type' => 'numeric',
+			'compare' => 'between'
+		);
+	} else {
+		// if only min price is set
+		if( isset( $_POST['price_min'] ) && $_POST['price_min'] )
+			$args['meta_query'][] = array(
+				'key' => '_price',
+				'value' => $_POST['price_min'],
+				'type' => 'numeric',
+				'compare' => '>'
+			);
+
+		// if only max price is set
+		if( isset( $_POST['price_max'] ) && $_POST['price_max'] )
+			$args['meta_query'][] = array(
+				'key' => '_price',
+				'value' => $_POST['price_max'],
+				'type' => 'numeric',
+				'compare' => '<'
+			);
+	}
+
+
+	// if post thumbnail is set
+	if( isset( $_POST['featured_image'] ) && $_POST['featured_image'] == 'on' )
+		$args['meta_query'][] = array(
+			'key' => '_thumbnail_id',
+			'compare' => 'EXISTS'
+		);
+	// if you want to use multiple checkboxed, just duplicate the above 5 lines for each checkbox
+
+	$query = new WP_Query( $args );
+	
+	if( $query->have_posts() ) :
+		while( $query->have_posts() ): $query->the_post();
+			echo '<h2>' . $query->post->post_title . '</h2>';
+		endwhile;
+		wp_reset_postdata();
+	else :
+		echo 'No posts found';
+	endif;
+	
+	die();
 }
