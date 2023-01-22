@@ -10,18 +10,13 @@
 get_header();
 ?>
 
+
 <?php if( $field = get_field_object('') ): ?>
-                    <?= $field['']; ?>
-                <?php endif; ?>
-
-                <?php echo do_shortcode('[post_taxonomy_filters]'); ?>
-
-<!-- start services section -->
+    <?= $field['']; ?>
+<?php endif; ?>
 
 <?php get_template_part( '' ); ?>
 
-<!-- end services section -->
 
-<!-- start relax section -->
 
-<?php get_footer();
+<?php get_footer(); ?>
