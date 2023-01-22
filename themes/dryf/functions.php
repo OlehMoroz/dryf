@@ -146,8 +146,8 @@ add_theme_support('post-thumbnails', array('post', 'services',));
 add_theme_support('widgets');
 
 add_theme_support('custom-logo', [
-	'height'      => 29.95,
-	'width'       => 137,
+	'height'      => 46,
+	'width'       => 120,
 	'flex-width'  => false,
 	'flex-height' => false,
 	'header-text' => 'Dryf',

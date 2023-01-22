@@ -1,1071 +1,165 @@
-/*
-    Header Style
-
-    -------------------------*/
-/*
-    font 
-
-    -------------------------*/
 /* 
     Font size
 
- ---------------------------*/
-/* base font */
+---------------------------*/
+/*Base font*/
 /* 
     Color
 
- ---------------------------*/
-/*
-    Start style
-
-    ---------------------------*/
-header {
-  background: transparent;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  max-width: 100vw;
-  z-index: 999;
-}
-header .header-container {
-  width: 95%;
-  padding: 1.2rem 0;
-  margin: 0 auto;
-  border-bottom: 1px solid #fff;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-}
-header .header-logo {
-  margin-right: auto;
-}
-header .header-menu_wrap {
-  position: relative;
-  margin-left: 3%;
-}
-header .header-menu_wrap .menu-button {
-  width: 2.1rem;
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-align: end;
-      align-items: flex-end;
-  background: transparent;
-  transition: all 0.4s linear;
-  cursor: url("/wp-content/themes/nashe/images/common/cursor-default.svg"), auto;
-  padding: 1.2rem 0;
-  position: relative;
-  z-index: 2;
-}
-header .header-menu_wrap .menu-button::before {
-  content: "";
-  width: 100%;
-  height: 0.12rem;
-  background: #fff;
-  margin: 0.12rem 0;
-  display: block;
-  transition: all 0.4s linear;
-}
-header .header-menu_wrap .menu-button::after {
-  content: "";
-  width: 70%;
-  height: 0.12rem;
-  background: #fff;
-  margin: 0.12rem 0;
-  display: block;
-  transition: all 0.4s linear;
-}
-header .header-menu_wrap .menu-button.active::before {
-  -webkit-transform: rotate(45deg) translate(15%, 155%);
-          transform: rotate(45deg) translate(15%, 155%);
-}
-header .header-menu_wrap .menu-button.active::after {
-  width: 100%;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-header .header-menu_wrap .menu-button.active:hover::after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-header .header-menu_wrap .menu-button:hover::after {
-  -webkit-transform: translateX(-42%);
-          transform: translateX(-42%);
-}
-header .header-menu_modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #324756;
-  box-sizing: border-box;
-  padding: 15vh 8vw 6vh;
-  opacity: 0;
-  visibility: hidden;
-  z-index: -5;
-  transition: all 0.4s ease-out;
-  transition-delay: 0.2s;
-  transition-property: opacity;
-  overflow-y: auto;
-  display: none;
-}
-header .header-menu_modal.active {
-  opacity: 1;
-  visibility: visible;
-  z-index: 1;
-  display: block;
-}
-header .header-menu_modal.active .animation_0 {
-  -webkit-animation: animation_draw 2000ms linear 0ms forwards;
-          animation: animation_draw 2000ms linear 0ms forwards;
-}
-header .header-menu_modal.active .animation_1 {
-  -webkit-animation: animation_draw 2000ms linear 111ms forwards;
-          animation: animation_draw 2000ms linear 111ms forwards;
-}
-header .header-menu_modal.active .animation_2 {
-  -webkit-animation: animation_draw 2000ms linear 222ms forwards;
-          animation: animation_draw 2000ms linear 222ms forwards;
-}
-header .header-menu_modal.active .animation_3 {
-  -webkit-animation: animation_draw 2000ms linear 333ms forwards;
-          animation: animation_draw 2000ms linear 333ms forwards;
-}
-header .header-menu_modal.active .animation_4 {
-  -webkit-animation: animation_draw 2000ms linear 444ms forwards;
-          animation: animation_draw 2000ms linear 444ms forwards;
-}
-header .header-menu_modal.active .animation_5 {
-  -webkit-animation: animation_draw 2000ms linear 555ms forwards;
-          animation: animation_draw 2000ms linear 555ms forwards;
-}
-header .header-menu_modal.active .animation_6 {
-  -webkit-animation: animation_draw 2000ms linear 666ms forwards;
-          animation: animation_draw 2000ms linear 666ms forwards;
-}
-header .header-menu_modal.active .animation_7 {
-  -webkit-animation: animation_draw 2000ms linear 777ms forwards;
-          animation: animation_draw 2000ms linear 777ms forwards;
-}
-header .header-menu_modal.active .animation_8 {
-  -webkit-animation: animation_draw 2000ms linear 888ms forwards;
-          animation: animation_draw 2000ms linear 888ms forwards;
-}
-header .header-menu_modal.active .animation_9 {
-  -webkit-animation: animation_draw 2000ms linear 1000ms forwards;
-          animation: animation_draw 2000ms linear 1000ms forwards;
-}
-header .header-menu_modal.active .header-weather_wrap {
-  opacity: 1;
-  visibility: visible;
-}
-header .header-menu_modal .menu-header-menu-container {
-  position: relative;
-  z-index: 1;
-  height: 100%;
-}
-header .header-menu_modal .menu-header-menu-container::before {
-  content: "";
-  height: 100%;
-  border-right: 0.11rem solid #F8C98B;
-  position: absolute;
-  left: calc(50% - 0.055rem);
-}
-header .header-menu_modal .menu-header-menu-container ul {
-  width: 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-align: start;
-      align-items: flex-start;
-  -ms-flex-pack: start;
-      justify-content: flex-start;
-  padding: 0 5% 0 0;
-  list-style: none;
-}
-header .header-menu_modal .menu-header-menu-container ul li {
-  -ms-flex-direction: column;
-      flex-direction: column;
-}
-header .header-menu_modal .menu-header-menu-container ul li span {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.9372071228vw;
-  line-height: 150%;
-  color: #F8C98B;
-}
-header .header-menu_modal .menu-header-menu-container ul li.menu-item-has-children {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: start;
-      align-items: flex-start;
-  -ms-flex-pack: start;
-      justify-content: flex-start;
-}
-header .header-menu_modal .menu-header-menu-container ul li.menu-item-has-children a {
-  -ms-flex: 0 1 100%;
-      flex: 0 1 100%;
-  display: block;
-}
-header .header-menu_modal .menu-header-menu-container ul li.menu-item-has-children ul.sub-menu {
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.5s ease-out;
-  -ms-flex: 0 1 50%;
-      flex: 0 1 50%;
-  max-width: calc(50% - 8vw);
-  position: fixed;
-  top: 15vh;
-  right: 8vw;
-  padding-left: 5%;
-}
-header .header-menu_modal .menu-header-menu-container ul li.menu-item-has-children ul.sub-menu li a {
-  font-family: "Playfair Display";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.8181818182vw;
-  line-height: 106.8%;
-  color: #5E7586;
-}
-header .header-menu_modal .menu-header-menu-container ul li.menu-item-has-children.active > a {
-  color: #fff;
-}
-header .header-menu_modal .menu-header-menu-container ul li.menu-item-has-children.active ul.sub-menu {
-  opacity: 1;
-  visibility: visible;
-}
-header .header-menu_modal .menu-header-menu-container ul li.menu-item-has-children.active ul.sub-menu a:hover {
-  color: #fff;
-}
-header .header-menu_modal .menu-header-menu-container ul li a {
-  font-family: "Playfair Display";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 3.3333333333vw;
-  line-height: 106.8%;
-  color: #5E7586;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: start;
-      align-items: flex-start;
-  -ms-flex-pack: start;
-      justify-content: flex-start;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  margin-bottom: 2.5rem;
-  transition: all 0.5s ease-out;
-}
-header .header-menu_modal .menu-header-menu-container ul li a:hover {
-  color: #fff;
-}
-header .header-menu_modal .menu-background {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  z-index: -1;
-}
-header .header-menu_modal .menu-background .animation_0 {
-  stroke-dasharray: 3125 3127;
-  stroke-dashoffset: 3126;
-}
-header .header-menu_modal .menu-background .animation_1 {
-  stroke-dasharray: 335 337;
-  stroke-dashoffset: 336;
-}
-header .header-menu_modal .menu-background .animation_2 {
-  stroke-dasharray: 234 236;
-  stroke-dashoffset: 235;
-}
-header .header-menu_modal .menu-background .animation_3 {
-  stroke-dasharray: 627 629;
-  stroke-dashoffset: 628;
-}
-header .header-menu_modal .menu-background .animation_4 {
-  stroke-dasharray: 779 781;
-  stroke-dashoffset: 780;
-}
-header .header-menu_modal .menu-background .animation_5 {
-  stroke-dasharray: 1019 1021;
-  stroke-dashoffset: 1020;
-}
-header .header-menu_modal .menu-background .animation_6 {
-  stroke-dasharray: 31 33;
-  stroke-dashoffset: 32;
-}
-header .header-menu_modal .menu-background .animation_7 {
-  stroke-dasharray: 168 170;
-  stroke-dashoffset: 169;
-}
-header .header-menu_modal .menu-background .animation_8 {
-  stroke-dasharray: 379 381;
-  stroke-dashoffset: 380;
-}
-header .header-menu_modal .menu-background .animation_9 {
-  stroke-dasharray: 517 519;
-  stroke-dashoffset: 518;
-}
-header .header-menu_modal .header-weather_wrap {
-  max-width: 50%;
-  position: relative;
-  z-index: 1;
-  opacity: 0;
-  visibility: visible;
-  transition: all 0.4s linear;
-  transition-delay: 2500ms;
-}
-header .header-menu_modal .header-weather_wrap .wp-forecast-curr {
-  display: none;
-}
-header .header-menu_modal .header-weather_wrap .wp-forecast-fc {
+---------------------------*/
+header .container {
   width: 100%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  -ms-flex-pack: start;
-      justify-content: flex-start;
-  margin-left: -5%;
-}
-header .header-menu_modal .header-weather_wrap .wp-forecast-fc .wp-forecast-fc-oneday {
-  -ms-flex: 0 1 100%;
-      flex: 0 1 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: start;
-      justify-content: flex-start;
-  -ms-flex-direction: row-reverse;
-      flex-direction: row-reverse;
-}
-header .header-menu_modal .header-weather_wrap .wp-forecast-fc .wp-forecast-fc-oneday .wp-forecast-fc-block {
-  -ms-flex: 0 1 50%;
-      flex: 0 1 50%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-align: start;
-      align-items: flex-start;
-  -ms-flex-pack: start;
-      justify-content: flex-start;
-  max-width: 40%;
-  padding-right: 5%;
-  border-right: 1px solid #5E7586;
-  margin-right: 5%;
-}
-header .header-menu_modal .header-weather_wrap .wp-forecast-fc .wp-forecast-fc-oneday .wp-forecast-fc-block .wp-forecast-fc-left > div {
-  display: none;
-}
-header .header-menu_modal .header-weather_wrap .wp-forecast-fc .wp-forecast-fc-oneday .wp-forecast-fc-block .wp-forecast-fc-right {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 1.686972821vw;
-  line-height: 1.2rem;
-  text-transform: uppercase;
-  color: #F8C98B;
-}
-header .header-menu_modal .header-weather_wrap .wp-forecast-fc .wp-forecast-fc-oneday .wp-forecast-fc-head {
-  -ms-flex: 0 1 50%;
-      flex: 0 1 50%;
-  max-width: 45%;
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 0.7497656982vw;
-  line-height: 1.2rem;
-  color: #5E7586;
-  margin: 0;
-  padding: 0;
-}
-
-.booking-modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100vw;
-  min-height: 100vh;
-  max-height: 100vh;
-  background: #324756;
-  box-sizing: border-box;
-  padding: 6vh 0 6vh 11vw;
-  opacity: 0;
-  visibility: hidden;
-  z-index: -5;
-  transition: all 0.4s ease-out;
-  overflow: hidden;
-  overflow-y: auto;
-}
-.booking-modal::after {
-  content: "";
-  width: 7%;
-  height: 100%;
-  display: block;
-  background: linear-gradient(275.94deg, #324756 4.58%, rgba(50, 71, 86, 0) 95.16%);
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1;
-}
-.booking-modal.active {
-  opacity: 1;
-  visibility: visible;
-  z-index: 2;
-}
-.booking-modal .booking-modal_header {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-  position: relative;
-  z-index: 2;
-}
-.booking-modal .booking-modal_header button[data-event=close-modal] {
-  width: 2.1rem;
-  height: 2.1rem;
-  margin-bottom: 1rem;
-  margin-top: 0rem;
-  margin-right: 4rem;
-  background: transparent;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  position: relative;
-  cursor: url("/wp-content/themes/nashe/images/common/cursor-default.svg") 3 3, auto;
-}
-.booking-modal .booking-modal_header button[data-event=close-modal]::after {
-  content: "";
-  width: 2.1rem;
-  height: 0.11rem;
-  background: #B1BAC1;
-  -webkit-transform: matrix(-0.71, -0.74, 0.67, -0.71, 0, 0);
-          transform: matrix(-0.71, -0.74, 0.67, -0.71, 0, 0);
-  position: absolute;
-}
-.booking-modal .booking-modal_header button[data-event=close-modal]::before {
-  content: "";
-  width: 2.1rem;
-  height: 0.11rem;
-  background: #B1BAC1;
-  -webkit-transform: matrix(0.71, -0.74, 0.67, 0.71, 0, 0);
-          transform: matrix(0.71, -0.74, 0.67, 0.71, 0, 0);
-  position: absolute;
-}
-.booking-modal .services-carousel {
-  width: 100%;
-  position: relative;
-  padding-bottom: 5rem;
-  margin-top: 3.1rem;
-  cursor: url("/wp-content/themes/nashe/images/common/cursor.svg"), auto;
-}
-.booking-modal .services-carousel .swiper-scrollbar.swiper-scrollbar-horizontal {
-  position: absolute;
-  left: 0%;
-  bottom: 2rem;
-  z-index: 50;
-  height: 0.15rem;
-  width: 90%;
-  background: #5E7586;
-  border-radius: 0;
-}
-.booking-modal .services-carousel .swiper-scrollbar.swiper-scrollbar-horizontal .swiper-scrollbar-drag {
-  background: #F8C98B;
-  border-radius: 0;
-}
-.booking-modal .swiper-slide {
-  overflow: hidden;
-}
-.booking-modal .swiper-slide label {
-  position: relative;
-  cursor: url("/wp-content/themes/nashe/images/common/cursor.svg"), auto;
-}
-.booking-modal .swiper-slide label::after {
-  content: "";
-  width: 0;
-  height: 0.8rem;
-  background: #F8C98B;
-  transition: all 0.5s ease-out;
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 1;
-}
-.booking-modal .swiper-slide label.active::after {
-  width: 100%;
-  opacity: 1;
-}
-.booking-modal .swiper-slide label.active .booking-services_card .check-wrap {
-  background: #F8C98B;
-  border: 0.11rem solid #F8C98B;
-}
-.booking-modal .swiper-slide label.active .booking-services_card .check-wrap .arrow {
-  display: none;
-}
-.booking-modal .swiper-slide label.active .booking-services_card .check-wrap .check {
-  display: block;
-}
-.booking-modal .swiper-slide input[type=checkbox] {
-  display: none;
-}
-.booking-modal .swiper-slide .booking-services_card {
-  width: 100%;
-  height: 30rem;
-  position: relative;
-  box-sizing: border-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.booking-modal .swiper-slide .booking-services_card .services-caption {
-  position: relative;
-  margin-top: auto;
-  display: block;
-  padding: 2.7rem 2rem;
-}
-.booking-modal .swiper-slide .booking-services_card .services-caption h3 {
-  font-family: "Playfair Display";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.6666666667vw;
-  line-height: 106.8%;
-  color: #fff;
-  height: 2.2em;
-}
-.booking-modal .swiper-slide .booking-services_card img {
-  position: absolute;
-  min-height: 100%;
-  max-width: 100%;
-  object-fit: cover;
-}
-.booking-modal .swiper-slide .booking-services_card .check-wrap {
-  width: 2.7rem;
-  height: 2.7rem;
-  border-radius: 50%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  border: 0.11rem solid rgba(255, 255, 255, 0.3);
-  margin-top: 1rem;
-  transition: all 0.5s ease-out;
-}
-.booking-modal .swiper-slide .booking-services_card .check-wrap svg.arrow * {
-  stroke: #F8C98B;
-}
-.booking-modal .swiper-slide .booking-services_card .check-wrap svg.check {
-  display: none;
-}
-.booking-modal .booking-modal-form_wrap {
-  width: 95%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: stretch;
-      align-items: stretch;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  margin-top: 2rem;
+  margin: 27px auto;
 }
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col {
-  width: 25%;
-  padding-right: 4rem;
-  margin-right: 4rem;
-  border-right: 1px solid #5E7586;
+header .header-logo {
+  width: calc(20% - 15px);
+  margin-right: 15px;
 }
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col:last-child {
-  width: 50%;
-  padding-right: 0rem;
-  margin-right: 0rem;
-  border-right: 1px solid transparent;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col .booking-count_dropdown-row {
-  width: 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  font-weight: 400;
-  font-size: 0.9372071228vw;
-  line-height: 150%;
-  color: #fff;
-  margin-bottom: 2.2rem;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col .booking-count_dropdown-row div {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 0.9372071228vw;
-  line-height: 106.8%;
-  color: #fff;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col .booking-count_dropdown-row .booking-counter_group {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  max-width: 50%;
-  margin-left: auto;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col .booking-count_dropdown-row .booking-counter_group button {
-  width: 1rem;
-  height: 1rem;
-  padding: 0;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  text-align: center;
-  border: none;
-  background: 0 0;
-  font-family: Raleway, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 0.9372071228vw;
-  line-height: 117%;
-  color: #3f5464;
-  box-sizing: border-box;
-  border-radius: 50%;
-  background: #F8C98B;
-  cursor: url("/wp-content/themes/nashe/images/common/cursor-default.svg") 3 3, auto;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col .booking-count_dropdown-row .booking-counter_group input {
-  max-width: 2rem;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  text-align: center;
-  border: none;
-  background: 0 0;
-  font-family: Raleway, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 0.9372071228vw;
-  line-height: 117%;
-  color: #fff;
-  padding: 0;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col .booking-count_dropdown-row p {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 150%;
-  color: #5e7586;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col .modal-calendar-form_group {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  position: relative;
-  text-align: center;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col .modal-calendar-form_group p {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 0.9372071228vw;
-  line-height: 105%;
-  color: #fff;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col .modal-calendar-form_group .ui-datepicker {
-  bottom: 10% !important;
-  left: 20% !important;
-  top: auto !important;
-  z-index: 51 !important;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col .modal-calendar-form_group input {
-  background: transparent;
-  border: none;
-  font-family: "Playfair Display";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.8181818182vw;
-  line-height: 106.8%;
-  color: #fff;
-  margin-bottom: 0.8rem;
-  text-align: center;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col .modal-calendar-form_group input::-webkit-input-placeholder {
-  color: #fff;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col .modal-calendar-form_group input:-ms-input-placeholder {
-  color: #fff;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col .modal-calendar-form_group input::-ms-input-placeholder {
-  color: #fff;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col .modal-calendar-form_group input::placeholder {
-  color: #fff;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col .modal-calendar-form_group button {
-  margin-top: 2.1rem;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col form > p {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 0.9372071228vw;
-  line-height: 105%;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col form > div {
+header .header-container {
+  width: 80%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center;
   -ms-flex-pack: start;
       justify-content: flex-start;
-  margin-bottom: 2rem;
 }
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col form > div label {
-  max-width: 45%;
-  margin-right: 2%;
+header .header-container .base-btn {
+  margin-left: auto;
 }
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col form > div input {
-  border: none;
-  border-bottom: 0.08rem solid #5e7586;
-  padding: 0.5rem 0;
-  font-family: "Raleway", sans-serif;
+header .mail-link {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+}
+header .mail-link svg {
+  margin-right: 10px;
+}
+header .mail-link svg * {
+  transition: all 0.4s ease-in-out;
+  stroke: #BDC2D1;
+}
+header .mail-link a {
   font-style: normal;
   font-weight: 500;
-  font-size: 1.0940919037vw;
-  line-height: 150%;
-  color: #fff;
-  background: transparent;
+  font-size: 0.87rem;
+  line-height: 130%;
+  color: #272930;
+  transition: all 0.4s ease-in-out;
+}
+header .mail-link a:hover {
+  color: #007FF4;
+}
+header .mail-link:hover svg * {
+  transition: all 0.4s ease-in-out;
+  stroke: #007FF4;
+}
+header .messenger-block {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+header .messenger-block a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin-left: 20px;
+}
+header .messenger-block a svg {
+  margin-left: 5px;
+}
+header .messenger-block a svg * {
+  transition: all 0.4s ease-in-out;
+  fill: #BDC2D1;
+}
+header .messenger-block a:hover svg * {
+  fill: #007FF4 !important;
+}
+header .phone-dropdown {
+  position: relative;
+  margin-right: 3%;
+}
+header .phone-dropdown .phone-toogle {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+header .phone-dropdown .phone-toogle svg {
+  margin-top: -3px;
+  margin-left: 10px;
+  transition: all 0.4s ease-in-out;
+}
+header .phone-dropdown .phone-flag {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin-right: 10px;
+}
+header .phone-dropdown .phone-flag img {
   width: 100%;
+  object-fit: cover;
 }
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col form > div input::-webkit-input-placeholder {
-  color: #5E7586;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col form > div input:-ms-input-placeholder {
-  color: #5E7586;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col form > div input::-ms-input-placeholder {
-  color: #5E7586;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col form > div input::placeholder {
-  color: #5E7586;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col form div.wpcf7-response-output {
-  margin: 0;
-  border: none;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col form div.wpcf7-response-output:empty {
-  display: none;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col form .wpcf7-list-item {
-  font-size: 0.9372071228vw;
-  line-height: 105%;
-  color: #fff;
-  margin: 0.08rem 0 1rem 0;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col form .base-btn {
-  color: #fff;
-  background: 0 0;
-  border: 0.1rem solid rgba(255, 255, 255, 0.3);
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col form .base-btn::after {
-  content: url(/wp-content/themes/nashe/images/common/arrow-white.svg);
-  margin-left: 0.8rem;
-  transition: all 0.4s linear;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col form .base-btn:hover {
-  border: 0.1rem solid #fff;
-}
-.booking-modal .booking-modal-form_wrap .booking-modal-form_col form .base-btn:hover::after {
-  -webkit-transform: translateX(0.5rem);
-          transform: translateX(0.5rem);
-}
-.booking-modal .form-thanks_massages {
-  box-sizing: border-box;
-  padding: 7rem 0;
-  margin: auto;
-  max-width: 80%;
-}
-.booking-modal .form-thanks_massages h3 {
-  font-family: "Playfair Display";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 106.8%;
-  color: #F2F2F2;
-  text-align: center;
-}
-.booking-modal .form-thanks_massages hr {
-  margin-top: 1.8rem;
-  color: #F2F2F2;
-  margin-bottom: 1.8rem;
-}
-.booking-modal .form-thanks_massages p {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 21px;
-  line-height: 106.8%;
-  color: #F2F2F2;
-  text-align: center;
-}
-.booking-modal .booking-modal-before_text {
-  font-family: "Playfair Display";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16.5104166667vw;
-  line-height: 150%;
-  color: #3F5464;
+header .phone-dropdown .phone-list {
   position: absolute;
-  left: 0%;
-  top: -8rem;
-  z-index: -1;
+  top: 80%;
+  width: 100%;
+  z-index: 9999;
+  background: #F2F5F9;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  padding: 15px 0;
 }
-
-@media screen and (max-width: 1100px) {
-  /* base font */
-  .booking-modal .swiper-slide .booking-services_card {
-    height: 20rem;
-  }
-  .booking-modal .swiper-slide .booking-services_card .services-caption {
-    padding: 1.7rem 1rem;
-  }
-  .booking-modal .booking-modal-form_wrap .booking-modal-form_col {
-    padding-right: 1rem;
-    margin-right: 1rem;
-  }
-  /*
-  Start style
-
-  ---------------------------*/
-  header .header-menu_modal .menu-header-menu-container ul li span {
-    font-size: 1.6363636364vw;
-  }
-  header .header-menu_modal .menu-header-menu-container ul li.menu-item-has-children ul.sub-menu li a {
-    font-size: 3.2727272727vw;
-  }
-  header .header-menu_modal .menu-header-menu-container ul li a {
-    font-size: 5.8181818182vw;
-  }
-  header .header-menu_modal .header-weather_wrap .wp-forecast-fc .wp-forecast-fc-oneday .wp-forecast-fc-block .wp-forecast-fc-right {
-    font-size: 2.9454545455vw;
-  }
-  header .header-menu_modal .header-weather_wrap .wp-forecast-fc .wp-forecast-fc-oneday .wp-forecast-fc-head {
-    font-size: 1.3090909091vw;
-  }
-  .booking-modal .swiper-slide .booking-services_card .services-caption h3 {
-    font-size: 1.6666666667vw;
-  }
-  .booking-modal .booking-modal-form_wrap .booking-modal-form_col .booking-count_dropdown-row {
-    font-size: 1.6363636364vw;
-  }
-  .booking-modal .booking-modal-form_wrap .booking-modal-form_col .booking-count_dropdown-row div {
-    font-size: 1.6363636364vw;
-  }
-  .booking-modal .booking-modal-form_wrap .booking-modal-form_col .booking-count_dropdown-row .booking-counter_group button {
-    font-size: 0.9372071228vw;
-  }
-  .booking-modal .booking-modal-form_wrap .booking-modal-form_col .booking-count_dropdown-row p {
-    font-size: 14px;
-  }
-  .booking-modal .booking-modal-form_wrap .booking-modal-form_col .modal-calendar-form_group p {
-    font-size: 1.6363636364vw;
-  }
-  .booking-modal .booking-modal-form_wrap .booking-modal-form_col .modal-calendar-form_group input {
-    font-size: 3.2727272727vw;
-  }
-  .booking-modal .booking-modal-form_wrap .booking-modal-form_col form > p {
-    font-size: 1.6363636364vw;
-  }
-  .booking-modal .booking-modal-form_wrap .booking-modal-form_col form > div input {
-    font-size: 1.9090909091vw;
-  }
-  .booking-modal .booking-modal-form_wrap .booking-modal-form_col form .wpcf7-list-item {
-    font-size: 1.6363636364vw;
-  }
-  .booking-modal .form-thanks_massages h3 {
-    font-size: 36px;
-  }
-  .booking-modal .form-thanks_massages p {
-    font-size: 21px;
-  }
-  .booking-modal .booking-modal-before_text {
-    font-size: 28.8181818182vw;
-  }
+header .phone-dropdown .phone-list_item {
+  width: 100%;
+  margin: 15px 0;
+  padding-right: 25px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
-@media screen and (max-width: 850px) {
-  /* base font */
-  .header-logo img {
-    max-width: 91px;
-  }
-  /*
-  Start style
-
-  ---------------------------*/
-  header .header-container {
-    padding: 1rem 0;
-  }
-  header .header-menu_modal {
-    padding: 10vh 8vw 6vh;
-    overflow: hidden;
-  }
-  header .header-menu_modal::before {
-    content: "";
-    z-index: -1;
-    border-radius: 50%;
-    position: absolute;
-    width: 200%;
-    background: #5E7586;
-    transition: all 0.4s ease-in-out;
-    top: -19%;
-    height: 38%;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0%);
-            transform: translate(-50%, 0%);
-  }
-  header .header-menu_modal.sub-menu-active::before {
-    top: 0%;
-    height: 100%;
-    border-radius: 0;
-  }
-  header .header-menu_modal.sub-menu-active .menu-header-menu-container ul li span {
-    display: none;
-  }
-  header .header-menu_modal.sub-menu-active .menu-header-menu-container ul li a {
-    display: none;
-  }
-  header .header-menu_modal.sub-menu-active .menu-header-menu-container ul li.menu-item-has-children ul.sub-menu li span {
-    display: block;
-  }
-  header .header-menu_modal.sub-menu-active .menu-header-menu-container ul li.menu-item-has-children ul.sub-menu li a {
-    display: block;
-  }
-  header .header-menu_modal.sub-menu-active .header-weather_wrap {
-    display: none;
-  }
-  header .header-menu_modal button[data-event=open-modal-booking] {
-    margin: -5% auto 1.5rem;
-  }
-  header .header-menu_modal .menu-header-menu-container ul li span {
-    opacity: 1;
-    font-size: 3.75vw;
-  }
-  header .header-menu_modal .menu-header-menu-container ul li.menu-item-has-children ul.sub-menu {
-    -ms-flex: 0 1 100%;
-        flex: 0 1 100%;
-    max-width: 100%;
-    position: fixed;
-    top: 19vh;
-    right: 0;
-    padding-left: 8%;
-    max-height: 75vh;
-    overflow: hidden;
-    overflow-y: auto;
-  }
-  header .header-menu_modal .menu-header-menu-container ul li.menu-item-has-children ul.sub-menu li span {
-    opacity: 1;
-  }
-  header .header-menu_modal .menu-header-menu-container ul li.menu-item-has-children ul.sub-menu li a {
-    opacity: 1;
-    color: #fff;
-    font-size: 9.6875vw;
-  }
-  header .header-menu_modal .menu-header-menu-container ul li a {
-    font-size: 9.6875vw;
-    margin-bottom: 1.5rem;
-  }
-  header .header-menu_modal .header-weather_wrap .wp-forecast-fc .wp-forecast-fc-oneday .wp-forecast-fc-block .wp-forecast-fc-right {
-    font-size: 6.75vw;
-  }
-  header .header-menu_modal .header-weather_wrap .wp-forecast-fc .wp-forecast-fc-oneday .wp-forecast-fc-head {
-    font-size: 3vw;
-  }
-  .booking-modal {
-    display: none;
-  }
-  .booking-modal .swiper-slide .booking-services_card .services-caption h3 {
-    font-size: 1.6666666667vw;
-  }
-  .booking-modal .booking-modal-form_wrap .booking-modal-form_col .booking-count_dropdown-row {
-    font-size: 3.75vw;
-  }
-  .booking-modal .booking-modal-form_wrap .booking-modal-form_col .booking-count_dropdown-row div {
-    font-size: 3.75vw;
-  }
-  .booking-modal .booking-modal-form_wrap .booking-modal-form_col .booking-count_dropdown-row .booking-counter_group button {
-    font-size: 0.9372071228vw;
-  }
-  .booking-modal .booking-modal-form_wrap .booking-modal-form_col .booking-count_dropdown-row p {
-    font-size: 14px;
-  }
-  .booking-modal .booking-modal-form_wrap .booking-modal-form_col .modal-calendar-form_group p {
-    font-size: 3.75vw;
-  }
-  .booking-modal .booking-modal-form_wrap .booking-modal-form_col .modal-calendar-form_group input {
-    font-size: 1.8181818182vw;
-  }
-  .booking-modal .booking-modal-form_wrap .booking-modal-form_col form > p {
-    font-size: 3.75vw;
-  }
-  .booking-modal .booking-modal-form_wrap .booking-modal-form_col form > div input {
-    font-size: 6.5625vw;
-  }
-  .booking-modal .booking-modal-form_wrap .booking-modal-form_col form .wpcf7-list-item {
-    font-size: 3.75vw;
-  }
-  .booking-modal .form-thanks_massages h3 {
-    font-size: 36px;
-  }
-  .booking-modal .form-thanks_massages p {
-    font-size: 21px;
-  }
-  .booking-modal .booking-modal-before_text {
-    font-size: 37.64375vw;
-  }
-  .menu-header-menu-container::before {
-    display: none;
-  }
-  header .header-menu_modal .header-weather_wrap {
-    max-width: 100%;
-    overflow: hidden;
-    overflow-x: auto;
-  }
-  header .header-menu_modal .header-weather_wrap::-webkit-scrollbar {
-    width: 5px;
-    height: 2px;
-  }
-  header .header-menu_modal .header-weather_wrap::-webkit-scrollbar-thumb {
-    width: 8px;
-    height: 2px;
-  }
-  header .header-menu_modal .menu-header-menu-container ul#header-menu-list {
-    max-height: 70vh;
-    overflow: hidden;
-    overflow-y: auto;
-  }
+header .phone-dropdown a {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.87rem;
+  line-height: 130%;
+  color: #272930;
+}
+header .phone-dropdown:hover .phone-toogle svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+header .phone-dropdown:hover .phone-list {
+  top: 100%;
+  width: 100%;
+  opacity: 9;
+  visibility: visible;
 }

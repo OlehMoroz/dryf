@@ -1,0 +1,28 @@
+$f-onest: 'Onest';
+
+/* 
+    Font size
+
+---------------------------*/
+
+$f-12: 0.75rem;
+$f-14: 0.87rem;
+$f-16: calc(100vw / 120); /*Base font*/
+$f-18: 1.125rem;
+$f-20: 1.25rem;
+$f-21: 1.31rem;
+$f-28: 1.75rem;
+$f-40: 2.5rem;
+
+/* 
+    Color
+
+---------------------------*/
+$black: #272930;
+$background: #F2F5F9;
+$grey: #BDC2D1;
+$blue: #007FF4;
+$orange: #FF6B00;
+$white: #fff;
+
+$transition: all .4s ease-in-out;

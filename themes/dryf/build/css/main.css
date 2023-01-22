@@ -2,9 +2,7 @@
     font 
 
     -------------------------*/
-/*@import url('../../assets/fonts/Playfair/stylesheet.css');*/
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("../../assets/fonts/Raleway/stylesheet.css");
+@import url("../../assets/font/onest.css");
 /*
     Import Style
 
@@ -12,7 +10,3 @@
 @import url("../../build/css/base.min.css");
 @import url("../../build/css/header.min.css");
 @import url("../../build/css/footer.min.css");
-@import url("../../build/css/page-home.min.css");
-@import url("../../build/css/services.min.css");
-@import url("../../build/css/contact.min.css");
-@import url("../../build/css/404.min.css");
