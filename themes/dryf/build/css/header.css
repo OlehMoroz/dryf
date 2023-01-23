@@ -40,6 +40,7 @@ header .mail-link {
       align-items: center;
   -ms-flex-pack: start;
       justify-content: flex-start;
+  margin-right: 2.5rem;
 }
 header .mail-link svg {
   margin-right: 10px;
@@ -107,44 +108,36 @@ header .phone-dropdown .phone-toogle svg {
   margin-left: 10px;
   transition: all 0.4s ease-in-out;
 }
-header .phone-dropdown .phone-flag {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+header .phone-dropdown .phone-name {
   margin-right: 10px;
-}
-header .phone-dropdown .phone-flag img {
-  width: 100%;
-  object-fit: cover;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.87rem;
+  line-height: 130%;
+  color: #BDC2D1;
 }
 header .phone-dropdown .phone-list {
   position: absolute;
-  top: 80%;
-  width: 100%;
+  top: -35px;
+  left: -25px;
   z-index: 9999;
-  background: #F2F5F9;
+  padding: 20px 25px;
+  background: #fff;
+  box-shadow: 0px 5px 65px rgba(39, 41, 48, 0.15);
+  border-radius: 5px;
   transition: all 0.4s ease-in-out;
   opacity: 0;
   visibility: hidden;
-  padding: 15px 0;
 }
 header .phone-dropdown .phone-list_item {
   width: 100%;
   margin: 15px 0;
-  padding-right: 25px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 header .phone-dropdown a {
   font-style: normal;
@@ -152,14 +145,17 @@ header .phone-dropdown a {
   font-size: 0.87rem;
   line-height: 130%;
   color: #272930;
+  transition: all 0.4s ease-in-out;
+}
+header .phone-dropdown a:hover {
+  color: #007FF4;
 }
 header .phone-dropdown:hover .phone-toogle svg {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 header .phone-dropdown:hover .phone-list {
-  top: 100%;
-  width: 100%;
-  opacity: 9;
+  opacity: 1;
   visibility: visible;
+  z-index: 9;
 }

@@ -22,7 +22,7 @@
             'menu_id' => 'footer-menu-list-info',
         )); ?>
         <div class="powered-text">
-            <a href="https://kantora.studio">
+            <a href="https://kantora.studio" target="_blank">
                 <?= _e( '© Powered by ' ); ?>
                 <svg width="78" height="13" viewBox="0 0 78 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_131_689)">
