@@ -29,6 +29,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        margin-right: 2.5rem;
 
         svg {
             margin-right: 10px;
@@ -108,40 +109,34 @@ header {
             } 
         }
 
-        .phone-flag {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .phone-name {
             margin-right: 10px;
-
-            img {
-                width: 100%;
-                object-fit: cover;
-            }
+            font-style: normal;
+            font-weight: 500;
+            font-size: v.$f-14;
+            line-height: 130%;
+            color: v.$grey;
         }
 
         .phone-list {
             position: absolute;
-            top: 80%;
-            width: 100%;
+            top: -35px;
+            left: -25px;
             z-index: 9999;
-            background: v.$background;
+            padding: 20px 25px;
+            background: v.$white;
+            box-shadow: 0px 5px 65px rgba(39, 41, 48, 0.15);
+            border-radius: 5px;
             transition: v.$transition;
             opacity: 0;
             visibility: hidden;
-            padding: 15px 0;
 
             &_item {
                 width: 100%;
                 margin: 15px 0;
-                padding-right: 25px;
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: space-between;
             }
         }
 
@@ -151,6 +146,11 @@ header {
             font-size: v.$f-14;
             line-height: 130%;
             color: v.$black;
+            transition: v.$transition;
+
+            &:hover {
+                color: v.$blue;
+            }
         }
 
         &:hover {
@@ -161,10 +161,9 @@ header {
             }
 
             .phone-list {
-                top: 100%;
-                width: 100%;
-                opacity: 9;
+                opacity: 1;
                 visibility: visible;
+                z-index: 9;
             }
         }
     }

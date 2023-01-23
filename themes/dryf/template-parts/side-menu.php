@@ -1,3 +1,5 @@
+<?php include __DIR__ . '/../lang/language.php'; ?>
+
 <div class="side-bar">
 	<?php wp_nav_menu(array(
 		'theme_location' => 'header_menu',
@@ -7,29 +9,48 @@
 	)); ?>
 
     <div class="social-menu">
-        <h4><?= _e( 'Ми в соц.мережах:' ); ?></h4>
+        <h4><?= _e( $social_title ); ?></h4>
 
         <div class="social-menu_row">
-            <a href="">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="#telegram-social"></use>
-                </svg>
-            </a>
-            <a href="">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="#viber-social"></use>
-                </svg>
-            </a>
-            <a href="">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="#facebook-social"></use>
-                </svg>
-            </a>
-            <a href="">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="#instagram-social"></use>
-                </svg>
-            </a>
+        <?php if (have_rows('social', $contact_page_id)) : 
+            while (have_rows('social', $contact_page_id)) : the_row();
+                if (get_sub_field('telegram')) { ?>
+                    <a href="<?= get_sub_field('telegram'); ?>">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#telegram-social"></use>
+                        </svg>
+                    </a>
+                    <?php 
+                }
+
+                if (get_sub_field('viber')) { ?>
+                        <a href="<?= get_sub_field('viber'); ?>">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <use xlink:href="#viber-social"></use>
+                            </svg>
+                        </a>
+                    <?php 
+                }
+
+                if (get_sub_field('facebook')) { ?>
+                    <a href="<?= get_sub_field('instagram'); ?>">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#facebook-social"></use>
+                        </svg>
+                    </a>
+                <?php 
+                }
+
+                if (get_sub_field('instagram')) { ?>
+                    <a href="<?= get_sub_field('instagram'); ?>">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#instagram-social"></use>
+                        </svg>
+                    </a>
+                <?php 
+                }
+            endwhile; ?>
+        <?php endif; ?>
         </div>
     </div>
 
