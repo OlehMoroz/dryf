@@ -28,14 +28,14 @@ add_action('wp_footer', 'scripts_theme');
 
 function style_theme()
 {
-	wp_enqueue_style('swiper', 'https://unpkg.com/swiper@8/swiper-bundle.min.css');
+	wp_enqueue_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css');
 	wp_enqueue_style('main-style', get_template_directory_uri() . '/build/css/main.min.css');
 	wp_enqueue_style('style', get_stylesheet_uri());
 }
 
 function scripts_theme()
 {
-	wp_enqueue_script('swiper', '//unpkg.com/swiper@8/swiper-bundle.min.js');
+	wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js');
 	wp_enqueue_script('main', get_template_directory_uri() . '/build/js/main.min.js');
 }
 

@@ -13,11 +13,11 @@
   position: relative;
   overflow: hidden;
   background: #fff;
+  z-index: 0;
   /* Container */
   /* Container parts*/
   /* Scroll-box */
   /* Background image (dude)*/
-  /* Background pattern*/
   /* Text box (Понад 10 років...)*/
   /* Top-left triangle*/
 }
@@ -32,9 +32,34 @@
       justify-content: space-between;
   box-sizing: border-box;
   padding: 5rem;
+  /* Background pattern*/
 }
 .about-section .about-container .col-50 {
   max-height: 100%;
+  z-index: 1;
+}
+.about-section .about-container .pattern-container {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+      align-items: flex-end;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  z-index: 0;
+}
+.about-section .about-container .pattern-container::before {
+  content: url("/wp-content/themes/dryf/images/common/about-section-pattern.png");
+  display: block;
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  z-index: -1;
+}
+.about-section .about-container .pattern-container img {
+  object-fit: cover;
+  margin-right: -2.5rem;
+  margin-bottom: -5rem;
 }
 .about-section h2.base-title {
   width: 74%;
@@ -62,29 +87,6 @@
 }
 .about-section .background-img {
   z-index: 1;
-}
-.about-section .pattern-container {
-  position: relative;
-  z-index: 0;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: end;
-      align-items: flex-end;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-}
-.about-section .pattern-container::before {
-  content: url("/wp-content/themes/dryf/images/common/about-section-pattern.png");
-  display: block;
-  position: absolute;
-  left: 5%;
-  top: 10%;
-  z-index: -1;
-}
-.about-section .pattern-container img {
-  object-fit: cover;
-  margin-right: -2.5rem;
-  margin-bottom: -5rem;
 }
 .about-section .text-box {
   max-width: 10.37rem;

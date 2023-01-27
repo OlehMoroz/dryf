@@ -201,6 +201,16 @@ body {
     line-height: 130%;
     cursor: pointer;
 
+    &_white {
+        color: v.$white;
+
+        svg {
+            * {
+                fill: v.$white;
+            }
+        }
+    }
+
     svg {
         margin-left: 5px;
 
