@@ -96,6 +96,7 @@
                         <use xlink:href="#arrow-right"></use>
                     </svg>
                 </button>
+
                 <div class="messenger-block">
                     <?php if (have_rows('social', $contact_page_id)) : 
                         while (have_rows('social', $contact_page_id)) : the_row();

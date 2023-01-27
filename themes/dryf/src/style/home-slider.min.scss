@@ -1,0 +1,136 @@
+@use 'variable'as v;
+
+.main-slider_section {
+    width: 100%;
+    position: relative;
+    margin-bottom: 6.2rem;
+
+    .main-slider {
+        width: 100%;
+        height: 35rem;
+        overflow: hidden;
+
+        .swiper-wrapper {
+            width: 100%;
+        }
+
+        .swiper-slide {
+            height: 35rem;
+            box-sizing: border-box;
+            padding: 7.5rem;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            z-index: 0;
+
+            &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: block;
+                z-index: -1;
+                background: linear-gradient(90deg, #272930 0%, rgba(39, 41, 48, 0) 100%);
+            }
+
+            &-active {
+                .slide-caption {
+                    h2 {
+                        opacity: 1;
+                        transform: translateY(0rem);
+                    }
+        
+                    p {
+                        opacity: 1;
+                        transform: translateY(0rem);
+                    }
+        
+                    .base-btn {
+                        opacity: 1;
+                        transform: translateY(0rem);
+                    }
+
+                    >svg {
+                        opacity: 1;
+                        transform: translateY(0rem);
+                    }
+                }
+            }
+        }
+
+        .slide-caption {
+            max-width: 50%;
+            position: relative;
+
+            h2 {
+                max-width: 71%;
+                font-family: v.$f-onest;
+                font-style: normal;
+                font-weight: 500;
+                font-size: v.$f-40;
+                line-height: 150%;
+                margin-bottom: 0.6rem;
+                color: v.$white;
+                opacity: 0;
+                transition: all .5s ease-out;
+                transform: translateY(-2rem);
+            }
+
+            p {
+                font-family: v.$f-onest;
+                font-style: normal;
+                font-weight: 400;
+                font-size: v.$f-18;
+                line-height: 150%;
+                color: v.$white;
+                margin-bottom: 3.5rem;
+                opacity: 0;
+                transition: all .5s ease-out;
+                transition-delay: .3s;
+                transform: translateY(-2rem);
+            }
+
+            .base-btn {
+                opacity: 0;
+                transition: background .4s ease-in-out 0s, transform .5s ease-out .6s, opacity .5s ease-out .6s;
+                transform: translateY(-2rem);
+            }
+
+            >svg {
+                position: absolute;
+                left: 45%;
+                bottom: .8rem;
+                opacity: 0;
+                transition: all .5s ease-out;
+                transition-delay: .5s;
+                transform: translateY(-2rem);
+            }
+        }
+
+        .swiper-button-prev {
+            left: -25px;
+        }
+
+        .swiper-button-next {
+            right: -25px;
+        }
+    }
+}
+
+.swiper-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: v.$background;
+    transition: v.$transition;
+    
+    &::after {
+        content: "";
+        display: none;
+    }
+}
