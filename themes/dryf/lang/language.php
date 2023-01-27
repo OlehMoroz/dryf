@@ -6,6 +6,8 @@
         /* text */
         $button_text = 'Замовити дзвінок';
         $social_title = 'Ми в соц.мережах:';
+        $about_section_title = 'Розповімо детальніше про нашу компанію';
+        $text_more = 'Дізнатися більше';
     }
     if (get_locale() == 'pl_PL') {
         $contact_page_id = 67;

@@ -342,3 +342,17 @@ body {
         }
     }
 }
+
+.base-title {
+    font-family: v.$f-onest;
+    font-style: normal;
+    font-weight: 500;
+    font-size: v.$f-28;
+    line-height: 130%;
+    color: v.$black;
+}
+
+.col-50 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}

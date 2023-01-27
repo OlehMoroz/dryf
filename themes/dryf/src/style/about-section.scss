@@ -1,49 +1,46 @@
-@use 'variable' as v;
-.about-section{
+@use 'variable'as v;
+
+.about-section {
+  margin: 3.75rem auto 7.5rem;
+  position: relative;
+  overflow: hidden;
+  background: v.$white;
 
   /* Container */
-  .about-container{
-    width:100%;/* 1420px or 88.75rem*/
-    height: 44.6875rem;
-    background: v.$white;
-    /*background: #c5c5c5;*/
+  .about-container {
+    width: 100%;
     position: relative;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 5rem;
+
+    .col-50 {
+      max-height: 100%;
+    }
   }
 
   /* Container parts*/
-
-  /* Heading */
-  .heading{
-    position: absolute;
-    width: 21.9%;/*19.43rem*/
-    height: 10.07%;/*4.5rem*/
-    left: 5rem;
-    top: 5rem;
-
-    font-family: v.$f-onest;
-    font-style: normal;
-    font-weight: 500;
-    font-size: v.$f-28;
-    line-height: 130%;
-
-    color: v.$black;
-
+  h2.base-title {
+    width: 74%;
   }
 
+
   /* Scroll-box */
-  .scroll-box{
-    position: absolute;
-    width: 34.78%;/*30.875rem*/
-    height: 52.43%;/*23.43rem*/
-    left: 5rem;
-    top: 12rem;
+  .scroll-box {
+    width: 95%;
+    /*30.875rem*/
+    max-height: 23.45rem;
+    overflow: hidden;
     overflow-y: scroll;
-    overflow-x: hidden;
-    margin: 0;
+    /*23.43rem*/
+    margin: 2.5rem 0;
+
     p {
       position: relative;
-      width: 92.08%;/*28.43rem*/
-      max-height: 237.64%;/*55.68rem*/
+      width: 92.08%;
+      max-height: 100%;
       font-family: v.$f-onest;
       font-style: normal;
       font-weight: 400;
@@ -54,103 +51,73 @@
     }
   }
 
-  /* Scroll-bar */
-  .scroll-box::-webkit-scrollbar {
-    width: 0.187rem; /*0.6%*/
-    padding-left: 2.43rem;
-  }
-
-  .scroll-box::-webkit-scrollbar-track {
-    width: 0.187rem;/*0.6%*/
-    height: 23.25rem;/*99.23%*/
-    background: transparent;
-    border-radius: 0.562rem;
-  }
-
-  .scroll-box::-webkit-scrollbar-thumb {
-    width: 0.187rem;/*0.6%*/
-    height: 6rem;/*25.60%*/
-    background: v.$blue;
-    border-radius: 0.562rem;
-  }
-
-  /* About-button*/
-  .about-button{
-    position: absolute;
-    left: 5rem;
-    bottom: 3.75rem;
-  }
-
   /* Background image (dude)*/
-  .background-img{
-    width: 47.39%;/*42.06rem*/
-    height: 96.06%;/*42.93rem*/
-    z-index: 2;
-    position: absolute;
-    bottom: 0;
-    left: 28.56rem;
+  .background-img {
+    z-index: 1;
   }
 
   /* Background pattern*/
-  .pattern-container{
+  .pattern-container {
+    position: relative;
     z-index: 0;
-    position: absolute;
-    width: 16.26%;/*14.4375rem*/
-    height: 79.58%;/*35.5625rem*/
-    bottom: 1.75rem;
-    left: 38.1875rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 
-    /*background: v.$white;*/
-      img{
-        width: 80.08%;/*11.5625rem*/
-        height: 91.38%;/*32.5rem*/
-        padding: 0.5625rem 1.275rem 2.5rem 1.5rem;
-      }
+    &::before {
+      content: url('/wp-content/themes/dryf/images/common/about-section-pattern.png');
+      display: block;
+      position: absolute;
+      left: 5%;
+      top: 10%;
+      z-index: -1;
+    }
+
+    img {
+      object-fit: cover;
+      margin-right: -2.5rem;
+      margin-bottom: -5rem;
+    }
   }
 
   /* Text box (Понад 10 років...)*/
-  .text-box{
-    z-index: 1;
+  .text-box {
+    max-width: 10.37rem;
+    z-index: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 1.5625rem;
-    gap: 2.8125rem;
-    position: absolute;
-    width: 11.67%;/*10.365rem*/
-    height: 32.16%;/*14.375rem*/
-    left: 41.75rem;
-    top: 5.9375rem;
+    /*14.375rem*/
     background: v.$blue;
     border-radius: 0.3125rem;
-      .text-box-svg{
-        width: 1.875rem;
-        height: 1.875rem;
-        * {
-          fill: v.$white !important;
-        }
+    position: absolute;
+    left: 10%;
+    top: 0;
+
+    svg {
+      margin-bottom: 2.8rem;
+
+      * {
+        fill: v.$white !important;
       }
-      .text-box-text{
-        position: absolute;
-        right: 1.5625rem;
-        bottom: 1.5625rem;
-        width: 7.25rem;
-        height: 6.5625rem;
-        font-family: v.$f-onest;
-        font-style: normal;
-        font-weight: 500;
-        font-size: v.$f-14;
-        line-height: 150%;
-        /* or 150% or 21px*/
-        color: v.$white;
-        /* Inside auto layout */
-        flex: none;
-        order: 1;
-        flex-grow: 0;
-      }
+    }
+
+    .text-box-text {
+      font-family: v.$f-onest;
+      font-style: normal;
+      font-weight: 500;
+      font-size: v.$f-14;
+      line-height: 150%;
+      /* or 150% or 21px*/
+      color: v.$white;
+      /* Inside auto layout */
+    }
   }
+
   /* Top-left triangle*/
-  .arrow-down {
+  &::before {
+    content: '';
     width: 0;
     height: 0;
     border-left: 0 solid transparent;
@@ -159,5 +126,6 @@
     position: absolute;
     left: 5rem;
     top: 0;
+    z-index: 1;
   }
 }

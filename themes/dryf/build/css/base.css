@@ -322,3 +322,18 @@ body * {
 .language-block ul li:last-of-type::after {
   content: "";
 }
+
+.base-title {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 130%;
+  color: #272930;
+}
+
+.col-50 {
+  -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+  max-width: 50%;
+}
