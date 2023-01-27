@@ -6,17 +6,27 @@
  *
  * @package WordPress
  */
+include __DIR__ . '/../lang/language.php';
 
 get_header();
 ?>
+
+<div class="page-container width-container">
+	<!-- Sidebar -->
+
+	<?php get_template_part( 'template-parts/side-menu' ); ?>
+
+	<!-- End Sidebar -->
+
+	<div class="content-col">
+        <?php get_template_part( 'template-parts/about-section' ); ?>
+	</div>
+</div>
 
 
 <?php if( $field = get_field_object('') ): ?>
     <?= $field['']; ?>
 <?php endif; ?>
-
-<?php get_template_part( '' ); ?>
-
 
 
 <?php get_footer(); ?>
