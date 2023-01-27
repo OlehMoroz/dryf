@@ -4,7 +4,15 @@
         $contact_page_id = 67;
 
         /* text */
+        /* button */
         $button_text = 'Замовити дзвінок';
+        $call_form_text = 'Заповнити форму';
+        $text_more = 'Дізнатися більше';
+
+        /* Title */
+        $about_section_title = 'Розповімо детальніше про нашу компанію';
+
+        /* Other text */
         $social_title = 'Ми в соц.мережах:';
     }
     if (get_locale() == 'pl_PL') {

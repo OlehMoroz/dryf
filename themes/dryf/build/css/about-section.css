@@ -1,0 +1,135 @@
+@charset "UTF-8";
+/* 
+    Font size
+
+---------------------------*/
+/*Base font*/
+/* 
+    Color
+
+---------------------------*/
+.about-section {
+  margin: 3.75rem auto 7.5rem;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  z-index: 0;
+  /* Container */
+  /* Container parts*/
+  /* Scroll-box */
+  /* Background image (dude)*/
+  /* Text box (Понад 10 років...)*/
+  /* Top-left triangle*/
+}
+.about-section .about-container {
+  width: 100%;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: stretch;
+      align-items: stretch;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  box-sizing: border-box;
+  padding: 5rem;
+  /* Background pattern*/
+}
+.about-section .about-container .col-50 {
+  max-height: 100%;
+  z-index: 1;
+}
+.about-section .about-container .pattern-container {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+      align-items: flex-end;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  z-index: 0;
+}
+.about-section .about-container .pattern-container::before {
+  content: url("/wp-content/themes/dryf/images/common/about-section-pattern.png");
+  display: block;
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  z-index: -1;
+}
+.about-section .about-container .pattern-container img {
+  object-fit: cover;
+  margin-right: -2.5rem;
+  margin-bottom: -5rem;
+}
+.about-section h2.base-title {
+  width: 74%;
+}
+.about-section .scroll-box {
+  width: 95%;
+  /*30.875rem*/
+  max-height: 23.45rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  /*23.43rem*/
+  margin: 2.5rem 0;
+}
+.about-section .scroll-box p {
+  position: relative;
+  width: 92.08%;
+  max-height: 100%;
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8333333333vw;
+  line-height: 169%;
+  /* or 169% or 27px*/
+  color: #272930;
+}
+.about-section .background-img {
+  z-index: 1;
+}
+.about-section .text-box {
+  max-width: 10.37rem;
+  z-index: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  padding: 1.5625rem;
+  /*14.375rem*/
+  background: #007FF4;
+  border-radius: 0.3125rem;
+  position: absolute;
+  left: 10%;
+  top: 0;
+}
+.about-section .text-box svg {
+  margin-bottom: 2.8rem;
+}
+.about-section .text-box svg * {
+  fill: #fff !important;
+}
+.about-section .text-box .text-box-text {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.87rem;
+  line-height: 150%;
+  /* or 150% or 21px*/
+  color: #fff;
+  /* Inside auto layout */
+}
+.about-section::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 10.15rem solid transparent;
+  border-top: 2.81rem solid #F2F5F9;
+  position: absolute;
+  left: 5rem;
+  top: 0;
+  z-index: 1;
+}

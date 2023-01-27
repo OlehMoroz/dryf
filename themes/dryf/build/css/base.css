@@ -201,6 +201,12 @@ body * {
   line-height: 130%;
   cursor: pointer;
 }
+.base-btn_white {
+  color: #fff;
+}
+.base-btn_white svg * {
+  fill: #fff;
+}
 .base-btn svg {
   margin-left: 5px;
 }
@@ -321,4 +327,19 @@ body * {
 }
 .language-block ul li:last-of-type::after {
   content: "";
+}
+
+.base-title {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 130%;
+  color: #272930;
+}
+
+.col-50 {
+  -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+  max-width: 50%;
 }

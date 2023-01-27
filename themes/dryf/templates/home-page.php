@@ -19,7 +19,8 @@ get_header();
 	<!-- End Sidebar -->
 
 	<div class="content-col">
-      <?php get_template_part( 'template-parts/about-section' ); ?>
+		<?php get_template_part( 'template-parts/home-slider' ); ?>
+		<?php get_template_part( 'template-parts/about-section' ); ?>
 	</div>
 </div>
 
