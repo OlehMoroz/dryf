@@ -1,0 +1,99 @@
+/* 
+    Font size
+
+---------------------------*/
+/*Base font*/
+/* 
+    Color
+
+---------------------------*/
+.advantages-section {
+  /*Container*/
+  /*Odd columns*/
+  /*Even columns*/
+}
+.advantages-section .advantages-container {
+  width: 100%;
+  /*height: 24.5rem;/*392px*/
+  /*Heading*/
+  /*Under-heading text*/
+  /*Row*/
+}
+.advantages-section .advantages-container .advantages-heading {
+  max-width: 44%; /*507px*/
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 150%; /*36px or 2.25rem*/
+  color: #272930;
+  margin-bottom: 0.625rem; /*10px*/
+}
+.advantages-section .advantages-container .advantages-p {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8333333333vw;
+  line-height: 150%; /*20px or 1.25rem*/
+  color: #BDC2D1;
+  margin-bottom: 3.75rem; /*60px*/
+}
+.advantages-section .advantages-container .row-cols-5 {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  padding: 0;
+  gap: 25px;
+  /*Row columns*/
+}
+.advantages-section .advantages-container .row-cols-5 .col-20 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  padding: 1.5625rem; /*25px*/
+  gap: 2.5rem; /*40px*/
+  border-radius: 5px;
+  width: 18.3%;
+}
+.advantages-section .advantages-container .row-cols-5 .col-20:hover {
+  box-shadow: 0 5px 65px rgba(39, 41, 48, 0.15);
+  transition: all 0.2s ease-in-out;
+}
+.advantages-section .advantages-container .row-cols-5 .col-20:hover svg * {
+  transition: all 0.2s ease-in-out;
+  fill: #007FF4;
+}
+.advantages-section .advantages-container .row-cols-5 .col-20 div {
+  width: 18.51%; /*40px or 2.5rem*/
+  height: 18.51%; /*40px or 2.5rem*/
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.advantages-section .advantages-container .row-cols-5 .col-20 div svg * {
+  fill: #BDC2D1;
+}
+.advantages-section .advantages-container .row-cols-5 .col-20 p {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8333333333vw;
+  line-height: 156%; /* or 25px */
+  color: #272930;
+}
+.advantages-section .cl-1 {
+  background: #fff;
+}
+.advantages-section .cl-2 {
+  background: #ECEFF2;
+}
