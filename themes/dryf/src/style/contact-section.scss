@@ -9,7 +9,7 @@
     background: v.$orange;
     border-radius: 0.3125rem;/*5px*/
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
       .container-inner{
         padding: 1.875rem 3.75rem 1.875rem 3.75rem;/*30px 60px 30px 60px*/
         gap: 3.25rem;/*52px*/
@@ -67,7 +67,7 @@
               }
             }
             .phone-number-text{
-              /*width: 9.1875rem;/*147px*/
+              width: 9.1875rem;/*147px*/
               /*height: 1.125rem;/*18px*/
               font-family: v.$f-onest;
               font-style: normal;
