@@ -10,7 +10,7 @@
             </div>
             <div class="contacts">
                 <div class="phone-number">
-                    <a class="phone-circle" href="">
+                    <a class="phone-circle" href="tel:+48 (515) 38-75-89">
                         <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <use xlink:href="#phone-call"></use>
                         </svg>
@@ -20,7 +20,7 @@
                     </p>
                 </div>
                 <div class="phone-number">
-                        <a class="phone-circle" href="">
+                        <a class="phone-circle" href="tel:+48 (504) 63-94-66">
                             <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <use xlink:href="#phone-call"></use>
                             </svg>
