@@ -7,7 +7,7 @@
     width:100%;/* 1179px or 73.68rem*/
     height: 6rem;
     background: v.$orange;
-    border-radius: 0.3125rem;/*5px*/
+    border-radius: 5px;/*0.3125rem*/
     display: flex;
     /*justify-content: center;*/
       .container-inner{
@@ -24,7 +24,7 @@
             font-style: normal;
             font-weight: 500;
             font-size: 1.125rem;
-            line-height: 1.5625rem;/*25px*/
+            line-height: 150%;/*25px or 1.5625rem 26.04%*/
             /* identical to box height */
             color: v.$white;
           }
@@ -46,9 +46,6 @@
             /*width: 12.0625rem;/*193px*/
             /*height: 2.25rem;/*36px*/
             /* Inside auto layout */
-            flex: none;
-            order: 0;
-            flex-grow: 0;
             .phone-circle{
               display: flex;
               box-sizing: border-box;
@@ -73,13 +70,10 @@
               font-style: normal;
               font-weight: 500;
               font-size: v.$f-14;
-              line-height: 1.125rem;/*18px*/
+              line-height: 18.75%;/*18px or 1.125rem*/
               /* identical to box height */
               color: v.$white;
               /* Inside auto layout */
-              flex: none;
-              order: 1;
-              flex-grow: 0;
             }
 
           }.contact-social{
@@ -91,9 +85,6 @@
              /*width: 6.875rem;/*110px*/
              /*height: 2.25rem;/*36px*/
              /* Inside auto layout */
-             flex: none;
-             order: 2;
-             flex-grow: 0;
              .contact-social-links{
                box-sizing: border-box;
                /* Auto layout */
@@ -105,11 +96,8 @@
                width: 3.125rem;/*50px*/
                height: 2.25rem;/*36px*/
                border: 0.0625rem solid #FF8D3A;
-               border-radius: 2.75rem;/*44px*/
+               border-radius: 44px;/*2.75rem*/
                /* Inside auto layout */
-               flex: none;
-               order: 0;
-               flex-grow: 0;
                justify-content: center;
                  svg {
                    * {
