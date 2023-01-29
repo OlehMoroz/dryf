@@ -24,10 +24,4 @@ get_header();
 	</div>
 </div>
 
-
-<?php if( $field = get_field_object('') ): ?>
-    <?= $field['']; ?>
-<?php endif; ?>
-
-
 <?php get_footer(); ?>
