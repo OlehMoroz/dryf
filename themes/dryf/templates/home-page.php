@@ -20,6 +20,8 @@ get_header();
 
 	<div class="content-col">
 		<?php get_template_part( 'template-parts/home-slider' ); ?>
+        <?php get_template_part( 'template-parts/contact-section' ); ?>
+        <?php get_template_part( 'template-parts/advantages-section' ); ?>
 		<?php get_template_part( 'template-parts/about-section' ); ?>
 	</div>
 </div>
