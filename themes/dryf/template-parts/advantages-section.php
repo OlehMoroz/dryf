@@ -17,9 +17,11 @@ while (have_rows('advantages')) : the_row(); ?>
         <div class="row row-cols-5">
             <div class="col-20 cl-1">
                 <div>
+                    <?php if (get_sub_field('first-column-svg')) { ?>
                     <svg width="30" height="34" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <use xlink:href="#book"></use>
+                        <?= get_sub_field('first-column-svg'); ?>
                     </svg>
+                    <?php } ?>
                 </div>
                 <?php if (get_sub_field('first-column')) { ?>
                 <p>
@@ -29,9 +31,11 @@ while (have_rows('advantages')) : the_row(); ?>
             </div>
             <div class="col-20 cl-2">
                 <div>
+                    <?php if (get_sub_field('second-column-svg')) { ?>
                     <svg width="27" height="38" viewBox="0 0 27 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <use xlink:href="#worker"></use>
+                        <?= get_sub_field('second-column-svg'); ?>
                     </svg>
+                    <?php } ?>
                 </div>
                 <?php if (get_sub_field('second-column')) { ?>
                     <p>
@@ -41,9 +45,11 @@ while (have_rows('advantages')) : the_row(); ?>
             </div>
             <div class="col-20 cl-1">
                 <div>
+                    <?php if (get_sub_field('third-column-svg')) { ?>
                     <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <use xlink:href="#headphones"></use>
+                        <?= get_sub_field('third-column-svg'); ?>
                     </svg>
+                    <?php } ?>
                 </div>
                 <?php if (get_sub_field('third-column')) { ?>
                     <p>
@@ -53,9 +59,11 @@ while (have_rows('advantages')) : the_row(); ?>
             </div>
             <div class="col-20 cl-2">
                 <div>
+                    <?php if (get_sub_field('fourth-column-svg')) { ?>
                     <svg width="34" height="40" viewBox="0 0 34 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <use xlink:href="#documents"></use>
+                        <?= get_sub_field('fourth-column-svg'); ?>
                     </svg>
+                    <?php } ?>
                 </div>
                 <?php if (get_sub_field('fourth-column')) { ?>
                     <p>
@@ -65,9 +73,11 @@ while (have_rows('advantages')) : the_row(); ?>
             </div>
             <div class="col-20 cl-1">
                 <div>
+                    <?php if (get_sub_field('fifth-column-svg')) { ?>
                     <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <use xlink:href="#message"></use>
+                        <?= get_sub_field('fifth-column-svg'); ?>
                     </svg>
+                    <?php } ?>
                 </div>
                 <?php if (get_sub_field('fifth-column')) { ?>
                     <p>
