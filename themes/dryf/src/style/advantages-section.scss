@@ -5,6 +5,7 @@
   /*Container*/
   .advantages-container {
     width: 100%;
+    margin: 7.5rem auto;
     /*height: 24.5rem;/*392px*/
 
     /*Heading*/
@@ -48,16 +49,20 @@
         gap: 2.5rem;/*40px*/
         border-radius: 5px;
         width: 18.30%;
+        transition: v.$transition;
+        background: v.$white;
+
         &:hover {
           box-shadow: 0 5px 65px rgba(39, 41, 48, 0.15);
-          transition: all 0.2s ease-in-out;
+          transition: v.$transition;
           svg {
             * {
-              transition: all 0.2s ease-in-out;
+              transition: v.$transition;
               fill: v.$blue;
             }
           }
         }
+
         div{
           width: 18.51%;/*40px or 2.5rem*/
           height: 18.51%;/*40px or 2.5rem*/
@@ -70,6 +75,7 @@
             }
           }
         }
+
         p{
           font-family: v.$f-onest;
           font-style: normal;
@@ -78,18 +84,11 @@
           line-height: 156%;/* or 25px */
           color: v.$black;
         }
+
+        &:nth-child(2n) {
+          background: v.$dark-grey;
+        }
       }
     }
   }
-
-  /*Odd columns*/
-  .cl-1{
-    background: v.$white;
-  }
-
-  /*Even columns*/
-  .cl-2{
-    background: #ECEFF2;
-  }
-
 }

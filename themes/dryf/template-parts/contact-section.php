@@ -5,31 +5,32 @@
         <div class="container-inner">
             <div class="contact-container-text">
                 <p class="contact-container-p" >
-                    Ми завжди на зв’язку, щоб знайти вам роботу!
+                    <?= _e( $contact_section_title ); ?>
                 </p>
             </div>
             <div class="contacts">
-                <div class="phone-number">
-                    <a class="phone-circle" href="tel:+48 (515) 38-75-89">
-                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="#phone-call"></use>
-                        </svg>
-                    </a>
-                    <p class="phone-number-text">
-                        +48 (515) 38-75-89
-                    </p>
-                </div>
-                <div class="phone-number">
-                        <a class="phone-circle" href="tel:+48 (504) 63-94-66">
-                            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <use xlink:href="#phone-call"></use>
-                            </svg>
-                        </a>
-                        <p class="phone-number-text">
-                            +48 (504) 63-94-66
-                        </p>
-
-                </div>
+            <?php if (have_rows('phones', $contact_page_id)) : 
+                $count_phones = count(get_field('phones', $contact_page_id)); ?>
+                <?php  while (have_rows('phones', $contact_page_id)) : the_row();
+                    if ($count_phones > 1) { ?>
+                        <?php for ($x = 0; $x <= $count_phones; ++$x) {
+                            if (get_sub_field('phone_' . $x)) { 
+                                while (have_rows('phone_' . $x)) : the_row(); ?>
+                                <div class="phone-number">
+                                    <a class="phone-circle" href="tel:<?= get_sub_field('phone_number'); ?>">
+                                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use xlink:href="#phone-call"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="tel:<?= get_sub_field('phone_number'); ?>" class="phone-number-text">
+                                        <?= get_sub_field('phone_number'); ?>
+                                    </a>
+                                </div>
+                        <?php endwhile; } 
+                    } ?>
+                <?php 
+                } endwhile; ?>
+            <?php endif; ?>
                 <div class="contact-social">
                     <?php if (have_rows('social', $contact_page_id)) :
                         while (have_rows('social', $contact_page_id)) : the_row();
@@ -48,7 +49,7 @@
                             </svg>
                         </a>
                         <?php } endwhile; ?>
-                         <?php endif; ?>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

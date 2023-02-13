@@ -14,6 +14,7 @@
 
         /* Other text */
         $social_title = 'Ми в соц.мережах:';
+        $contact_section_title = 'Ми завжди на зв’язку, щоб знайти вам роботу!';
     }
     if (get_locale() == 'pl_PL') {
         $contact_page_id = 67;

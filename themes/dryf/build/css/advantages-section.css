@@ -9,11 +9,10 @@
 ---------------------------*/
 .advantages-section {
   /*Container*/
-  /*Odd columns*/
-  /*Even columns*/
 }
 .advantages-section .advantages-container {
   width: 100%;
+  margin: 7.5rem auto;
   /*height: 24.5rem;/*392px*/
   /*Heading*/
   /*Under-heading text*/
@@ -61,13 +60,15 @@
   gap: 2.5rem; /*40px*/
   border-radius: 5px;
   width: 18.3%;
+  transition: all 0.4s ease-in-out;
+  background: #fff;
 }
 .advantages-section .advantages-container .row-cols-5 .col-20:hover {
   box-shadow: 0 5px 65px rgba(39, 41, 48, 0.15);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .advantages-section .advantages-container .row-cols-5 .col-20:hover svg * {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.4s ease-in-out;
   fill: #007FF4;
 }
 .advantages-section .advantages-container .row-cols-5 .col-20 div {
@@ -91,9 +92,6 @@
   line-height: 156%; /* or 25px */
   color: #272930;
 }
-.advantages-section .cl-1 {
-  background: #fff;
-}
-.advantages-section .cl-2 {
+.advantages-section .advantages-container .row-cols-5 .col-20:nth-child(2n) {
   background: #ECEFF2;
 }
