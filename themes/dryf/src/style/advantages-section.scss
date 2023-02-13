@@ -48,12 +48,13 @@
         gap: 2.5rem;/*40px*/
         border-radius: 5px;
         width: 18.30%;
+        transition: all 0.2s ease-in-out;
         &:hover {
           box-shadow: 0 5px 65px rgba(39, 41, 48, 0.15);
           transition: all 0.2s ease-in-out;
           svg {
             * {
-              transition: all 0.2s ease-in-out;
+              transition: all 0.1s ease-in-out;
               fill: v.$blue;
             }
           }
@@ -66,6 +67,7 @@
           align-items: center;
           svg{
             * {
+              transition: all 0.1s ease-in-out;
               fill: #BDC2D1;
             }
           }
