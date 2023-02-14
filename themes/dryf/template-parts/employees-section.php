@@ -1,7 +1,7 @@
 <?php include __DIR__ . '/../lang/language.php'; ?>
 
 <section class="employees-section">
-    <div class="employees-container">
+    <div class="employees-container employee-slider">
         <div class="row row-cols-2">
             <div class="col-50 cl1">
                 <p class="heading">
@@ -32,8 +32,9 @@
         <p class="underheading-text">
             І вони допоможуть вам влаштуватися на омріяну посаду закордоном!
         </p>
-        <div class="row row-cols-5">
-            <div class="col-20">
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide col-20">
                 <img class="employee-img" src="wp-content/themes/dryf/images/common/Victoriya.png" alt="employee photo" loading="lazy">
                 <div class="name-container">
                     <p class="employee-name">
@@ -44,7 +45,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-20">
+            <div class="swiper-slide col-20">
                 <img class="employee-img" src="wp-content/themes/dryf/images/common/Svitlana.png" alt="employee photo" loading="lazy">
                 <div class="name-container">
                     <p class="employee-name">
@@ -55,7 +56,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-20">
+            <div class="swiper-slide col-20">
                 <img class="employee-img" src="wp-content/themes/dryf/images/common/Anatoliy.png" alt="employee photo" loading="lazy">
                 <div class="name-container">
                     <p class="employee-name">
@@ -66,7 +67,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-20">
+            <div class="swiper-slide col-20">
                 <img class="employee-img" src="wp-content/themes/dryf/images/common/Igor.png" alt="employee photo" loading="lazy">
                 <div class="name-container">
                     <p class="employee-name">
@@ -77,7 +78,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-20">
+            <div class="swiper-slide col-20">
                 <img class="employee-img" src="wp-content/themes/dryf/images/common/Nataliya.png" alt="employee photo" loading="lazy">
                 <div class="name-container">
                     <p class="employee-name">
@@ -88,6 +89,18 @@
                     </p>
                 </div>
             </div>
+            <div class="swiper-slide col-20">
+                <img class="employee-img" src="wp-content/themes/dryf/images/common/Victoriya.png" alt="employee photo" loading="lazy">
+                <div class="name-container">
+                    <p class="employee-name">
+                        Вікторія Кравець
+                    </p>
+                    <p class="employee-job">
+                        Координатор
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+<!-- Slider main container -->
