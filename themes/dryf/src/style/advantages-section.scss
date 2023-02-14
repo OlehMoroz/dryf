@@ -2,6 +2,8 @@
 
 .advantages-section {
 
+  margin: 7.5rem auto 7.5rem;
+
   /*Container*/
   .advantages-container {
     width: 100%;
@@ -37,7 +39,7 @@
       flex-direction: row;
       align-items: flex-start;
       padding: 0;
-      gap: 25px;
+      gap: 1.5625rem;/*25px*/
 
       /*Row columns*/
       .col-20{
@@ -48,13 +50,13 @@
         gap: 2.5rem;/*40px*/
         border-radius: 5px;
         width: 18.30%;
-        transition: all 0.2s ease-in-out;
+        transition: v.$transition;
         &:hover {
           box-shadow: 0 5px 65px rgba(39, 41, 48, 0.15);
-          transition: all 0.2s ease-in-out;
+          transition: v.$transition;
           svg {
             * {
-              transition: all 0.1s ease-in-out;
+              transition: all 0.2s ease-in-out;
               fill: v.$blue;
             }
           }
@@ -67,8 +69,8 @@
           align-items: center;
           svg{
             * {
-              transition: all 0.1s ease-in-out;
-              fill: #BDC2D1;
+              transition: all 0.2s ease-in-out;
+              fill: v.$grey;
             }
           }
         }
