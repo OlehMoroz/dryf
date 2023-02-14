@@ -7,22 +7,21 @@
     Color
 
 ---------------------------*/
-.employees-section {
-  margin: 7.5rem auto 2.8125rem;
+.favorite-job-section {
+  margin: 7.5rem auto 3.5rem;
   /*Container*/
   /*Slider*/
   /*Swipe buttons*/
   /*Slider block*/
 }
-.employees-section .employees-container {
+.favorite-job-section .favorite-job-container {
   width: 100%;
-  /*height: 28.625rem;/*458px*/
   /*background: #46b450; /* just to test */
   /*Row (heading and buttons)*/
   /*Underheading text*/
-  /*Row (team)*/
+  /*Row (vacancies)*/
 }
-.employees-section .employees-container .row-cols-2 {
+.favorite-job-section .favorite-job-container .row-cols-2 {
   width: 100%;
   display: -ms-flexbox;
   display: flex;
@@ -33,15 +32,15 @@
   padding: 0;
   /*heading*/
 }
-.employees-section .employees-container .row-cols-2 .col-50 {
+.favorite-job-section .favorite-job-container .row-cols-2 .col-50 {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
   width: 50%;
 }
-.employees-section .employees-container .row-cols-2 .heading {
-  max-width: 97%; /*557px*/
+.favorite-job-section .favorite-job-container .row-cols-2 .heading {
+  max-width: 83%; /*557px*/
   font-family: "Onest";
   font-style: normal;
   font-weight: 500;
@@ -50,7 +49,7 @@
   color: #272930;
   margin-bottom: 0.625rem; /*10px*/
 }
-.employees-section .employees-container .row-cols-2 .cl2 { /*Column 2 (buttons)*/
+.favorite-job-section .favorite-job-container .row-cols-2 .cl2 { /*Column 2 (buttons)*/
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-direction: row;
@@ -61,16 +60,15 @@
   padding-top: 0.75rem; /*12px*/
   gap: 1.5625rem; /*25px*/
 }
-.employees-section .employees-container .underheading-text {
+.favorite-job-section .favorite-job-container .underheading-text {
   font-family: "Onest";
   font-style: normal;
   font-weight: 400;
   font-size: 0.8333333333vw;
   line-height: 150%; /*20px or 1.25rem*/
   color: #BDC2D1;
-  margin-bottom: 3.75rem; /*60px*/
 }
-.employees-section .employees-container .row-cols-5 {
+.favorite-job-section .favorite-job-container .row-cols-5 {
   width: 100%;
   display: -ms-flexbox;
   display: flex;
@@ -80,9 +78,8 @@
       align-items: flex-start;
   padding: 0;
   gap: 1.5625rem; /*25px*/
-  /*Columns*/
 }
-.employees-section .swiper-buttons {
+.favorite-job-section .swiper-buttons {
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-direction: row;
@@ -92,15 +89,15 @@
   box-sizing: border-box;
   gap: 0.9375rem; /*15px*/
 }
-.employees-section .swiper-buttons .swiper-button-prev {
+.favorite-job-section .swiper-buttons .swiper-button-prev {
   position: static;
   margin-top: 0;
 }
-.employees-section .swiper-buttons .swiper-button-next {
+.favorite-job-section .swiper-buttons .swiper-button-next {
   position: static;
   margin-top: 0;
 }
-.employees-section .col-20 {
+.favorite-job-section .col-20 {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -111,41 +108,69 @@
   background: #fff;
   border-radius: 5px;
   transition: all 0.4s ease-in-out;
+  margin-top: 3.75rem;
   /*Photo*/
 }
-.employees-section .col-20:hover {
+.favorite-job-section .col-20:hover {
   transition: all 0.4s ease-in-out;
   box-shadow: 0 5px 65px rgba(39, 41, 48, 0.15);
+  margin-top: 3.125rem;
 }
-.employees-section .col-20 .employee-img {
+.favorite-job-section .col-20:hover .name-container .number-div {
+  transition: all 0.4s ease-in-out;
+  background: #007FF4;
+}
+.favorite-job-section .col-20:hover .name-container .number-div .number-of-vacancies {
+  transition: all 0.4s ease-in-out;
+  color: #fff;
+}
+.favorite-job-section .col-20 .vacancy-img {
   width: 100%;
   border-radius: 5px;
 }
-.employees-section .col-20 .name-container {
+.favorite-job-section .col-20 .name-container {
   box-sizing: border-box;
   padding: 1.5625rem; /*25px*/
   width: 100%;
   /*Name*/
   /*Job*/
 }
-.employees-section .col-20 .name-container .employee-name {
-  font-family: "Onest";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 0.8333333333vw;
-  line-height: 150%; /*20px or 1.25rem*/
-  color: #272930;
-  margin-bottom: 0.3125rem;
+.favorite-job-section .col-20 .name-container .number-div {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  transition: all 0.4s ease-in-out;
+  padding: 0.3125rem 0.625rem;
+  background: #E4F2FF;
+  border-radius: 15px;
+  margin-bottom: 0.625rem;
 }
-.employees-section .col-20 .name-container .employee-job {
+.favorite-job-section .col-20 .name-container .number-div .number-of-vacancies {
+  transition: all 0.4s ease-in-out;
   font-family: "Onest";
   font-style: normal;
   font-weight: 400;
-  font-size: 0.87rem;
-  line-height: 150%; /*18px or 1.125rem*/
-  color: #BDC2D1;
+  font-size: 0.75rem;
+  line-height: 150%; /*15px*/
+  color: #007FF4;
 }
-.employees-section .employee-slider {
-  width: 100%;
+.favorite-job-section .col-20 .name-container .vacancy-name {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8333333333vw;
+  line-height: 150%;
+  color: #272930;
+}
+.favorite-job-section .swiper-con {
   overflow: hidden;
+  position: relative;
+  left: -1.5625rem;
+  width: calc(100% + 5.5625rem);
+  padding: 0 1.5625rem 4rem 1.5625rem;
+}
+.favorite-job-section .swiper-con .swiper-wrapper {
+  width: 100%;
+}
+.favorite-job-section .employee-slider {
+  width: 100%;
 }

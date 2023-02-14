@@ -1,0 +1,172 @@
+/* 
+    Font size
+
+---------------------------*/
+/*Base font*/
+/* 
+    Color
+
+---------------------------*/
+.feedback-section {
+  margin: 7.5rem auto 7.5rem;
+  /*Container*/
+  /*Slider*/
+  /*Swipe buttons*/
+  /*Feedback block*/
+}
+.feedback-section .feedback-container {
+  /*Row (heading and buttons)*/
+  /*Underheading text*/
+}
+.feedback-section .feedback-container .row-cols-2 {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  padding: 0;
+  /*heading*/
+}
+.feedback-section .feedback-container .row-cols-2 .col-50 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 50%;
+}
+.feedback-section .feedback-container .row-cols-2 .heading {
+  max-width: 78%;
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 150%; /*36px or 2.25rem*/
+  color: #272930;
+  margin-bottom: 0.625rem; /*10px*/
+}
+.feedback-section .feedback-container .row-cols-2 .cl2 { /*Column 2 (buttons)*/
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  box-sizing: border-box;
+  padding-top: 0.75rem; /*12px*/
+  gap: 1.5625rem; /*25px*/
+}
+.feedback-section .feedback-container .underheading-text {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8333333333vw;
+  line-height: 150%; /*20px or 1.25rem*/
+  color: #BDC2D1;
+  margin-bottom: 3.75rem; /*60px*/
+}
+.feedback-section .swiper-buttons {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  box-sizing: border-box;
+  gap: 0.9375rem; /*15px*/
+}
+.feedback-section .swiper-buttons .swiper-button-prev {
+  position: static;
+  margin-top: 0;
+}
+.feedback-section .swiper-buttons .swiper-button-next {
+  position: static;
+  margin-top: 0;
+}
+.feedback-section .feedback-column {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  width: 31.7%;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+}
+.feedback-section .feedback-column:hover {
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 5px 65px rgba(39, 41, 48, 0.15);
+}
+.feedback-section .feedback-column .feedback-block {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  padding: 1.5625rem; /*25px*/
+}
+.feedback-section .feedback-column .feedback-block .heading {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 133%; /*24px*/
+  color: #272930;
+  margin-bottom: 0.625rem; /*10px*/
+}
+.feedback-section .feedback-column .feedback-block .city {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 150%;
+  color: #272930;
+  margin-bottom: 1rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex-align: center;
+      align-items: center;
+  gap: 0.25rem;
+}
+.feedback-section .feedback-column .feedback-block .city .city-svg {
+  width: 21.875%;
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.feedback-section .feedback-column .feedback-block .city .city-svg svg * {
+  fill: #BDC2D1;
+}
+.feedback-section .feedback-column .feedback-block .feedback {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8333333333vw;
+  line-height: 150%;
+  color: #272930;
+  margin-bottom: 1rem;
+}
+.feedback-section .feedback-column .feedback-block .name {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.87rem;
+  line-height: 171%;
+  color: #007FF4;
+}
+.feedback-section .feedback-slider {
+  width: 100%;
+  overflow: hidden;
+}
