@@ -139,10 +139,40 @@ function my_custom_init()
 			'not_found' => __('No Authors found', 'txtdomain'),
 		]
 	]);
+
 	register_taxonomy_for_object_type('animal_category_new', 'services');
+    register_post_type('feedback', array(
+        'labels'             => array(
+            'name'               => 'Фідбек',
+            'singular_name'      => 'Фідбек',
+            'add_new'            => 'Добавити послугу',
+            'add_new_item'       => 'Добавити послугу',
+            'edit_item'          => 'Редагувати послугу',
+            'new_item'           => 'Нові послуги',
+            'view_item'          => 'Подивитись послугу',
+            'search_items'       => 'Знайти послугу',
+            'not_found'          =>  'Послуг не знайдено',
+            'not_found_in_trash' => 'В корзині послуг не знайдено',
+            'parent_item_colon'  => '',
+            'menu_name'          => 'Фідбек'
+
+        ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => true,
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 4,
+        'supports'           => array('title', 'thumbnail', 'excerpt', 'editor'),
+        'menu_icon'			 => 'dashicons-open-folder',
+    ));
 }
 
-add_theme_support('post-thumbnails', array('post', 'services',));
+add_theme_support('post-thumbnails', array('post','feedback', 'services',));
 add_theme_support('widgets');
 
 add_theme_support('custom-logo', [
