@@ -14,4 +14,34 @@ $(document).ready(function () {
             prevEl: '.swiper-button-prev',
         },
     });
+    const swiperTeam = new Swiper('.employee-slider', {
+        slidesPerView: 5,
+        direction: 'horizontal',
+        spaceBetween: 25,
+        loop: false,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    const swiperJobs = new Swiper('.swiper-con', {
+        slidesPerView: 5,
+        direction: 'horizontal',
+        spaceBetween: 25,
+        loop: false,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    const swiperFeedback = new Swiper('.feedback-slider', {
+        slidesPerView: 3,
+        direction: 'horizontal',
+        spaceBetween: 29,
+        loop: false,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 });
