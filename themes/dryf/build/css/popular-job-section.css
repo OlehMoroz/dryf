@@ -7,87 +7,11 @@
     Color
 
 ---------------------------*/
-/*45555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
-555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
-uyiyui55555555555555555555555555555555555555555werwrwww35342342424werwr534555555555523423455555555464645555555555tryrtyrty555555555555
-uyiyui5555555555555555555555555555555555555555535342342424werwr534555555555523423455555555464645555555555tryrtyrty555555555555
-55555555555555555555555555555555554ffggfwerwrwerfgf353455555555555555555555555555576786875555555768686787655555555555555555555555555555555555555
-55555555555555555555555555555555555555554354655555435werwr3454355553453453455555555555555555555555555555*/
 .popular-job-section {
-  margin: 3.5rem auto 7.5rem;
-  /*Container*/
-  /*Slider*/
-  /*Swipe buttons*/
   /*Feedback block*/
 }
-.popular-job-section .popular-job-container {
-  /*Row (heading and buttons)*/
-  /*Underheading text*/
-}
-.popular-job-section .popular-job-container .row-cols-2 {
-  width: 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-align: start;
-      align-items: flex-start;
-  padding: 0;
-  /*heading*/
-}
-.popular-job-section .popular-job-container .row-cols-2 .col-50 {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  width: 50%;
-}
-.popular-job-section .popular-job-container .row-cols-2 .heading {
-  max-width: 55%;
-  font-family: "Onest";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.75rem;
-  line-height: 150%; /*36px or 2.25rem*/
-  color: #272930;
-  margin-bottom: 0.625rem; /*10px*/
-}
-.popular-job-section .popular-job-container .row-cols-2 .cl2 { /*Column 2 (buttons)*/
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-  box-sizing: border-box;
-  padding-top: 0.75rem; /*12px*/
-  gap: 1.5625rem; /*25px*/
-}
-.popular-job-section .popular-job-container .underheading-text {
-  font-family: "Onest";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.8333333333vw;
-  line-height: 150%; /*20px or 1.25rem*/
-  color: #BDC2D1;
-}
-.popular-job-section .swiper-buttons {
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-  box-sizing: border-box;
-  gap: 0.9375rem; /*15px*/
-}
-.popular-job-section .swiper-buttons .swiper-button-prev {
-  position: static;
-  margin-top: 0;
-}
-.popular-job-section .swiper-buttons .swiper-button-next {
-  position: static;
-  margin-top: 0;
+.popular-job-section .heading {
+  width: 55%;
 }
 .popular-job-section .popular-job-column {
   display: -ms-flexbox;
@@ -117,8 +41,7 @@ uyiyui5555555555555555555555555555555555555555535342342424werwr53455555555552342
       align-items: flex-start;
 }
 .popular-job-section .popular-job-column .popular-job-block .vacancy-img {
-  width: 100%;
-  border-radius: 5px;
+  height: 100%;
 }
 .popular-job-section .popular-job-column .popular-job-block .text-block {
   display: -ms-flexbox;
@@ -129,7 +52,7 @@ uyiyui5555555555555555555555555555555555555555535342342424werwr53455555555552342
       align-items: flex-start;
   padding: 1.5625rem;
 }
-.popular-job-section .popular-job-column .popular-job-block .text-block .heading {
+.popular-job-section .popular-job-column .popular-job-block .text-block .vacancy-heading {
   font-family: "Onest";
   font-style: normal;
   font-weight: 400;
@@ -139,7 +62,7 @@ uyiyui5555555555555555555555555555555555555555535342342424werwr53455555555552342
   color: #272930;
   margin-bottom: 0.625rem;
 }
-.popular-job-section .popular-job-column .popular-job-block .text-block .prize {
+.popular-job-section .popular-job-column .popular-job-block .text-block .price {
   font-family: "Onest";
   font-style: normal;
   font-weight: 500;
@@ -148,91 +71,6 @@ uyiyui5555555555555555555555555555555555555555535342342424werwr53455555555552342
   color: #007FF4;
   margin-bottom: 0.625rem;
 }
-.popular-job-section .popular-job-column .popular-job-block .text-block .places {
-  float: bottom;
-  width: 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-align: start;
-      align-items: flex-start;
-  -ms-flex-pack: start;
-      justify-content: flex-start;
-  padding: 0;
-  gap: 0.3125rem; /*jk*/
-}
-.popular-job-section .popular-job-column .popular-job-block .text-block .places .single-place {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-  -ms-flex-align: center;
-      align-items: center;
-  gap: 0.25rem;
-}
-.popular-job-section .popular-job-column .popular-job-block .text-block .places .single-place .city-svg {
-  width: 21.875%;
-  height: 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-}
-.popular-job-section .popular-job-column .popular-job-block .text-block .places .single-place .city-svg svg * {
-  fill: #BDC2D1;
-}
-.popular-job-section .popular-job-column .popular-job-block .text-block .places .single-place p {
-  font-family: "Onest";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 150%;
-  color: #272930;
-}
-.popular-job-section .popular-job-column .popular-job-block .text-block .places .more-places {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-  -ms-flex-align: center;
-      align-items: center;
-  gap: 0.25rem;
-}
-.popular-job-section .popular-job-column .popular-job-block .text-block .places .more-places .city-svg {
-  width: 21.875%;
-  height: 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-}
-.popular-job-section .popular-job-column .popular-job-block .text-block .places .more-places .city-svg svg * {
-  fill: #BDC2D1;
-}
-.popular-job-section .popular-job-column .popular-job-block .text-block .places .more-places p {
-  white-space: nowrap;
-  font-family: "Onest";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 150%;
+.popular-job-section .popular-job-column .popular-job-block .text-block .more-cities {
   color: #BDC2D1;
-}
-.popular-job-section .swiper-wrapper {
-  width: calc(100% + 128px);
-}
-.popular-job-section .feedback-slider {
-  width: 100%;
-  overflow: hidden;
-  margin: -64px;
-  padding: 64px;
 }

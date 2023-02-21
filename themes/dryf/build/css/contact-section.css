@@ -12,34 +12,32 @@
   /* Container */
 }
 .contact-section .contact-container {
-  width: 100%; /* 1179px or 73.68rem*/
+  width: 100%;
   height: 6rem;
   background: #FF6B00;
-  border-radius: 5px; /*0.3125rem*/
+  border-radius: 5px;
   display: -ms-flexbox;
   display: flex;
   /*justify-content: center;*/
 }
 .contact-section .contact-container .container-inner {
-  padding: 1.875rem 3.75rem 1.875rem 3.75rem; /*30px 60px 30px 60px*/
-  gap: 3.25rem; /*52px*/
+  padding: 1.875rem 3.75rem 1.875rem 3.75rem;
+  gap: 3.25rem;
   display: -ms-flexbox;
   display: flex;
 }
 .contact-section .contact-container .container-inner .contact-container-text {
   display: -ms-flexbox;
   display: flex;
-  padding: 0.3125rem 0 0.3125rem 0; /*5px 0 5px 0*/
+  padding: 0.3125rem 0 0.3125rem 0;
 }
 .contact-section .contact-container .container-inner .contact-container-text .contact-container-p {
-  /*width: 28.125rem; or 461px*/
-  height: 1.625rem; /*26px*/
+  height: 1.625rem;
   font-family: "Onest";
   font-style: normal;
   font-weight: 500;
   font-size: 1.125rem;
-  line-height: 150%; /*25px or 1.5625rem 26.04%*/
-  /* identical to box height */
+  line-height: 150%;
   color: #fff;
 }
 .contact-section .contact-container .container-inner .contacts {
@@ -50,9 +48,7 @@
   -ms-flex-align: center;
       align-items: center;
   padding: 0;
-  gap: 1.5625rem; /*25px*/
-  /*width: 34.125rem;/*546px*/
-  /*height: 2.25rem;/*36px*/
+  gap: 1.5625rem;
 }
 .contact-section .contact-container .container-inner .contacts .phone-number {
   display: -ms-flexbox;
@@ -62,18 +58,15 @@
   -ms-flex-align: center;
       align-items: center;
   padding: 0;
-  gap: 0.625rem; /*10px*/
-  /*width: 12.0625rem;/*193px*/
-  /*height: 2.25rem;/*36px*/
-  /* Inside auto layout */
+  gap: 0.625rem;
 }
 .contact-section .contact-container .container-inner .contacts .phone-number .phone-circle {
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  width: 2.25rem; /*36px*/
-  height: 2.25rem; /*36px*/
-  padding: 0.7rem 0.63rem 0.63rem 0.7rem; /*12.34px 11.31px 11.31px 12.34px*/
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0.7rem 0.63rem 0.63rem 0.7rem;
   border: 0.0625rem solid #FF8D3A;
   border-radius: 50%;
   -ms-flex-align: center;
@@ -86,16 +79,13 @@
   fill: #fff;
 }
 .contact-section .contact-container .container-inner .contacts .phone-number .phone-number-text {
-  width: 9.1875rem; /*147px*/
-  /*height: 1.125rem;/*18px*/
+  width: 9.1875rem;
   font-family: "Onest";
   font-style: normal;
   font-weight: 500;
   font-size: 0.87rem;
-  line-height: 18.75%; /*18px or 1.125rem*/
-  /* identical to box height */
+  line-height: 18.75%;
   color: #fff;
-  /* Inside auto layout */
 }
 .contact-section .contact-container .container-inner .contacts .contact-social {
   display: -ms-flexbox;
@@ -105,27 +95,22 @@
   -ms-flex-align: start;
       align-items: flex-start;
   padding: 0;
-  gap: 0.625rem; /*10px*/
-  /*width: 6.875rem;/*110px*/
-  /*height: 2.25rem;/*36px*/
-  /* Inside auto layout */
+  gap: 0.625rem;
 }
 .contact-section .contact-container .container-inner .contacts .contact-social .contact-social-links {
   box-sizing: border-box;
-  /* Auto layout */
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
       flex-direction: row;
   -ms-flex-align: center;
       align-items: center;
-  padding: 0.5rem 0.9375rem; /*8px 15px*/
-  gap: 0.9375rem; /*15px*/
-  width: 3.125rem; /*50px*/
-  height: 2.25rem; /*36px*/
+  padding: 0.5rem 0.9375rem;
+  gap: 0.9375rem;
+  width: 3.125rem;
+  height: 2.25rem;
   border: 0.0625rem solid #FF8D3A;
-  border-radius: 44px; /*2.75rem*/
-  /* Inside auto layout */
+  border-radius: 44px;
   -ms-flex-pack: center;
       justify-content: center;
 }
