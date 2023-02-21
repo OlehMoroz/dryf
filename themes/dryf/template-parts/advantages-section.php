@@ -2,15 +2,15 @@
 
 <?php if (have_rows('advantages')) :
 while (have_rows('advantages')) : the_row(); ?>
-<section class="advantages-section">
+<section class="advantages-section section">
     <div class="advantages-container">
         <?php if (get_sub_field('heading')) { ?>
-            <p class="advantages-heading">
+            <h2 class="base-title heading">
                 <?= get_sub_field('heading'); ?>
-            </p>
+            </h2>
         <?php } ?>
         <?php if (get_sub_field('underheading-text')) { ?>
-        <p class="advantages-p">
+        <p class="underheading-text">
             <?= get_sub_field('underheading-text'); ?>
         </p>
         <?php } ?>

@@ -1,12 +1,12 @@
 <?php include __DIR__ . '/../lang/language.php'; ?>
 
-<section class="favorite-job-section">
-    <div class="favorite-job-container">
+<section class="favorite-job-section section">
+    <div class="favorite-job-container favorite-job-slider slider">
         <div class="row row-cols-2">
             <div class="col-50 cl1">
-                <p class="heading">
+                <h2 class="base-title heading">
                     Обирайте вакансію, яка буде приносити вам задоволення
-                </p>
+                </h2>
             </div>
             <div class="col-50 cl2">
                 <a href="#" class="base-btn" data-event="learn-more">
@@ -29,92 +29,101 @@
                 </div>
             </div>
         </div>
-        <p class="underheading-text">
+        <p class="underheading-text above-slider-text">
             Знайдіть себе в улюбленій справі.
         </p>
-        <div class="swiper-con">
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide col-20">
-                    <img class="vacancy-img" src="wp-content/themes/dryf/images/common/na-zavodi.png" alt="vacancy picture" loading="lazy">
-                    <div class="name-container">
-                        <div class="number-div">
-                            <p class="number-of-vacancies">
-                                15 вакансій
+                    <a href="#">
+                        <img class="vacancy-img" src="/wp-content/themes/dryf/images/common/na-zavodi.png" alt="vacancy picture" loading="lazy">
+                        <div class="name-container">
+                            <div class="number-div">
+                                <p class="number-of-vacancies">
+                                    15 вакансій
+                                </p>
+                            </div>
+                            <p class="vacancy-name">
+                                На заводі
                             </p>
                         </div>
-                        <p class="vacancy-name">
-                            На заводі
-                        </p>
-                    </div>
+                    </a>
                 </div>
                 <div class="swiper-slide col-20">
-                    <img class="vacancy-img" src="wp-content/themes/dryf/images/common/na-fabrytsi.png" alt="vacancy picture" loading="lazy">
-                    <div class="name-container">
-                        <div class="number-div">
-                            <p class="number-of-vacancies">
-                                15 вакансій
+                    <a href="#">
+                        <img class="vacancy-img" src="/wp-content/themes/dryf/images/common/na-fabrytsi.png" alt="vacancy picture" loading="lazy">
+                        <div class="name-container">
+                            <div class="number-div">
+                                <p class="number-of-vacancies">
+                                    15 вакансій
+                                </p>
+                            </div>
+                            <p class="vacancy-name">
+                                На фабриці
                             </p>
                         </div>
-                        <p class="vacancy-name">
-                            На фабриці
-                        </p>
-                    </div>
+                    </a>
                 </div>
                 <div class="swiper-slide col-20">
-                    <img class="vacancy-img" src="wp-content/themes/dryf/images/common/na-skladi.png" alt="vacancy picture" loading="lazy">
-                    <div class="name-container">
-                        <div class="number-div">
-                            <p class="number-of-vacancies">
-                                15 вакансій
+                    <a href="#">
+                        <img class="vacancy-img" src="/wp-content/themes/dryf/images/common/na-skladi.png" alt="vacancy picture" loading="lazy">
+                        <div class="name-container">
+                            <div class="number-div">
+                                <p class="number-of-vacancies">
+                                    15 вакансій
+                                </p>
+                            </div>
+                            <p class="vacancy-name">
+                                На складі
                             </p>
                         </div>
-                        <p class="vacancy-name">
-                            На складі
-                        </p>
-                    </div>
+                    </a>
                 </div>
                 <div class="swiper-slide col-20">
-                    <img class="vacancy-img" src="wp-content/themes/dryf/images/common/na-budivnytstvi.png" alt="vacancy picture" loading="lazy">
-                    <div class="name-container">
-                        <div class="number-div">
-                            <p class="number-of-vacancies">
-                                15 вакансій
+                    <a href="#">
+                        <img class="vacancy-img" src="/wp-content/themes/dryf/images/common/na-budivnytstvi.png" alt="vacancy picture" loading="lazy">
+                        <div class="name-container">
+                            <div class="number-div">
+                                <p class="number-of-vacancies">
+                                    15 вакансій
+                                </p>
+                            </div>
+                            <p class="vacancy-name">
+                                На будівництві
                             </p>
                         </div>
-                        <p class="vacancy-name">
-                            На будівництві
-                        </p>
-                    </div>
+                    </a>
                 </div>
                 <div class="swiper-slide col-20">
-                    <img class="vacancy-img" src="wp-content/themes/dryf/images/common/na-kuhni.png" alt="vacancy picture" loading="lazy">
-                    <div class="name-container">
-                        <div class="number-div">
-                            <p class="number-of-vacancies">
-                                15 вакансій
+                    <a href="#">
+                        <img class="vacancy-img" src="/wp-content/themes/dryf/images/common/na-kuhni.png" alt="vacancy picture" loading="lazy">
+                        <div class="name-container">
+                            <div class="number-div">
+                                <p class="number-of-vacancies">
+                                    15 вакансій
+                                </p>
+                            </div>
+                            <p class="vacancy-name">
+                                На кухні
                             </p>
                         </div>
-                        <p class="vacancy-name">
-                            На кухні
-                        </p>
-                    </div>
+                    </a>
                 </div>
                 <div class="swiper-slide col-20">
-                    <img class="vacancy-img" src="wp-content/themes/dryf/images/common/na-zavodi.png" alt="vacancy picture" loading="lazy">
-                    <div class="name-container">
-                        <div class="number-div">
-                            <p class="number-of-vacancies">
-                                15 вакансій
+                    <a href="#">
+                        <img class="vacancy-img" src="/wp-content/themes/dryf/images/common/na-zavodi.png" alt="vacancy picture" loading="lazy">
+                        <div class="name-container">
+                            <div class="number-div">
+                                <p class="number-of-vacancies">
+                                    15 вакансій
+                                </p>
+                            </div>
+                            <p class="vacancy-name">
+                                На заводі
                             </p>
                         </div>
-                        <p class="vacancy-name">
-                            На заводі
-                        </p>
-                    </div>
+                    </a>
                 </div>
             </div>
-        </div>
-
     </div>
 </section>
