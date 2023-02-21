@@ -9,12 +9,6 @@
                 </h2>
             </div>
             <div class="col-50 cl2">
-                <a href="#" class="base-btn" data-event="learn-more">
-                    Більше працівників
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <use xlink:href="#arrow-right"></use>
-                    </svg>
-                </a>
                 <div class="swiper-buttons">
                     <div class="swiper-button swiper-button-prev">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
