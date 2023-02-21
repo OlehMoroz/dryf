@@ -3,90 +3,8 @@
 .employees-section {
   margin: 7.5rem auto 2.8125rem;
 
-  /*Container*/
-  .employees-container {
-    width: 100%;
-    /*height: 28.625rem;/*458px*/
-    /*background: #46b450; /* just to test */
-
-    /*Row (heading and buttons)*/
-    .row-cols-2 {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      padding: 0;
-
-      .col-50 {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-      }
-
-      /*heading*/
-      .heading {
-        max-width: 97%; /*557px*/
-        font-family: v.$f-onest;
-        font-style: normal;
-        font-weight: 500;
-        font-size: v.$f-28;
-        line-height: 150%; /*36px or 2.25rem*/
-        color: v.$black;
-        margin-bottom: 0.625rem; /*10px*/
-      }
-
-      .cl2 { /*Column 2 (buttons)*/
-        display: inline-flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        box-sizing: border-box;
-        padding-top: 0.75rem; /*12px*/
-        gap: 1.5625rem; /*25px*/
-      }
-    }
-    /*Underheading text*/
-    .underheading-text {
-      font-family: v.$f-onest;
-      font-style: normal;
-      font-weight: 400;
-      font-size: v.$f-16;
-      line-height: 150%; /*20px or 1.25rem*/
-      color: v.$grey;
-      margin-bottom: 3.75rem; /*60px*/
-    }
-
-    /*Row (team)*/
-    .row-cols-5 {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      padding: 0;
-      gap: 1.5625rem; /*25px*/
-
-      /*Columns*/
-
-    }
-  }
-
-  /*Slider*/
-
-  /*Swipe buttons*/
-  .swiper-buttons {
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    box-sizing: border-box;
-    gap: 0.9375rem; /*15px*/
-    .swiper-button-prev {
-      position: static;
-      margin-top: 0;
-    }
-
-    .swiper-button-next {
-      position: static;
-      margin-top: 0;
-    }
+  .heading {
+    width: 97%;
   }
 
   /*Slider block*/
@@ -94,25 +12,21 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 18.30%;
     background: v.$white;
     border-radius: 5px;
     transition: v.$transition;
-
     &:hover {
       transition: v.$transition;
       box-shadow: 0 5px 65px rgba(39, 41, 48, 0.15);
     }
-
-    /*Photo*/
-    .employee-img {
+    :nth-child(1){
+      height: 100%;
       width: 100%;
       border-radius: 5px;
     }
-
     .name-container {
       box-sizing: border-box;
-      padding: 1.5625rem; /*25px*/
+      padding: 1.5625rem;
       width: 100%;
 
       /*Name*/
@@ -121,7 +35,7 @@
         font-style: normal;
         font-weight: 500;
         font-size: v.$f-16;
-        line-height: 150%; /*20px or 1.25rem*/
+        line-height: 150%;
         color: v.$black;
         margin-bottom: 0.3125rem;
       }
@@ -132,16 +46,10 @@
         font-style: normal;
         font-weight: 400;
         font-size: v.$f-14;
-        line-height: 150%; /*18px or 1.125rem*/
+        line-height: 150%;
         color: v.$grey;
       }
     }
-  }
-  .swiper-wrapper{
-  }
-  .employee-slider{
-    width: 100%;
-    overflow: hidden;
   }
 }
 

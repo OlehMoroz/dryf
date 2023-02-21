@@ -1,83 +1,15 @@
 @use 'variable' as v;
 
 .feedback-section {
-  margin: 7.5rem auto 7.5rem;
-  /*Container*/
-  .feedback-container {
-    /*Row (heading and buttons)*/
-    .row-cols-2 {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      padding: 0;
-
-      .col-50 {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-      }
-
-      /*heading*/
-      .heading {
-        max-width: 78%;
-        font-family: v.$f-onest;
-        font-style: normal;
-        font-weight: 500;
-        font-size: v.$f-28;
-        line-height: 150%; /*36px or 2.25rem*/
-        color: v.$black;
-        margin-bottom: 0.625rem; /*10px*/
-      }
-
-      .cl2 { /*Column 2 (buttons)*/
-        display: inline-flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        box-sizing: border-box;
-        padding-top: 0.75rem; /*12px*/
-        gap: 1.5625rem; /*25px*/
-      }
-    }
-    /*Underheading text*/
-    .underheading-text {
-      font-family: v.$f-onest;
-      font-style: normal;
-      font-weight: 400;
-      font-size: v.$f-16;
-      line-height: 150%; /*20px or 1.25rem*/
-      color: v.$grey;
-      margin-bottom: 3.75rem; /*60px*/
-    }
-  }
-
-  /*Slider*/
-
-  /*Swipe buttons*/
-  .swiper-buttons {
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    box-sizing: border-box;
-    gap: 0.9375rem; /*15px*/
-    .swiper-button-prev {
-      position: static;
-      margin-top: 0;
-    }
-
-    .swiper-button-next {
-      position: static;
-      margin-top: 0;
-    }
+  .heading {
+    width: 78%;
   }
 
   /*Feedback block*/
-
     .feedback-column{
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      width: 31.7%;
       background: v.$white;
       border-radius: 5px;
       transition: v.$transition;
@@ -89,41 +21,27 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding: 1.5625rem;/*25px*/
+        padding: 1.5625rem;
+        :nth-child(3){
+          font-family: v.$f-onest;
+          font-style: normal;
+          font-weight: 400;
+          font-size: v.$f-16;
+          line-height: 150%;
+          color: #272930;
+          margin-bottom: 1rem;
+        }
         .heading{
           font-family: v.$f-onest;
           font-style: normal;
           font-weight: 500;
           font-size: v.$f-18;
-          line-height: 133%;/*24px*/
+          line-height: 133%;
           color: v.$black;
-          margin-bottom: 0.625rem;/*10px*/
+          margin-bottom: 0.625rem;
         }
-        .city{
-          font-family: v.$f-onest;
-          font-style: normal;
-          font-weight: 400;
-          font-size: v.$f-12;
-          line-height: 150%;
-          color: v.$black;
+        .margin-b-city{
           margin-bottom: 1rem;
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-end;
-          align-items: center;
-          gap: 0.25rem;
-          .city-svg{
-            width: 21.875%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            svg{
-              * {
-                fill: v.$grey;
-              }
-            }
-          }
         }
         .feedback{
           font-family: v.$f-onest;
@@ -144,10 +62,4 @@
         }
       }
     }
-  .swiper-wrapper{
-  }
-  .feedback-slider{
-    width: 100%;
-    overflow: hidden;
-  }
 }

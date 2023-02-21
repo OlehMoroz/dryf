@@ -1,0 +1,58 @@
+@use 'variable'as v;
+
+.about-employer-section{
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  .about-employer-column{
+    display: flex;
+    flex-direction: column;
+    width: 49.02%;
+    .employer-info{
+      margin-bottom: 5rem;
+      .text{
+        color: #000000;
+      }
+    }
+    .contact-employer{
+      .heading{
+        margin-bottom: 2.5rem;
+      }
+      .conditions-row{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 3.625rem;
+        .column{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.625rem;
+          .conditions-heading{
+            font-family: v.$f-onest;
+            font-style: normal;
+            font-weight: 400;
+            font-size: v.$f-18;
+            line-height: 150%;
+            color: v.$blue;
+          }
+          .text{
+            font-family: v.$f-onest;
+            font-style: normal;
+            font-weight: 500;
+            font-size: v.$f-26;
+            line-height: 150%;
+            color: v.$black;
+          }
+        }
+      }
+    }
+  }
+  .form-column{
+    display: flex;
+    flex-direction: column;
+  }
+}
