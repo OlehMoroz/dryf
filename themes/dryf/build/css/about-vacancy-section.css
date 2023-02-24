@@ -13,88 +13,11 @@
 .about-vacancy-section .about-vacancy-container {
   box-sizing: border-box;
   padding: 3.75rem 7.5rem;
-  margin-bottom: 7.5rem;
   border-radius: 5px;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/wp-content/themes/dryf/images/common/meet.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  z-index: -1;
-}
-.about-vacancy-section .about-vacancy-container .menu-row {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-align: center;
-      align-items: center;
-  gap: 0.9375rem;
-}
-.about-vacancy-section .about-vacancy-container .menu-row .menu-column {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-align: start;
-      align-items: flex-start;
-}
-.about-vacancy-section .about-vacancy-container .menu-row .menu-column .inner-div {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-align: start;
-      align-items: flex-start;
-}
-.about-vacancy-section .about-vacancy-container .menu-row .menu-column #active-menu {
-  color: #fff;
-}
-.about-vacancy-section .about-vacancy-container .menu-row .menu-column #active-menu:hover {
-  color: #FF6B00;
-  transition: all 0.4s ease-in-out;
-}
-.about-vacancy-section .about-vacancy-container .menu-row .menu-column #active-menu:active {
-  color: #272930;
-}
-.about-vacancy-section .about-vacancy-container .menu-row .menu-column .menu-text {
-  white-space: nowrap;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  font-family: "Onest";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 0.75rem;
-  line-height: 150%;
-  color: #BDC2D1;
-  transition: all 0.4s ease-in-out;
-}
-.about-vacancy-section .about-vacancy-container .menu-row .menu-column .menu-text:hover {
-  color: #FF6B00;
-  transition: all 0.4s ease-in-out;
-}
-.about-vacancy-section .about-vacancy-container .menu-row .menu-column .menu-text:active {
-  color: #272930;
-  transition: all 0.4s ease-in-out;
-}
-.about-vacancy-section .about-vacancy-container .menu-row .menu-column .menu-svg {
-  height: 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: start;
-      justify-content: flex-start;
-  -ms-flex-align: end;
-      align-items: flex-end;
-  box-sizing: border-box;
-  padding: 0.09375rem 0 0 0.25rem;
-  margin-right: 0.9375rem;
-}
-.about-vacancy-section .about-vacancy-container .menu-row .menu-column .menu-svg svg * {
-  stroke-width: 2px;
-  stroke: #BDC2D1;
 }
 .about-vacancy-section .about-vacancy-container .content-block {
   width: 76.86%;

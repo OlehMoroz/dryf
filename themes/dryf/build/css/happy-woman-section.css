@@ -1,0 +1,115 @@
+/* 
+    Font size
+
+---------------------------*/
+/*Base font*/
+/* 
+    Color
+
+---------------------------*/
+.happy-woman-section {
+  position: relative;
+  background: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  width: 100%;
+  z-index: 0;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.happy-woman-section .text-col {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding: 7.5rem 0 7.5rem 7.5rem;
+  width: 38.67%;
+}
+.happy-woman-section .text-col .credo {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.87rem;
+  line-height: 150%;
+  color: #FF6B00;
+  margin-bottom: 0.9375rem;
+}
+.happy-woman-section .text-col .heading {
+  line-height: 147.5%;
+  margin-bottom: 0.9375rem;
+}
+.happy-woman-section .text-col .happy-woman-text {
+  line-height: 169%;
+  color: #272930;
+  margin-bottom: 2.5rem;
+}
+.happy-woman-section .img-col {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  position: relative;
+  width: 53.96%;
+}
+.happy-woman-section .img-col::before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 12.23%;
+  top: 14.1%;
+  z-index: 1;
+  background-image: url("/wp-content/themes/dryf/images/common/about-section-pattern.png");
+  width: 31%;
+  height: 56.05%;
+  background-repeat: no-repeat;
+}
+.happy-woman-section .img-col .text-box {
+  max-width: 10.37rem;
+  z-index: 2;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  padding: 1.5625rem;
+  background: #FF6B00;
+  border-radius: 0.3125rem;
+  position: absolute;
+  top: 21.34%;
+  left: 0;
+}
+.happy-woman-section .img-col .text-box svg {
+  margin-bottom: 2.8rem;
+}
+.happy-woman-section .img-col .text-box svg * {
+  fill: #fff !important;
+}
+.happy-woman-section .img-col .text-box .text-box-text {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.87rem;
+  line-height: 150%;
+  color: #fff;
+}
+.happy-woman-section .img-col .background-img {
+  position: absolute;
+  right: 12.81%;
+  z-index: 3;
+  height: 100%;
+}
+.happy-woman-section::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 10.15rem solid transparent;
+  border-top: 2.81rem solid #F2F5F9;
+  position: absolute;
+  left: 7.5rem;
+  top: 0;
+  z-index: 1;
+}

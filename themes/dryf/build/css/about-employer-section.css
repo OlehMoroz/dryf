@@ -24,7 +24,7 @@
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  width: 49.02%;
+  width: 50.885%;
 }
 .about-employer-section .about-employer-column .employer-info {
   margin-bottom: 5rem;
@@ -74,4 +74,24 @@
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
+  box-sizing: border-box;
+  padding: 2.5rem;
+  background: #fff;
+  width: 40.235%;
+  border-radius: 5px;
+}
+.about-employer-section .form-column .heading {
+  margin-bottom: 0.5rem;
+}
+.about-employer-section .form-column .form-text {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 150%;
+  color: #272930;
+  margin-bottom: 2.5rem;
+}
+.about-employer-section .form-column .form-section {
+  margin-bottom: 1.5625rem;
 }

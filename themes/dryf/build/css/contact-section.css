@@ -74,8 +74,7 @@
   -ms-flex-pack: center;
       justify-content: center;
 }
-.contact-section .contact-container .container-inner .contacts .phone-number .phone-circle .svg * {
-  transition: all 0.4s ease-in-out;
+.contact-section .contact-container .container-inner .contacts .phone-number .phone-circle svg * {
   fill: #fff;
 }
 .contact-section .contact-container .container-inner .contacts .phone-number .phone-number-text {
