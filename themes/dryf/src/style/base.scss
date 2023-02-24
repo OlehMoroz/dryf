@@ -495,3 +495,133 @@ body {
         color: v.$black;
     }
 }
+.form-btn{
+    margin-right: auto;
+}
+.menu-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.9375rem;
+    margin-bottom: 1.5625rem;
+    .menu-column{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .inner-div{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+        #active-menu{
+            color: v.$white;
+            &:hover{
+                color: v.$orange;
+                transition: v.$transition;
+            }
+            &:active{
+                color: v.$black;
+                transition: v.$transition;
+            }
+        }
+        .menu-text{
+            white-space: nowrap;
+            display: flex;
+            flex-direction: column;
+            font-family: v.$f-onest;
+            font-style: normal;
+            font-weight: 500;
+            font-size: v.$f-12;
+            line-height: 150%;
+            color: v.$grey;
+            transition: v.$transition;
+            &:hover{
+                color: v.$orange;
+                transition: v.$transition;
+            }
+            &:active{
+                color: v.$black;
+                transition: v.$transition;
+            }
+        }
+        .menu-svg{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
+            box-sizing: border-box;
+            padding: 0.09375rem 0 0 0.25rem;
+            margin-right: 0.9375rem;
+            svg{
+
+                * {
+                    stroke-width: 2px;
+                    stroke: v.$grey;
+                }
+            }
+        }
+    }
+}
+.top-container{
+    .top-row{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.9375rem;
+        margin-bottom: 3.125rem;
+        .menu-column{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            .inner-div{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+            }
+            #active-menu{
+                color: v.$black;
+            }
+            .menu-text{
+                white-space: nowrap;
+                display: flex;
+                flex-direction: column;
+                font-family: v.$f-onest;
+                font-style: normal;
+                font-weight: 500;
+                font-size: v.$f-12;
+                line-height: 150%;
+                color: v.$grey;
+                transition: v.$transition;
+                &:hover{
+                    color: v.$orange;
+                    transition: v.$transition;
+                }
+                &:active{
+                    color: v.$black;
+                    transition: v.$transition;
+                }
+            }
+            .menu-svg{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-end;
+                box-sizing: border-box;
+                padding: 0.09375rem 0 0 0.25rem;
+                margin-right: 0.9375rem;
+                svg{
+
+                    * {
+                        stroke-width: 2px;
+                        stroke: v.$grey;
+                    }
+                }
+            }
+        }
+    }
+    .top-page-title{
+        margin-bottom: 3.75rem;
+    }
+}

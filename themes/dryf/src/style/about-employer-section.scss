@@ -10,7 +10,7 @@
   .about-employer-column{
     display: flex;
     flex-direction: column;
-    width: 49.02%;
+    width: 50.885%;
     .employer-info{
       margin-bottom: 5rem;
       .text{
@@ -54,5 +54,25 @@
   .form-column{
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
+    padding: 2.5rem;
+    background: v.$white;
+    width: 40.235%;
+    border-radius: 5px;
+    .heading{
+      margin-bottom: 0.5rem;
+    }
+    .form-text{
+      font-family: v.$f-onest;
+      font-style: normal;
+      font-weight: 400;
+      font-size: v.$f-18;
+      line-height: 150%;
+      color: v.$black;
+      margin-bottom: 2.5rem;
+    }
+    .form-section{
+      margin-bottom: 1.5625rem;
+    }
   }
 }

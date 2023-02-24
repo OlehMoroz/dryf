@@ -51,9 +51,8 @@
               border-radius: 50%;
               align-items: center;
               justify-content: center;
-              .svg{
+              svg{
                 * {
-                  transition: v.$transition;
                   fill: v.$white;
                 }
               }
