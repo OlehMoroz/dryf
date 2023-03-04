@@ -55,3 +55,8 @@ $(document).ready(function () {
         },
     });
 });
+function copyToClipboard() {
+    var link = window.location.href;
+    navigator.clipboard.writeText(link);
+    alert("Link copied!");
+}
