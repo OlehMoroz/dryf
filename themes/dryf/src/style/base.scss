@@ -515,14 +515,6 @@ body {
         }
         #active-menu{
             color: v.$white;
-            &:hover{
-                color: v.$orange;
-                transition: v.$transition;
-            }
-            &:active{
-                color: v.$black;
-                transition: v.$transition;
-            }
         }
         .menu-text{
             white-space: nowrap;
@@ -623,5 +615,33 @@ body {
     }
     .top-page-title{
         margin-bottom: 3.75rem;
+    }
+}
+.employer-content-section{
+    margin: 3.75rem auto 7.5rem;
+}
+.page-blocks{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 1.5625rem;
+    row-gap: 0.9375rem;
+    .single-block{
+        display: flex;
+        flex-direction: column;
+        width: 48.9%;
+        background: v.$white;
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding: 3.75rem 0 3.75rem 3.75rem;
+        transition: v.$transition;
+        margin-top: 0.625rem;
+        &:hover{
+            box-shadow: 0 5px 65px rgba(39, 41, 48, 0.15);
+            transition: v.$transition;
+            margin-top: 0;
+            margin-bottom: 0.625rem;
+        }
     }
 }

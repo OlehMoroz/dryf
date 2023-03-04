@@ -1,0 +1,53 @@
+@use 'variable'as v;
+
+.team-section {
+  margin: 2.5rem auto 7rem;
+  .heading{
+    width: 38.76%;
+    margin-bottom: 3.125rem;
+  }
+  .single-block{
+    position: relative;
+    .employee-position{
+      color: #007FF4;
+      margin-bottom: 0.3125rem;
+    }
+    .employee-name{
+      margin-bottom: 1.5625rem;
+    }
+    :nth-child(3) {
+      width: 51%;
+      margin-bottom: 1.5625rem;
+    }
+    .contacts{
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+      .single-contact{
+        display: flex;
+        flex-direction: row;
+        gap: 0.625rem;
+        align-items: center;
+        svg{
+          *{
+            fill: v.$grey;
+          }
+        }
+        .contact-text{
+          font-weight: 500;
+          font-size: v.$f-14;
+          line-height: 150%;
+        }
+      }
+    }
+    .post-img{
+      position: absolute;
+      width: 54.07%;
+      max-height: 100%;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+    }
+  }
+  /*3363733334443223333ww34442ww3ewwwe22222332ww33334333ee344333322*/
+}

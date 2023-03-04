@@ -7,7 +7,6 @@
     .heading {
       width: 44%;
     }
-
       /*Row columns*/
       .col-20{
         display: flex;
@@ -17,6 +16,7 @@
         gap: 2.5rem;
         border-radius: 5px;
         width: 18.30%;
+        height: 14.375rem;
         transition: v.$transition;
         &:hover {
           box-shadow: 0 5px 65px rgba(39, 41, 48, 0.15);
