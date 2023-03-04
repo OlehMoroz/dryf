@@ -527,14 +527,6 @@ body * {
 .menu-row .menu-column #active-menu {
   color: #fff;
 }
-.menu-row .menu-column #active-menu:hover {
-  color: #FF6B00;
-  transition: all 0.4s ease-in-out;
-}
-.menu-row .menu-column #active-menu:active {
-  color: #272930;
-  transition: all 0.4s ease-in-out;
-}
 .menu-row .menu-column .menu-text {
   white-space: nowrap;
   display: -ms-flexbox;
@@ -647,4 +639,40 @@ body * {
 }
 .top-container .top-page-title {
   margin-bottom: 3.75rem;
+}
+
+.employer-content-section {
+  margin: 3.75rem auto 7.5rem;
+}
+
+.page-blocks {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  -webkit-column-gap: 1.5625rem;
+          column-gap: 1.5625rem;
+  row-gap: 0.9375rem;
+}
+.page-blocks .single-block {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 48.9%;
+  background: #fff;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 3.75rem 0 3.75rem 3.75rem;
+  transition: all 0.4s ease-in-out;
+  margin-top: 0.625rem;
+}
+.page-blocks .single-block:hover {
+  box-shadow: 0 5px 65px rgba(39, 41, 48, 0.15);
+  transition: all 0.4s ease-in-out;
+  margin-top: 0;
+  margin-bottom: 0.625rem;
 }
