@@ -4,16 +4,12 @@
 while (have_rows('advantages')) : the_row(); ?>
 <section class="advantages-section section">
     <div class="advantages-container">
-        <?php if (get_sub_field('heading')) { ?>
             <h2 class="base-title heading">
-                <?= get_sub_field('heading'); ?>
+              <?= $heading ?>
             </h2>
-        <?php } ?>
-        <?php if (get_sub_field('underheading-text')) { ?>
         <p class="underheading-text">
-            <?= get_sub_field('underheading-text'); ?>
+            Відповідь проста - ми одні з кращих!
         </p>
-        <?php } ?>
         <div class="row row-cols-5">
             <div class="col-20 cl-1">
                 <div>

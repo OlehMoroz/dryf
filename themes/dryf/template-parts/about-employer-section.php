@@ -13,7 +13,7 @@
             <div class="conditions-row">
                 <div class="column">
                     <p class="conditions-heading">
-                        Телефон
+                        Телефон:
                     </p>
                     <p class="text">
                         +48515387589
@@ -21,7 +21,7 @@
                 </div>
                 <div class="column">
                     <p class="conditions-heading">
-                        Email
+                        Email:
                     </p>
                     <p class="text">
                         dryf@gmail.com

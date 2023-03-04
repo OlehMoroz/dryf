@@ -1,5 +1,7 @@
 <?php include __DIR__ . '/../lang/language.php'; ?>
 
+<?php if (have_rows('top_bar')) :
+while (have_rows('top_bar')) : the_row(); ?>
 <section class="about-company-section section">
     <div class="about-company-container">
         <div class="menu-row">
@@ -18,10 +20,12 @@
             </div>
         </div>
         <h1 class="about-company-heading">
-            Розповімо детальніше про нашу компанію
+            <?= get_sub_field('heading'); ?>
         </h1>
         <p class="about-company-text">
-            Lorem ipsum dolor sit amet consectetur. Ultrices semper et amet hac sed eget. Bibendum aenean vitae vulputate pharetra est cras. Tempus tempor vulputate tellus mauris nulla dolor.
+            <?= get_sub_field('under-heading_text'); ?>
         </p>
     </div>
 </section>
+<?php endwhile; ?>
+<?php endif; ?>

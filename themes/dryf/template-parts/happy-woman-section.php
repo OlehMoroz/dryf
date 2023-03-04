@@ -1,15 +1,17 @@
 <?php include __DIR__ . '/../lang/language.php'; ?>
 
+<?php if (have_rows('creed_section')) :
+while (have_rows('creed_section')) : the_row(); ?>
 <section class="happy-woman-section section">
     <div class="text-col">
         <p class="credo">
-            Наше кредо
+            <?= get_sub_field('short_text_at_top'); ?>
         </p>
         <h2 class="base-title heading">
-            Працюємо для того, щоб ви могли заробляти більше!
+            <?= get_sub_field('heading'); ?>
         </h2>
         <p class="underheading-text happy-woman-text">
-            Lorem ipsum dolor sit amet consectetur. Ultrices semper et amet hac sed eget.
+            <?= get_sub_field('under-heading_text'); ?>
         </p>
         <a href="#" class="base-btn form-btn" data-event="learn-more">
             Знайти вакансію для себе
@@ -23,8 +25,12 @@
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="#heart"></use>
             </svg>
-            <p class="text-box-text">Понад 10 років допомогаємо знаходити роботу в Польщі усім охочим</p>
+            <p class="text-box-text">
+                <?= get_sub_field('message'); ?>
+            </p>
         </div>
         <img src="/wp-content/themes/dryf/images/common/happy-woman.png" class="background-img" alt="background image" loading="lazy">
     </div>
 </section>
+<?php endwhile; ?>
+<?php endif; ?>

@@ -1,5 +1,13 @@
 <?php include __DIR__ . '/../lang/language.php'; ?>
-
+<?php
+$posts = get_posts(array(
+    'numberposts' => 1,
+    'post_type'   => 'vacancies',
+    'suppress_filters' => true,
+));
+foreach ($posts as $post) {
+setup_postdata($post);
+?>
 <section class="about-vacancy-section section">
     <div class="about-vacancy-container">
         <div class="menu-row">
@@ -29,9 +37,9 @@
         </div>
         <div class="content-block">
             <h1 class="job-name">
-                Професійний обвалювальник м’яса на м’ясокомбінат
+                <?php the_title() ?>
             </h1>
-            <p class="salary">3 500 zl. - 4 800 zl. в місяць</p>
+            <p class="salary"><?= get_field('price'); ?> в місяць</p>
             <div class="locations">
                 <p class="locations-text">
                     Локації:
@@ -132,6 +140,7 @@
                     <p class="tag-text">Робота увесь рік</p>
                 </a>
             </div>
+
         </div>
         <a href="#" class="base-btn" data-event="learn-more">
             Відгукнутись на вакансію
@@ -141,3 +150,4 @@
         </a>
     </div>
 </section>
+<?php } wp_reset_postdata(); ?>

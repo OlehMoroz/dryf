@@ -5,7 +5,7 @@
     <div class="conditions-row">
         <div class="column">
             <p class="conditions-heading">
-                Ставка
+                Ставка:
             </p>
             <p class="text">
                 16-17.5 zl/год

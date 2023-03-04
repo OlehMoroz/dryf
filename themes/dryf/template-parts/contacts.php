@@ -27,79 +27,76 @@
                 <p class="underheading-text">
                     Телефони:
                 </p>
+                <?php if (have_rows('phones', $contact_page_id)) :
+                $count_phones = count(get_field('phones', $contact_page_id)); ?>
+                    <?php  while (have_rows('phones', $contact_page_id)) : the_row();
+                    if ($count_phones > 1) { ?>
+                    <?php for ($x = 0; $x <= $count_phones; ++$x) {
+                    if (get_sub_field('phone_' . $x)) {
+                    while (have_rows('phone_' . $x)) : the_row(); ?>
                 <div class="info">
                     <div class="contact-row">
-                        <a class="phone-circle-column" href="tel:+48515387589">
+                        <a class="phone-circle-column" href="tel:<?= get_sub_field('phone_number'); ?>">
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <use xlink:href="#another-phone-call"></use>
                             </svg>
                         </a>
                         <div class="contact-info-column">
                             <p class="underheading-text">
-                                Наталя
+                                <?= get_sub_field('account_name'); ?>
                             </p>
                             <p class="number-text">
-                                +48515387589
+                                <?= get_sub_field('phone_number'); ?>
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="info">
-                    <div class="contact-row">
-                        <a class="phone-circle-column" href="tel:+48504639466">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <use xlink:href="#another-phone-call"></use>
-                            </svg>
-                        </a>
-                        <div class="contact-info-column">
-                            <p class="underheading-text">
-                                Ілля
-                            </p>
-                            <p class="number-text">
-                                +48504639466
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                    <?php endwhile; }
+                    } ?>
+
+                <?php
+                } endwhile; ?>
+                <?php endif; ?>
             </div>
-            <div class="email-container social-col">
+            <div class="social-col">
                 <p class="underheading-text">
-                    E-mail:
+                    Email:
                 </p>
-                <div class="info">
-                    <div class="contact-row">
-                        <a class="phone-circle-column" href="mailto:hiringdryftpl@gmail.com">
-                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <use xlink:href="#email"></use>
-                            </svg>
-                        </a>
-                        <div class="contact-info-column">
-                            <p class="underheading-text">
-                                Для роботодавців
-                            </p>
-                            <p class="number-text">
-                                hiringdryftpl@gmail.com
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="info">
-                    <div class="contact-row">
-                        <a class="phone-circle-column" href="mailto:dryf@rekrutacja.com">
-                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <use xlink:href="#email"></use>
-                            </svg>
-                        </a>
-                        <div class="contact-info-column">
-                            <p class="underheading-text">
-                                Для пошуку роботи
-                            </p>
-                            <p class="number-text">
-                                dryf@rekrutacja.com
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <?php if (have_rows('emails', $contact_page_id)) :
+                    $count_emails = count(get_field('emails', $contact_page_id));
+                $text_0 = 'Для роботодавців';
+                $text_1 = 'Для пошуку роботи';
+                    while (have_rows('emails', $contact_page_id)) : the_row();
+                        for ($x = 0; $x <= $count_emails; ++$x) {
+                            if (get_sub_field('email_' . $x)) { ?>
+                                <div class="info">
+                                    <div class="contact-row">
+                                        <a class="phone-circle-column" href="tel:<?= get_sub_field('email_' . $x); ?>">
+                                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <use xlink:href="#email"></use>
+                                            </svg>
+                                        </a>
+                                        <div class="contact-info-column">
+                                            <?php if ($x == 0) { ?>
+                                            <p class="underheading-text">
+                                                <?= __( $text_0); ?>
+                                            </p>
+                                            <?php } else { ?>
+                                            <p class="underheading-text">
+                                                <?= __( $text_1); ?>
+                                            </p>
+                                            <?php } ?>
+                                            <p class="number-text">
+                                                <?= get_sub_field('email_' . $x); ?>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php
+                            }
+                        }
+                    endwhile; ?>
+                <?php endif; ?>
             </div>
             <div class="social-menu">
                 <div class="social-menu_row">

@@ -5,7 +5,7 @@
         <div class="row row-cols-2">
             <div class="col-50">
                 <h2 class="base-title heading">
-                    Найпопулярніші вакансії на сьогодні
+                   <?= $heading; ?>
                 </h2>
             </div>
             <div class="col-50 cl2">
@@ -53,46 +53,41 @@
                             <?= get_field('price'); ?>
                         </p>
                         <div class="places">
-                                <div class="city">
-                                    <div class="city-svg">
-                                        <svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <use xlink:href="#mark"></use>
-                                        </svg>
-                                    </div>
-                                    <p class="city-name">
-                                        <?= get_field('city_0'); ?>
-                                    </p>
-                                </div>
-                            <div class="city">
-                                <div class="city-svg">
-                                    <svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <use xlink:href="#mark"></use>
-                                    </svg>
-                                </div>
-                                <p class="city-name">
-                                    <?= get_field('city_1'); ?>
-                                </p>
-                            </div>
-                            <div class="city">
-                                <div class="city-svg">
-                                    <svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <use xlink:href="#mark"></use>
-                                    </svg>
-                                </div>
-                                <p class="city-name">
-                                    <?= get_field('city_2'); ?>
-                                </p>
-                            </div>
-                                <div class="city">
-                                    <div class="city-svg">
-                                        <svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <use xlink:href="#mark"></use>
-                                        </svg>
-                                    </div>
-                                    <p class="city-name more-cities">
-                                        ще +5 локацій
-                                    </p>
-                                </div>
+                           <!-- <?php
+                                if (get_field('group_city')) {
+                                    while (have_rows('group_city')) : the_row();
+                                    $count = count(get_field('group_city'));
+                                    if ($count > 3) {
+                                        for ($i = 0; $i <= 3; $i++) { ?>
+                                            <div class="city">
+                                                <div class="city-svg">
+                                                    <svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <use xlink:href="#mark"></use>
+                                                    </svg>
+                                                </div>
+                                                <p class="city-name">
+                                                    <?= get_sub_field('place_' . $i); ?>
+                                                </p>
+                                            </div>
+                                        <?php  };  echo ($count - 3); ?>
+                                        city
+                                        <?php
+                                    } else {
+                                        for ($i = 0; $i <= $count; $i++) { ?>
+                                            <div class="city">
+                                                <div class="city-svg">
+                                                    <svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <use xlink:href="#mark"></use>
+                                                    </svg>
+                                                </div>
+                                                <p class="city-name">
+                                                    <?= get_sub_field('place_' . $i); ?>
+                                                </p>
+                                            </div>
+                                        <?php  };
+                                    }; ?>
+                             <?php  endwhile; } ?>-->
+
                         </div>
                     </div>
                 </a>
