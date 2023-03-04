@@ -21,10 +21,16 @@ get_header();
 	<div class="content-col">
 		<?php get_template_part( 'template-parts/home-slider' ); ?>
         <?php get_template_part( 'template-parts/favorite-job-section' ); ?>
-        <?php get_template_part( 'template-parts/popular-job-section' ); ?>
+        <?php
+        $heading = 'Найпопулярніші вакансії на сьогодні';
+        include get_template_directory() . '/template-parts/popular-job-section.php';
+        ?>
         <?php get_template_part( 'template-parts/employees-section' ); ?>
         <?php get_template_part( 'template-parts/contact-section' ); ?>
-        <?php get_template_part( 'template-parts/advantages-section' ); ?>
+        <?php
+        $heading = 'Чому варто обирати нашу компанію для пошуку роботи закордоном?';
+        include get_template_directory() . '/template-parts/advantages-section.php';
+        ?>
         <?php get_template_part( 'template-parts/feedback-section' ); ?>
 		<?php get_template_part( 'template-parts/about-section' ); ?>
 	</div>

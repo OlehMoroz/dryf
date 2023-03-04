@@ -20,6 +20,10 @@ get_header();
 
     <div class="content-col">
         <?php get_template_part( 'template-parts/about-company-section' ); ?>
+        <?php
+        $heading = 'Чому варто обирати компанію Dryf для пошуку роботи?';
+        include get_template_directory() . '/template-parts/advantages-section.php';
+        ?>
         <?php get_template_part( 'template-parts/description-section' ); ?>
         <?php get_template_part( 'template-parts/happy-woman-section' ); ?>
         <?php get_template_part( 'template-parts/employees-section' ); ?>

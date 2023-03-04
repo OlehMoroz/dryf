@@ -22,6 +22,10 @@ get_header();
         <?php get_template_part( 'template-parts/about-vacancy-section' ); ?>
         <?php get_template_part( 'template-parts/conditions-section' ); ?>
         <?php get_template_part( 'template-parts/about-employer-section' ); ?>
+        <?php
+        $heading = 'Схожі вакансії';
+        include get_template_directory() . '/template-parts/popular-job-section.php';
+        ?>
     </div>
 </div>
 
