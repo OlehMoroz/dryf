@@ -101,4 +101,4 @@
         </div>
     </div>
 </section>
-<script src="/wp-content/themes/dryf/build/js/main.js"></script>
+<script src="/wp-content/themes/dryf/src/js/main.js"></script>
