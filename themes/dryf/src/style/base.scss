@@ -645,3 +645,12 @@ body {
         }
     }
 }
+.pagination{
+    display: flex;
+    flex-direction: row;
+    margin-top: 3.125rem;
+    .page-swiper-buttons{
+        justify-content: flex-end;
+        gap: 0.625rem;
+    }
+}

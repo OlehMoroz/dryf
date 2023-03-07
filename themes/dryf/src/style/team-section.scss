@@ -1,7 +1,7 @@
 @use 'variable'as v;
 
 .team-section {
-  margin: 2.5rem auto 7rem;
+  margin: 2.5rem auto 7.5rem;
   .heading{
     width: 38.76%;
     margin-bottom: 3.125rem;
@@ -28,9 +28,15 @@
         flex-direction: row;
         gap: 0.625rem;
         align-items: center;
-        svg{
+        .phone-svg{
           *{
             fill: v.$grey;
+          }
+        }
+        .email-svg{
+          *{
+            stroke: v.$grey;
+            stroke-width: 2;
           }
         }
         .contact-text{
@@ -47,7 +53,8 @@
       right: 0;
       bottom: 0;
       z-index: 2;
+      display: none;
     }
   }
-  /*3363733334443223333ww34442ww3ewwwe22222332ww33334333ee344333322*/
+  /*3345544433ee632*/
 }
