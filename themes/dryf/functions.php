@@ -227,9 +227,38 @@ function my_custom_init()
         'supports'           => array('title', 'thumbnail', 'excerpt', 'editor'),
         'menu_icon'			 => 'dashicons-open-folder',
     ));
+    register_taxonomy_for_object_type('animal_category_new', 'services');
+    register_post_type('blog', array(
+        'labels'             => array(
+            'name'               => 'Блог',
+            'singular_name'      => 'Блог',
+            'add_new'            => 'Добавити новину',
+            'add_new_item'       => 'Добавити новину',
+            'edit_item'          => 'Редагувати новину',
+            'new_item'           => 'Нові новини',
+            'view_item'          => 'Подивитись новини',
+            'search_items'       => 'Знайти новину',
+            'not_found'          =>  'Новину не знайдено',
+            'not_found_in_trash' => 'В корзині новину не знайдено',
+            'parent_item_colon'  => '',
+            'menu_name'          => 'Блог'
+        ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => true,
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 7,
+        'supports'           => array('title', 'thumbnail', 'excerpt', 'editor'),
+        'menu_icon'			 => 'dashicons-open-folder',
+    ));
 }
 
-add_theme_support('post-thumbnails', array('post','feedback', 'vacancies', 'services', 'team',));
+add_theme_support('post-thumbnails', array('post','feedback', 'vacancies', 'services', 'team', 'blog'));
 add_theme_support('widgets');
 
 add_theme_support('custom-logo', [
