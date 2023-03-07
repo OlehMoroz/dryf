@@ -24,7 +24,7 @@ $(document).ready(function () {
             prevEl: '.swiper-button-prev',
         },
     });
-    const swiperPopular_job = new Swiper('.favorite-job-slider', {
+    const swiperFavorite_job = new Swiper('.favorite-job-slider', {
         slidesPerView: 5,
         direction: 'horizontal',
         spaceBetween: 25,
@@ -44,10 +44,10 @@ $(document).ready(function () {
             prevEl: '.swiper-button-prev',
         },
     });
-    const swiperFavorite_job = new Swiper('.popular-job-slider', {
+    const swiperPopular_job = new Swiper('.popular-job-slider', {
         slidesPerView: 3,
         direction: 'horizontal',
-        spaceBetween: 29,
+        spaceBetween: 25,
         loop: false,
         navigation: {
             nextEl: '.swiper-button-next',
