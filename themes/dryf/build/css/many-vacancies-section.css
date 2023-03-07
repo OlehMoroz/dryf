@@ -1,0 +1,141 @@
+/* 
+    Font size
+
+---------------------------*/
+/*Base font*/
+/* 
+    Color
+
+---------------------------*/
+.many-vacancies-section {
+  margin: 2.5rem auto 7.5rem;
+}
+.many-vacancies-section .vacancy-row {
+  margin-bottom: 3.75rem;
+}
+.many-vacancies-section .vacancy-row .heading {
+  width: 76.85%;
+  margin-bottom: 0;
+}
+.many-vacancies-section .date-col {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  height: 100%;
+}
+.many-vacancies-section .date-col .classify-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  gap: 3.125rem;
+}
+.many-vacancies-section .date-col .classify-container .classify-btn { /*32322333333333333333332333*/
+  background: transparent;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: center;
+      align-items: center;
+  gap: 0.9375rem;
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.87rem;
+  line-height: 150%;
+  color: #272930;
+  transition: all 0.4s ease-in-out;
+}
+.many-vacancies-section .date-col .classify-container .classify-btn .classify-svg {
+  transition: all 0.4s ease-in-out;
+  stroke: #BDC2D1;
+  stroke-width: 3;
+}
+.many-vacancies-section .date-col .classify-container .classify-btn .filter-svg {
+  transition: all 0.4s ease-in-out;
+  stroke: #BDC2D1;
+  stroke-width: 2;
+}
+.many-vacancies-section .date-col .classify-container .classify-btn:hover {
+  transition: all 0.4s ease-in-out;
+  color: #FF6B00;
+}
+.many-vacancies-section .date-col .classify-container .classify-btn:hover svg {
+  transition: all 0.4s ease-in-out;
+  stroke: #FF6B00;
+}
+.many-vacancies-section .page-vacancy {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -webkit-column-gap: 1.5625rem;
+          column-gap: 1.5625rem;
+  row-gap: 0.9375rem;
+}
+.many-vacancies-section .page-vacancy .vacancy-column {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  height: 70.23%;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+  margin-top: 0.625rem;
+  width: 31.5%;
+}
+.many-vacancies-section .page-vacancy .vacancy-column:hover {
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 5px 65px rgba(39, 41, 48, 0.15);
+  margin-top: 0;
+}
+.many-vacancies-section .page-vacancy .vacancy-column .vacancy-block {
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
+}
+.many-vacancies-section .page-vacancy .vacancy-column .vacancy-block .vacancy-img {
+  height: 100%;
+}
+.many-vacancies-section .page-vacancy .vacancy-column .vacancy-block .text-block {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  padding: 1.5625rem;
+}
+.many-vacancies-section .page-vacancy .vacancy-column .vacancy-block .text-block .vacancy-heading {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8333333333vw;
+  height: 3rem;
+  line-height: 150%;
+  color: #272930;
+  margin-bottom: 0.625rem;
+}
+.many-vacancies-section .page-vacancy .vacancy-column .vacancy-block .text-block .price {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.31rem;
+  line-height: 150%;
+  color: #007FF4;
+  margin-bottom: 0.625rem;
+}
+.many-vacancies-section .page-vacancy .vacancy-column .vacancy-block .text-block .more-cities {
+  color: #BDC2D1;
+}

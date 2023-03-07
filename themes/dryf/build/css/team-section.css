@@ -8,8 +8,8 @@
 
 ---------------------------*/
 .team-section {
-  margin: 2.5rem auto 7rem;
-  /*3363733334443223333ww34442ww3ewwwe22222332ww33334333ee344333322*/
+  margin: 2.5rem auto 7.5rem;
+  /*3345544433ee632*/
 }
 .team-section .heading {
   width: 38.76%;
@@ -45,8 +45,12 @@
   -ms-flex-align: center;
       align-items: center;
 }
-.team-section .single-block .contacts .single-contact svg * {
+.team-section .single-block .contacts .single-contact .phone-svg * {
   fill: #BDC2D1;
+}
+.team-section .single-block .contacts .single-contact .email-svg * {
+  stroke: #BDC2D1;
+  stroke-width: 2;
 }
 .team-section .single-block .contacts .single-contact .contact-text {
   font-weight: 500;
@@ -60,4 +64,5 @@
   right: 0;
   bottom: 0;
   z-index: 2;
+  display: none;
 }

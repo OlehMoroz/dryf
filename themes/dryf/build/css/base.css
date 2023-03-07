@@ -676,3 +676,16 @@ body * {
   margin-top: 0;
   margin-bottom: 0.625rem;
 }
+
+.pagination {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  margin-top: 3.125rem;
+}
+.pagination .page-swiper-buttons {
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  gap: 0.625rem;
+}
