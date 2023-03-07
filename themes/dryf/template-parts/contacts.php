@@ -4,7 +4,7 @@
     <div class="top-container">
         <div class="top-row">
             <div class="menu-column">
-                <a class="menu-text">Головна</a>
+                <a class="menu-text" href="<?= $home_page_url ?>"><?= _e( $home_page_name ); ?></a>
             </div>
             <div class="menu-column">
                 <div class="inner-div">
@@ -13,7 +13,7 @@
                             <use xlink:href="#menu-arrow"></use>
                         </svg>
                     </div>
-                    <a class="menu-text" id="active-menu">Наші контакти</a>
+                    <a class="menu-text" id="active-menu"><?= _e( $contact_page_name ); ?></a>
                 </div>
             </div>
         </div>
@@ -53,7 +53,6 @@
                 </div>
                     <?php endwhile; }
                     } ?>
-
                 <?php
                 } endwhile; ?>
                 <?php endif; ?>
@@ -71,7 +70,7 @@
                             if (get_sub_field('email_' . $x)) { ?>
                                 <div class="info">
                                     <div class="contact-row">
-                                        <a class="phone-circle-column" href="tel:<?= get_sub_field('email_' . $x); ?>">
+                                        <a class="phone-circle-column" href="mailto:<?= get_sub_field('email_' . $x); ?>">
                                             <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <use xlink:href="#email"></use>
                                             </svg>
@@ -150,7 +149,7 @@
 
             </div>
             <a href="#" class="base-btn form-btn" data-event="learn-more">
-                Надіслати запит
+                <?= _e( $send_request2 ); ?>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="#arrow-right"></use>
                 </svg>

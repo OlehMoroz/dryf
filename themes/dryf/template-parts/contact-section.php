@@ -28,7 +28,6 @@
                         <p class="phone-number-text">
                             +48 (504) 63-94-66
                         </p>
-
                 </div>
                 <div class="contact-social">
                     <?php if (have_rows('social', $contact_page_id)) :

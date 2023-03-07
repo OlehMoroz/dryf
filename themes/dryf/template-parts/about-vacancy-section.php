@@ -9,10 +9,10 @@ foreach ($posts as $post) {
 setup_postdata($post);
 ?>
 <section class="about-vacancy-section section">
-    <div class="about-vacancy-container">
+    <div class="about-vacancy-container" style="background: url('<?= get_the_post_thumbnail($post, 'large')?>') center/cover no-repeat;">
         <div class="menu-row">
             <div class="menu-column">
-                <a class="menu-text">Головна</a>
+                <a class="menu-text" href="<?= $home_page_url ?>"><?= _e( $home_page_name ); ?></a>
             </div>
             <div class="menu-column">
                 <div class="inner-div">
@@ -21,7 +21,7 @@ setup_postdata($post);
                             <use xlink:href="#menu-arrow"></use>
                         </svg>
                     </div>
-                    <a class="menu-text">Вакансії</a>
+                    <a class="menu-text" href="<?= $vacancies_page_url ?>"><?= _e( $vacancies_page_name ); ?></a>
                 </div>
             </div>
             <div class="menu-column">
@@ -31,7 +31,7 @@ setup_postdata($post);
                             <use xlink:href="#menu-arrow"></use>
                         </svg>
                     </div>
-                    <a id="active-menu" class="menu-text">Професійний обвалювальник м’яса на м’ясокомбінат</a>
+                    <a id="active-menu" class="menu-text"><?php the_title() ?></a>
                 </div>
             </div>
         </div>
@@ -143,7 +143,7 @@ setup_postdata($post);
 
         </div>
         <a href="#" class="base-btn" data-event="learn-more">
-            Відгукнутись на вакансію
+            <?= _e( $respond ); ?>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="#arrow-right"></use>
             </svg>

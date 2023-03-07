@@ -57,7 +57,6 @@
                         </p>
                     </div>
                 </div>
-                <!--<?php the_permalink(); ?>"><?php the_post_thumbnail() ?>-->
             <?php } wp_reset_postdata(); ?>
         </div>
     </div>

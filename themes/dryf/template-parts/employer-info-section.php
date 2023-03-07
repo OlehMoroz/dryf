@@ -6,7 +6,7 @@ while (have_rows('employer_info')) : the_row(); ?>
     <div class="top-container">
         <div class="top-row">
             <div class="menu-column">
-                <a class="menu-text">Головна</a>
+                <a class="menu-text" href="<?= $home_page_url ?>"><?= _e( $home_page_name ); ?></a>
             </div>
             <div class="menu-column">
                 <div class="inner-div">
@@ -15,7 +15,7 @@ while (have_rows('employer_info')) : the_row(); ?>
                             <use xlink:href="#menu-arrow"></use>
                         </svg>
                     </div>
-                    <a class="menu-text" id="active-menu">Роботодавцю</a>
+                    <a class="menu-text" id="active-menu"><?= _e( $employer_page_name ); ?></a>
                 </div>
             </div>
         </div>

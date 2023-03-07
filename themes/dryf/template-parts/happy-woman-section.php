@@ -13,8 +13,8 @@ while (have_rows('creed_section')) : the_row(); ?>
         <p class="underheading-text happy-woman-text">
             <?= get_sub_field('under-heading_text'); ?>
         </p>
-        <a href="#" class="base-btn form-btn" data-event="learn-more">
-            Знайти вакансію для себе
+        <a href="<?= $vacancies_page_url ?>" class="base-btn form-btn" data-event="learn-more">
+            <?= _e( $find_vacancy ); ?>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="#arrow-right"></use>
             </svg>

@@ -9,8 +9,8 @@
                 </h2>
             </div>
             <div class="col-50 cl2">
-                <a href="#" class="base-btn" data-event="learn-more">
-                    Показати всі вакансії
+                <a href="<?= $vacancies_page_url ?>" class="base-btn" data-event="learn-more">
+                    <?= _e( $show_more_vacancies ); ?>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <use xlink:href="#arrow-right"></use>
                     </svg>
@@ -43,7 +43,7 @@
             setup_postdata($post);
             ?>
             <div class="popular-job-column swiper-slide">
-                <a href="http://localhost:10029/vacancy-page/" class="popular-job-block">
+                <a href="<?= $vacancy_page_url ?>" class="popular-job-block">
                     <?= get_the_post_thumbnail($post, 'large', array('class' => 'vacancy-img'))?>
                     <div class="text-block">
                         <p class="vacancy-heading">
@@ -87,11 +87,11 @@
                                         <?php  };
                                     }; ?>
                              <?php  endwhile; } ?>-->
-
                         </div>
                     </div>
                 </a>
             </div>
             <?php } wp_reset_postdata(); ?>
+    </div>
     </div>
 </section>

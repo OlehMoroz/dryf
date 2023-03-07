@@ -9,8 +9,8 @@
                 </h2>
             </div>
             <div class="col-50 cl2">
-                <a href="#" class="base-btn" data-event="learn-more">
-                    Показати всі вакансії
+                <a href="<?= $vacancies_page_url ?>" class="base-btn" data-event="learn-more">
+                    <?= _e( $show_more_vacancies ); ?>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <use xlink:href="#arrow-right"></use>
                     </svg>
@@ -35,7 +35,7 @@
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide col-20">
-                    <a href="#">
+                    <a href="<?= $vacancies_page_url ?>">
                         <img class="vacancy-img" src="/wp-content/themes/dryf/images/common/na-zavodi.png" alt="vacancy picture" loading="lazy">
                         <div class="name-container">
                             <div class="number-div">
@@ -50,7 +50,7 @@
                     </a>
                 </div>
                 <div class="swiper-slide col-20">
-                    <a href="#">
+                    <a href="<?= $vacancies_page_url ?>">
                         <img class="vacancy-img" src="/wp-content/themes/dryf/images/common/na-fabrytsi.png" alt="vacancy picture" loading="lazy">
                         <div class="name-container">
                             <div class="number-div">
@@ -65,7 +65,7 @@
                     </a>
                 </div>
                 <div class="swiper-slide col-20">
-                    <a href="#">
+                    <a href="<?= $vacancies_page_url ?>">
                         <img class="vacancy-img" src="/wp-content/themes/dryf/images/common/na-skladi.png" alt="vacancy picture" loading="lazy">
                         <div class="name-container">
                             <div class="number-div">
@@ -80,7 +80,7 @@
                     </a>
                 </div>
                 <div class="swiper-slide col-20">
-                    <a href="#">
+                    <a href="<?= $vacancies_page_url ?>">
                         <img class="vacancy-img" src="/wp-content/themes/dryf/images/common/na-budivnytstvi.png" alt="vacancy picture" loading="lazy">
                         <div class="name-container">
                             <div class="number-div">
@@ -95,7 +95,7 @@
                     </a>
                 </div>
                 <div class="swiper-slide col-20">
-                    <a href="#">
+                    <a href="<?= $vacancies_page_url ?>">
                         <img class="vacancy-img" src="/wp-content/themes/dryf/images/common/na-kuhni.png" alt="vacancy picture" loading="lazy">
                         <div class="name-container">
                             <div class="number-div">
@@ -110,7 +110,7 @@
                     </a>
                 </div>
                 <div class="swiper-slide col-20">
-                    <a href="#">
+                    <a href="<?= $vacancies_page_url ?>">
                         <img class="vacancy-img" src="/wp-content/themes/dryf/images/common/na-zavodi.png" alt="vacancy picture" loading="lazy">
                         <div class="name-container">
                             <div class="number-div">
