@@ -20,6 +20,19 @@ get_header();
 
 	<div class="content-col">
 		<?php get_template_part( 'template-parts/home-slider' ); ?>
+		<?php
+			$candidate_image = '/wp-content/themes/dryf/images/common/worker-1.png';
+			$employer_image = '/wp-content/themes/dryf/images/common/businessman-2.png';
+
+			include get_template_directory() . '/template-parts/cta-form.php';
+        ?>
+		<?php
+			$candidate_image = '/wp-content/themes/dryf/images/common/worker-2.png';
+			$employer_image = '/wp-content/themes/dryf/images/common/businessman-1.png';
+
+			include get_template_directory() . '/template-parts/cta-form.php';
+        ?>
+        <?php get_template_part( 'template-parts/employees-section' ); ?>
         <?php get_template_part( 'template-parts/contact-section' ); ?>
         <?php get_template_part( 'template-parts/advantages-section' ); ?>
 		<?php get_template_part( 'template-parts/about-section' ); ?>

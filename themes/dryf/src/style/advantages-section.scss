@@ -10,24 +10,11 @@
 
     /*Heading*/
     .advantages-heading {
-      max-width: 44%; /*507px*/
-      font-family: v.$f-onest;
-      font-style: normal;
-      font-weight: 500;
-      font-size: v.$f-28;
-      line-height: 150%; /*36px or 2.25rem*/
-      color: v.$black;
       margin-bottom: 0.625rem; /*10px*/
     }
 
     /*Under-heading text*/
     .advantages-p {
-      font-family: v.$f-onest;
-      font-style: normal;
-      font-weight: 400;
-      font-size: v.$f-16;
-      line-height: 150%; /*20px or 1.25rem*/
-      color: v.$grey;
       margin-bottom: 3.75rem; /*60px*/
     }
 
@@ -51,13 +38,12 @@
         width: 18.30%;
         transition: v.$transition;
         background: v.$white;
-
         &:hover {
           box-shadow: 0 5px 65px rgba(39, 41, 48, 0.15);
           transition: v.$transition;
           svg {
             * {
-              transition: v.$transition;
+              transition: all 0.2s ease-in-out;
               fill: v.$blue;
             }
           }
@@ -71,6 +57,7 @@
           align-items: center;
           svg{
             * {
+              transition: all 0.1s ease-in-out;
               fill: #BDC2D1;
             }
           }

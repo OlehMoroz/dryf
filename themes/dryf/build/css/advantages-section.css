@@ -19,22 +19,9 @@
   /*Row*/
 }
 .advantages-section .advantages-container .advantages-heading {
-  max-width: 44%; /*507px*/
-  font-family: "Onest";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.75rem;
-  line-height: 150%; /*36px or 2.25rem*/
-  color: #272930;
   margin-bottom: 0.625rem; /*10px*/
 }
 .advantages-section .advantages-container .advantages-p {
-  font-family: "Onest";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.8333333333vw;
-  line-height: 150%; /*20px or 1.25rem*/
-  color: #BDC2D1;
   margin-bottom: 3.75rem; /*60px*/
 }
 .advantages-section .advantages-container .row-cols-5 {
@@ -68,7 +55,7 @@
   transition: all 0.4s ease-in-out;
 }
 .advantages-section .advantages-container .row-cols-5 .col-20:hover svg * {
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
   fill: #007FF4;
 }
 .advantages-section .advantages-container .row-cols-5 .col-20 div {
@@ -82,6 +69,7 @@
       align-items: center;
 }
 .advantages-section .advantages-container .row-cols-5 .col-20 div svg * {
+  transition: all 0.1s ease-in-out;
   fill: #BDC2D1;
 }
 .advantages-section .advantages-container .row-cols-5 .col-20 p {

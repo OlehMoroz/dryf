@@ -14,4 +14,18 @@ $(document).ready(function () {
             prevEl: '.swiper-button-prev',
         },
     });
+
+    $('select[name="your-region"]').select2();
+
+    document.querySelectorAll('.form-tab').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (e.currentTarget.parentNode.classList.contains('tab-changed')) {
+
+            }
+            e.currentTarget.parentNode.classList.add('active');
+            e.currentTarget.nextElementSibling.classList.remove('active');
+            e.currentTarget.classList.add('active');
+        });
+    });
 });

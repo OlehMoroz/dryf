@@ -1,0 +1,134 @@
+@use 'variable'as v;
+
+.cta-section {
+    margin: 3.75rem auto 7.5rem;
+    position: relative;
+    overflow: hidden;
+    background: v.$white;
+    z-index: 0;
+
+    .form-tabs {
+        margin-top: 1.6rem;
+    }
+
+    .form-tabs_text {
+        font-family: v.$f-onest;
+        font-style: normal;
+        font-weight: 400;
+        font-size: v.$f-12;
+        line-height: 130%;
+        color: v.$text-grey;
+        margin-bottom: v.$f-12;
+    }
+
+    .form-tabs_row {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        background: v.$tab-grey;
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: '';
+            width: 50%;
+            height: 100%;
+            z-index: -1;
+            display: block;
+            background: v.$light-blue;
+            transition: v.$transition;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 15px;
+        }
+
+        .form-tab {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: v.$f-onest;
+            font-style: normal;
+            font-weight: 400;
+            font-size: v.$f-12;
+            color: v.$grey;
+            box-sizing: border-box;
+            padding: 5px 35px;
+            transition: v.$transition;
+            cursor: pointer;
+            z-index: 1;
+            position: relative;
+
+            svg {
+                margin-right: 10px;
+                * {
+                    fill: v.$grey;
+                    transition: v.$transition;
+                }
+            }
+
+            &.active {
+                color: v.$blue;
+
+                &::before {
+                    left: 0;
+                    right: auto;
+                    width: 100%;
+                    border-radius: 15px;
+                    background: v.$light-blue;
+                }
+
+                &:nth-child(2) {
+                    &::before {
+                        left: auto;
+                        right: 0;
+                    }
+                }
+
+                svg {
+                    * {
+                        fill: v.$blue;
+                    }
+                }
+            }
+        }
+
+        &.tab-changed {
+            &::before {
+                left: 50%;
+            }
+        }
+    }
+
+    /* Container */
+    .cta-container {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 5rem;
+    }
+
+    /* Background image (dude)*/
+    .background-img {
+        z-index: 1;
+    }
+
+    /* Top-left triangle*/
+    &::before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 0 solid transparent;
+        border-right: 10.15rem solid transparent;
+        border-top: 2.81rem solid v.$background;
+        position: absolute;
+        left: 5rem;
+        top: 0;
+        z-index: 1;
+    }
+}
