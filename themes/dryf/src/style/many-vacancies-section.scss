@@ -1,0 +1,114 @@
+@use 'variable' as v;
+
+.many-vacancies-section {
+  margin: 2.5rem auto 7.5rem;
+  .vacancy-row{
+    margin-bottom: 3.75rem;
+    .heading{
+      width: 76.85%;
+      margin-bottom: 0;
+    }
+  }
+  .date-col{
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    height: 100%;
+    .classify-container{
+      display: flex;
+      flex-direction:row;
+      gap: 3.125rem;
+      .classify-btn{/*32322333333333333333332333*/
+        background: transparent;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.9375rem;
+        font-family: v.$f-onest;
+        font-style: normal;
+        font-weight: 500;
+        font-size: v.$f-14;
+        line-height: 150%;
+        color: v.$black;
+        transition: v.$transition;
+        .classify-svg{
+          transition: v.$transition;
+          stroke: v.$grey;
+          stroke-width: 3;
+        }
+        .filter-svg{
+          transition: v.$transition;
+          stroke: v.$grey;
+          stroke-width: 2;
+        }
+        &:hover{
+          transition: v.$transition;
+          color: v.$orange;
+          svg{
+            transition: v.$transition;
+            stroke: v.$orange;
+          }
+        }
+      }
+    }
+  }
+  .page-vacancy{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.5625rem;
+    row-gap: 0.9375rem;
+    .vacancy-column{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 70.23%;
+      background: v.$white;
+      border-radius: 5px;
+      transition: v.$transition;
+      margin-top: 0.625rem;
+      width: 31.5%;
+      &:hover{
+        transition: v.$transition;
+        box-shadow: 0 5px 65px rgba(39, 41, 48, 0.15);
+        margin-top: 0;
+      }
+      .vacancy-block{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .vacancy-img{
+          height: 100%;
+        }
+        .text-block{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 1.5625rem;
+          .vacancy-heading{
+            font-family: v.$f-onest;
+            font-style: normal;
+            font-weight: 400;
+            font-size: v.$f-16;
+            height: 3rem;
+            line-height: 150%;
+            color: v.$black;
+            margin-bottom: 0.625rem;
+          }
+          .price{
+            font-family: v.$f-onest;
+            font-style: normal;
+            font-weight: 500;
+            font-size: v.$f-21;
+            line-height: 150%;
+            color: v.$blue;
+            margin-bottom: 0.625rem;
+          }
+          .more-cities{
+            color: #BDC2D1;
+          }
+        }
+      }
+    }
+  }
+}

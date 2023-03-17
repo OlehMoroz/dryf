@@ -1,0 +1,76 @@
+@use 'variable'as v;
+
+.employer-info-section {
+  margin: 2.5rem auto 4.5625rem;
+  .description{
+    .description-text{
+      line-height: 150%;
+      margin-bottom: 3.125rem;
+    }
+  }
+  .col-20{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5625rem;
+    gap: 2.5rem;
+    border-radius: 5px;
+    width: 18.30%;
+    height: 14.375rem;
+    transition: v.$transition;
+    &:hover {
+      box-shadow: 0 5px 65px rgba(39, 41, 48, 0.15);
+      transition: v.$transition;
+      svg {
+        * {
+          transition: all 0.2s ease-in-out;
+          fill: v.$blue;
+        }
+      }
+      #black{
+        * {
+          transition: all 0.2s ease-in-out;
+          fill: v.$blue;
+        }
+      }
+    }
+    div{
+      width: 18.51%;
+      height: 18.51%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s ease-in-out;
+      svg{
+        * {
+          transition: all 0.2s ease-in-out;
+          fill: v.$grey;
+        }
+      }
+      #black{
+        * {
+          transition: all 0.2s ease-in-out;
+          fill: black;
+        }
+      }
+    }
+    p{
+      font-family: v.$f-onest;
+      font-style: normal;
+      font-weight: 400;
+      font-size: v.$f-16;
+      line-height: 156%;
+      color: v.$black;
+    }
+  }
+
+/*Odd columns*/
+.cl-1{
+  background: v.$white;
+}
+
+/*Even columns*/
+.cl-2{
+  background: #ECEFF2;
+}
+}

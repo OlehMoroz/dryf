@@ -139,10 +139,126 @@ function my_custom_init()
 			'not_found' => __('No Authors found', 'txtdomain'),
 		]
 	]);
+
 	register_taxonomy_for_object_type('animal_category_new', 'services');
+    register_post_type('feedback', array(
+        'labels'             => array(
+            'name'               => 'Фідбек',
+            'singular_name'      => 'Фідбек',
+            'add_new'            => 'Добавити фідбек',
+            'add_new_item'       => 'Добавити фідбек',
+            'edit_item'          => 'Редагувати фідбек',
+            'new_item'           => 'Нові фідбеки',
+            'view_item'          => 'Подивитись фідбеки',
+            'search_items'       => 'Знайти фідбеки',
+            'not_found'          =>  'Фідбек не знайдено',
+            'not_found_in_trash' => 'В корзині фідбеків не знайдено',
+            'parent_item_colon'  => '',
+            'menu_name'          => 'Фідбек'
+        ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => true,
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 4,
+        'supports'           => array('title', 'thumbnail', 'excerpt', 'editor'),
+        'menu_icon'			 => 'dashicons-open-folder',
+    ));
+    register_taxonomy_for_object_type('animal_category_new', 'services');
+    register_post_type('team', array(
+        'labels'             => array(
+            'name'               => 'Команда',
+            'singular_name'      => 'Команда',
+            'add_new'            => 'Добавити працівника',
+            'add_new_item'       => 'Добавити працівника',
+            'edit_item'          => 'Редагувати працівника',
+            'new_item'           => 'Нові працівники',
+            'view_item'          => 'Подивитись працівників',
+            'search_items'       => 'Знайти працівника',
+            'not_found'          =>  'Працівника не знайдено',
+            'not_found_in_trash' => 'В корзині працівнкиків не знайдено',
+            'parent_item_colon'  => '',
+            'menu_name'          => 'Команда'
+        ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => true,
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 5,
+        'supports'           => array('title', 'thumbnail', 'excerpt', 'editor'),
+        'menu_icon'			 => 'dashicons-open-folder',
+    ));
+    register_taxonomy_for_object_type('animal_category_new', 'services');
+    register_post_type('vacancies', array(
+        'labels'             => array(
+            'name'               => 'Вакансії',
+            'singular_name'      => 'Вакансії',
+            'add_new'            => 'Добавити вакансію',
+            'add_new_item'       => 'Добавити вакансію',
+            'edit_item'          => 'Редагувати вакансію',
+            'new_item'           => 'Нові вакансії',
+            'view_item'          => 'Подивитись вакансії',
+            'search_items'       => 'Знайти вакансію',
+            'not_found'          =>  'Вакансію не знайдено',
+            'not_found_in_trash' => 'В корзині вакансії не знайдено',
+            'parent_item_colon'  => '',
+            'menu_name'          => 'Вакансії'
+        ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => true,
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 6,
+        'supports'           => array('title', 'thumbnail', 'excerpt', 'editor'),
+        'menu_icon'			 => 'dashicons-open-folder',
+    ));
+    register_taxonomy_for_object_type('animal_category_new', 'services');
+    register_post_type('blog', array(
+        'labels'             => array(
+            'name'               => 'Блог',
+            'singular_name'      => 'Блог',
+            'add_new'            => 'Добавити новину',
+            'add_new_item'       => 'Добавити новину',
+            'edit_item'          => 'Редагувати новину',
+            'new_item'           => 'Нові новини',
+            'view_item'          => 'Подивитись новини',
+            'search_items'       => 'Знайти новину',
+            'not_found'          =>  'Новину не знайдено',
+            'not_found_in_trash' => 'В корзині новину не знайдено',
+            'parent_item_colon'  => '',
+            'menu_name'          => 'Блог'
+        ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => true,
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 7,
+        'supports'           => array('title', 'thumbnail', 'excerpt', 'editor'),
+        'menu_icon'			 => 'dashicons-open-folder',
+    ));
 }
 
-add_theme_support('post-thumbnails', array('post', 'services',));
+add_theme_support('post-thumbnails', array('post','feedback', 'vacancies', 'services', 'team', 'blog'));
 add_theme_support('widgets');
 
 add_theme_support('custom-logo', [

@@ -14,4 +14,49 @@ $(document).ready(function () {
             prevEl: '.swiper-button-prev',
         },
     });
+    const swiperTeam = new Swiper('.employee-slider', {
+        slidesPerView: 5,
+        direction: 'horizontal',
+        spaceBetween: 25,
+        loop: false,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    const swiperFavorite_job = new Swiper('.favorite-job-slider', {
+        slidesPerView: 5,
+        direction: 'horizontal',
+        spaceBetween: 25,
+        loop: false,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    const swiperFeedback = new Swiper('.feedback-slider', {
+        slidesPerView: 3,
+        direction: 'horizontal',
+        spaceBetween: 29,
+        loop: false,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    const swiperPopular_job = new Swiper('.popular-job-slider', {
+        slidesPerView: 3,
+        direction: 'horizontal',
+        spaceBetween: 25,
+        loop: false,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 });
+function copyToClipboard() {
+    var link = window.location.href;
+    navigator.clipboard.writeText(link);
+    alert("Link copied!");
+}

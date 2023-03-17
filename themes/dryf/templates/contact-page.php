@@ -18,7 +18,7 @@ get_header();
 	<!-- End Sidebar -->
 
 	<div class="content-col">
-
+        <?php get_template_part( 'template-parts/contacts' ); ?>
 	</div>
 </div>
 

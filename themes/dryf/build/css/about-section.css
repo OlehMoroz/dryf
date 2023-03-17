@@ -9,7 +9,6 @@
 
 ---------------------------*/
 .about-section {
-  margin: 3.75rem auto 7.5rem;
   position: relative;
   overflow: hidden;
   background: #fff;
@@ -61,16 +60,15 @@
   margin-right: -2.5rem;
   margin-bottom: -5rem;
 }
-.about-section h2.base-title {
+.about-section .heading {
   width: 74%;
+  margin-bottom: 0;
 }
 .about-section .scroll-box {
   width: 95%;
-  /*30.875rem*/
   max-height: 23.45rem;
   overflow: hidden;
   overflow-y: scroll;
-  /*23.43rem*/
   margin: 2.5rem 0;
 }
 .about-section .scroll-box p {
@@ -82,7 +80,6 @@
   font-weight: 400;
   font-size: 0.8333333333vw;
   line-height: 169%;
-  /* or 169% or 27px*/
   color: #272930;
 }
 .about-section .background-img {
@@ -98,7 +95,6 @@
   -ms-flex-align: start;
       align-items: flex-start;
   padding: 1.5625rem;
-  /*14.375rem*/
   background: #007FF4;
   border-radius: 0.3125rem;
   position: absolute;
@@ -117,9 +113,7 @@
   font-weight: 500;
   font-size: 0.87rem;
   line-height: 150%;
-  /* or 150% or 21px*/
   color: #fff;
-  /* Inside auto layout */
 }
 .about-section::before {
   content: "";

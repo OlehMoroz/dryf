@@ -1,0 +1,76 @@
+/* 
+    Font size
+
+---------------------------*/
+/*Base font*/
+/* 
+    Color
+
+---------------------------*/
+.popular-job-section {
+  /*Feedback block*/
+}
+.popular-job-section .heading {
+  width: 55%;
+}
+.popular-job-section .popular-job-column {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  height: 70.23%;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+  margin-top: 3.75rem;
+}
+.popular-job-section .popular-job-column:hover {
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 5px 65px rgba(39, 41, 48, 0.15);
+  margin-top: 3.125rem;
+}
+.popular-job-section .popular-job-column .popular-job-block {
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
+}
+.popular-job-section .popular-job-column .popular-job-block .vacancy-img {
+  height: 100%;
+}
+.popular-job-section .popular-job-column .popular-job-block .text-block {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  padding: 1.5625rem;
+}
+.popular-job-section .popular-job-column .popular-job-block .text-block .vacancy-heading {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8333333333vw;
+  height: 3rem;
+  line-height: 150%;
+  color: #272930;
+  margin-bottom: 0.625rem;
+}
+.popular-job-section .popular-job-column .popular-job-block .text-block .price {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.31rem;
+  line-height: 150%;
+  color: #007FF4;
+  margin-bottom: 0.625rem;
+}
+.popular-job-section .popular-job-column .popular-job-block .text-block .more-cities {
+  color: #BDC2D1;
+}

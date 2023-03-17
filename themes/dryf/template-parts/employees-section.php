@@ -1,16 +1,16 @@
 <?php include __DIR__ . '/../lang/language.php'; ?>
 
 <section class="employees-section">
-    <div class="employees-container">
+    <div class="employees-container employee-slider slider">
         <div class="row row-cols-2">
             <div class="col-50 cl1">
-                <p class="heading">
+                <h2 class="base-title heading">
                     В нас працюють справжні професіонали, котрі знають що роблять
-                </p>
+                </h2>
             </div>
             <div class="col-50 cl2">
-                <a href="#" class="base-btn" data-event="learn-more">
-                    Більше працівників
+                <a href="<?= $our_team_page_url ?>" class="base-btn" data-event="learn-more">
+                    <?= _e( $more_employees ); ?>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <use xlink:href="#arrow-right"></use>
                     </svg>
@@ -32,62 +32,29 @@
         <p class="underheading-text">
             І вони допоможуть вам влаштуватися на омріяну посаду закордоном!
         </p>
-        <div class="row row-cols-5">
-            <div class="col-20">
-                <img class="employee-img" src="wp-content/themes/dryf/images/common/Victoriya.png" alt="employee photo" loading="lazy">
+        <div class="swiper-wrapper">
+            <?php
+            $posts = get_posts(array(
+                'numberposts' => 6,
+                'post_type'   => 'team',
+                'suppress_filters' => true,
+            ));
+            foreach ($posts as $post) {
+            setup_postdata($post);
+            ?>
+            <!-- Slides -->
+            <div class="swiper-slide col-20">
+                <?= get_the_post_thumbnail($post, 'large')?>
                 <div class="name-container">
                     <p class="employee-name">
-                        Вікторія Кравець
+                        <?php the_title() ?>
                     </p>
                     <p class="employee-job">
-                        Координатор
+                        <?= get_field('position'); ?>
                     </p>
                 </div>
             </div>
-            <div class="col-20">
-                <img class="employee-img" src="wp-content/themes/dryf/images/common/Svitlana.png" alt="employee photo" loading="lazy">
-                <div class="name-container">
-                    <p class="employee-name">
-                        Світлана Кудрик
-                    </p>
-                    <p class="employee-job">
-                        Бригадир
-                    </p>
-                </div>
-            </div>
-            <div class="col-20">
-                <img class="employee-img" src="wp-content/themes/dryf/images/common/Anatoliy.png" alt="employee photo" loading="lazy">
-                <div class="name-container">
-                    <p class="employee-name">
-                        Анатолій Семенов
-                    </p>
-                    <p class="employee-job">
-                        Рекрутер
-                    </p>
-                </div>
-            </div>
-            <div class="col-20">
-                <img class="employee-img" src="wp-content/themes/dryf/images/common/Igor.png" alt="employee photo" loading="lazy">
-                <div class="name-container">
-                    <p class="employee-name">
-                        Ігор Бондаренко
-                    </p>
-                    <p class="employee-job">
-                        CEO
-                    </p>
-                </div>
-            </div>
-            <div class="col-20">
-                <img class="employee-img" src="wp-content/themes/dryf/images/common/Nataliya.png" alt="employee photo" loading="lazy">
-                <div class="name-container">
-                    <p class="employee-name">
-                        Наталія Гнатюк
-                    </p>
-                    <p class="employee-job">
-                        Координатор
-                    </p>
-                </div>
-            </div>
+            <?php } wp_reset_postdata(); ?>
         </div>
     </div>
 </section>
