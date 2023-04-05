@@ -1,0 +1,87 @@
+@use 'variable'as v;
+
+.team-section {
+  margin: 2.5rem auto 7.5rem;
+  .heading{
+    width: 38.76%;
+    margin-bottom: 3.125rem;
+  }
+  .single-block{
+    flex-direction: row;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    .employee-position{
+      color: #007FF4;
+      margin-bottom: 0.3125rem;
+    }
+    .employee-name{
+      margin-bottom: 1.5625rem;
+    }
+    :nth-child(3) {
+      width: 51%;
+      margin-bottom: 1.5625rem;
+    }
+    .contacts{
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+      .single-contact{
+        display: flex;
+        flex-direction: row;
+        gap: 0.625rem;
+        align-items: center;
+        transition: v.$transition;
+        overflow: hidden;
+        .phone-svg{
+          *{
+            fill: v.$grey;
+            transition: v.$transition;
+          }
+        }
+        .email-svg{
+          *{
+            stroke: v.$grey;
+            stroke-width: 2;
+            transition: v.$transition;
+          }
+        }
+        .contact-text{
+          font-weight: 500;
+          font-size: v.$f-14;
+          line-height: 150%;
+          transition: v.$transition;
+        }
+        &:hover {
+          .contact-text {
+            color: v.$blue;
+          }
+          .phone-svg{
+            *{
+              fill: v.$blue;
+            }
+          }
+          .email-svg{
+            *{
+              stroke:v.$blue;
+            }
+          }
+        }
+      }
+    }
+    .col {
+      margin-right: -70%;
+    }
+    .post-img{
+      width: auto;
+      z-index: 2;
+      max-width: 65%;
+      margin: -3.75rem -5% -5rem auto;
+      display: block;
+      object-fit: cover;
+      min-height: 100%;
+      z-index: -1;
+      min-width: 65%;
+    }
+  }
+}

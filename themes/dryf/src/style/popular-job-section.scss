@@ -1,0 +1,78 @@
+@use 'variable' as v;
+
+.popular-job-section {
+  .heading {
+    width: 65%;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: -2rem;
+    padding-bottom: 2rem;
+  }
+  /*Feedback block*/
+  .popular-job-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 70.23%;
+    background: v.$white;
+    border-radius: 5px;
+    transition: v.$transition;
+    margin-top: 3.75rem;
+    height: auto;
+
+    &:hover {
+      transition: v.$transition;
+      box-shadow: 0 5px 65px rgba(39, 41, 48, 0.15);
+      transform: translateY(-.625rem);
+    }
+    
+      .popular-job-block{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .vacancy-img{
+          height: 100%;
+        }
+        .text-block{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 1.5625rem;
+          .vacancy-heading{
+            font-family: v.$f-onest;
+            font-style: normal;
+            font-weight: 400;
+            font-size: v.$f-16;
+            height: 3rem;
+            line-height: 150%;
+            color: v.$black;
+            margin-bottom: 0.625rem;
+            overflow: hidden;
+          }
+          .price{
+            font-family: v.$f-onest;
+            font-style: normal;
+            font-weight: 500;
+            font-size: v.$f-21;
+            line-height: 150%;
+            color: v.$blue;
+            margin-bottom: 0.625rem;
+          }
+        }
+      }
+  }
+}
+
+.places {
+  align-items: center;
+}
+
+.more-cities{
+  color: #BDC2D1;
+  display: none;
+  font-size: .75rem;
+}

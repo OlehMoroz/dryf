@@ -9,7 +9,6 @@
 
 ---------------------------*/
 .about-section {
-  margin: 3.75rem auto 7.5rem;
   position: relative;
   overflow: hidden;
   background: #fff;
@@ -33,16 +32,15 @@
   box-sizing: border-box;
   padding: 5rem;
 }
-.about-section h2.base-title {
+.about-section .heading {
   width: 74%;
+  margin-bottom: 0;
 }
 .about-section .scroll-box {
   width: 95%;
-  /*30.875rem*/
   max-height: 23.45rem;
   overflow: hidden;
   overflow-y: scroll;
-  /*23.43rem*/
   margin: 2.5rem 0;
 }
 .about-section .scroll-box p {
@@ -52,9 +50,8 @@
   font-family: "Onest";
   font-style: normal;
   font-weight: 400;
-  font-size: 0.8333333333vw;
+  font-size: clamp(16px, 0.8333333333vw, 18px);
   line-height: 169%;
-  /* or 169% or 27px*/
   color: #272930;
 }
 .about-section .background-img {
@@ -70,7 +67,6 @@
   -ms-flex-align: start;
       align-items: flex-start;
   padding: 1.5625rem;
-  /*14.375rem*/
   background: #007FF4;
   border-radius: 0.3125rem;
   position: absolute;
@@ -79,9 +75,56 @@
 }
 .about-section .text-box svg {
   margin-bottom: 2.8rem;
+  -webkit-animation: heart 2s infinite linear;
+          animation: heart 2s infinite linear;
+  display: block;
 }
 .about-section .text-box svg * {
   fill: #fff !important;
+}
+@-webkit-keyframes heart {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  65% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  85% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes heart {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  65% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  85% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 .about-section .text-box .text-box-text {
   font-family: "Onest";
@@ -89,9 +132,7 @@
   font-weight: 500;
   font-size: 0.87rem;
   line-height: 150%;
-  /* or 150% or 21px*/
   color: #fff;
-  /* Inside auto layout */
 }
 .about-section::before {
   content: "";

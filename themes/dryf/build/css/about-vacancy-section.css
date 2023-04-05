@@ -1,0 +1,130 @@
+/* 
+    Font size
+
+---------------------------*/
+/*Base font*/
+/* 
+    Color
+
+---------------------------*/
+.about-vacancy-section {
+  margin: 2.5rem auto 7.5rem;
+}
+.about-vacancy-section .about-vacancy-container {
+  box-sizing: border-box;
+  padding: 3.75rem 7.5rem;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+.about-vacancy-section .about-vacancy-container:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  z-index: -1;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+.about-vacancy-section .about-vacancy-container .breadcrumbs-row span > span {
+  color: #BDC2D1;
+}
+.about-vacancy-section .about-vacancy-container .content-block {
+  width: 76.86%;
+  padding: 1.5625rem 0 3.75rem 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
+}
+.about-vacancy-section .about-vacancy-container .content-block h1 {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 150%;
+  color: #fff;
+  padding-bottom: 0.9375rem;
+}
+.about-vacancy-section .about-vacancy-container .content-block .salary {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 150%;
+  color: #fff;
+  padding-bottom: 1.25rem;
+}
+.about-vacancy-section .about-vacancy-container .content-block .locations {
+  padding-bottom: 1.875rem;
+}
+.about-vacancy-section .about-vacancy-container .content-block .locations .locations-text {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 150%;
+  color: #fff;
+  padding-bottom: 0.75rem;
+}
+.about-vacancy-section .about-vacancy-container .content-block .locations .places {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 0.9375rem;
+}
+.about-vacancy-section .about-vacancy-container .content-block .locations .places .city .city-svg svg * {
+  fill: #007FF4;
+}
+.about-vacancy-section .about-vacancy-container .content-block .locations .places .city .city-name {
+  font-size: 0.87rem;
+  color: #fff;
+}
+.about-vacancy-section .about-vacancy-container .content-block .tag-block {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  gap: 0.8125rem;
+  row-gap: 0.9375rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.about-vacancy-section .about-vacancy-container .content-block .tag-block .tag-item {
+  box-sizing: border-box;
+  padding: 0.3125rem 0.625rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+}
+.about-vacancy-section .about-vacancy-container .content-block .tag-block .tag-item .tag-text {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 150%;
+  color: #fff;
+}
+.about-vacancy-section .about-vacancy-container .base-btn {
+  background: #FF6B00;
+  color: #fff;
+  transition: all 0.4s ease-in-out;
+}
+.about-vacancy-section .about-vacancy-container .base-btn svg * {
+  fill: #fff;
+  transition: all 0.4s ease-in-out;
+}
+.about-vacancy-section .about-vacancy-container .base-btn:hover {
+  background: #fff;
+  color: #272930;
+}
+.about-vacancy-section .about-vacancy-container .base-btn:hover svg * {
+  fill: #BDC2D1 !important;
+}

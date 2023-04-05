@@ -41,12 +41,12 @@
                         opacity: 1;
                         transform: translateY(0rem);
                     }
-        
+
                     p {
                         opacity: 1;
                         transform: translateY(0rem);
                     }
-        
+
                     .base-btn {
                         opacity: 1;
                         transform: translateY(0rem);
@@ -65,7 +65,7 @@
             position: relative;
 
             h2 {
-                max-width: 71%;
+                max-width: 85%;
                 font-family: v.$f-onest;
                 font-style: normal;
                 font-weight: 500;
@@ -128,7 +128,23 @@
     justify-content: center;
     background: v.$background;
     transition: v.$transition;
-    
+
+    svg {
+        * {
+            fill: v.$grey;
+            transition: v.$transition;
+        }
+    }
+
+    &:hover {
+        background: v.$blue;
+        svg {
+            * {
+                fill: v.$white;
+            }
+        }
+    }
+
     &::after {
         content: "";
         display: none;

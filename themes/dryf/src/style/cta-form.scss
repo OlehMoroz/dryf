@@ -7,8 +7,22 @@
     background: v.$white;
     z-index: 0;
 
+    .base-title {
+        max-width: 72%;
+    }
+
     .form-tabs {
         margin-top: 1.6rem;
+    }
+
+    .col-50 {
+        flex: 0 0 60%;
+        max-width: 58%;
+
+        &.pattern-container {
+            flex: 0 0 41%;
+            max-width: 58%;
+        }
     }
 
     .form-tabs_text {
@@ -43,6 +57,12 @@
             left: 0;
             top: 0;
             border-radius: 15px;
+        }
+
+        &.change {
+            &::before {
+                left: 50%;
+            }
         }
 
         .form-tab {
@@ -102,6 +122,181 @@
         }
     }
 
+    .form-content {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 1s ease-out;
+
+        &.tab_content-display {
+            display: block;
+        }
+
+        &.show {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .messenger-row {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 2rem;
+
+            span {
+                font-style: normal;
+                font-weight: 500;
+                font-size: v.$f-14;
+                line-height: 130%;
+                color: v.$black;
+            }
+
+            .messenger-item {
+                background: v.$message-bg;
+                border-radius: 65px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: v.$f-12;
+                line-height: 130%;
+                padding: 5.5px 10px;
+                margin: 0 0 0 v.$f-12;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: v.$transition;
+
+                &.active {
+                    background: v.$input-bg;
+                }
+
+                &::before {
+                    content: '';
+                    margin-right: 5px;
+                    margin-bottom: -5px;
+                }
+
+                &.telegram {
+                    p {
+                        text-transform: capitalize;
+                        color: #259CD8;
+                    }
+
+                    &::before {
+                        content: url('/wp-content/themes/dryf/images/telegram.svg');
+                    }
+                }
+
+                &.viber {
+                    p {
+                        text-transform: capitalize;
+                        color: #6359A2;
+                    }
+
+                    &::before {
+                        content: url('/wp-content/themes/dryf/images/viber.svg');
+                    }
+                }
+
+                &.whatsapp {
+                    p {
+                        text-transform: capitalize;
+                        color: #1AD03F;
+                    }
+
+                    &::before {
+                        content: url('/wp-content/themes/dryf/images/whatsapp.svg');
+                    }
+                }
+            }
+        }
+
+        .base-btn {
+            &::after {
+                content: url('/wp-content/themes/dryf/images/arrow.svg');
+                margin-left: 5px;
+                margin-bottom: -5px;
+            }
+
+            &:hover {
+                &::after {
+                    content: url('/wp-content/themes/dryf/images/arrow-wh.svg');
+                }
+            }
+        }
+    }
+
+    .cta-form-image {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        margin-right: -5rem;
+        transition: all 1s ease-out;
+        transform: translateX(30%);
+
+        &.tab_content-display {
+            display: block;
+        }
+
+        &.show {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0%);
+        }
+    }
+
+    .text-box {
+        max-width: 9.5rem;
+        z-index: 1;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        padding: 1.5625rem;
+        background: v.$blue;
+        border-radius: .3125rem;
+        position: absolute;
+        left: 10%;
+        top: 0;
+
+        &.orange {
+            background: v.$orange;
+        }
+
+        svg {
+            margin-bottom: 2.8rem;
+            display: block;
+            animation: time 2s infinite linear;
+        }
+
+        @keyframes time {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(180deg);
+            }
+        }
+
+        .text-box-text {
+            font-family: Onest;
+            font-style: normal;
+            font-weight: 500;
+            font-size: .87rem;
+            line-height: 150%;
+            color: #fff;
+        }
+    }
+
     /* Container */
     .cta-container {
         width: 100%;
@@ -115,7 +310,7 @@
 
     /* Background image (dude)*/
     .background-img {
-        z-index: 1;
+        z-index: 0;
     }
 
     /* Top-left triangle*/
@@ -130,5 +325,85 @@
         left: 5rem;
         top: 0;
         z-index: 1;
+    }
+}
+
+.select2-dropdown {
+    border: none;
+    background: v.$input-bg;
+    color: v.$black;
+
+    &.select2-dropdown--above {
+        transform: translateY(4px);
+    }
+
+    &.select2-dropdown--below {
+        margin-top: -4px;
+    }
+}
+
+body {
+    form {
+        margin-top: 2rem;
+
+        .form-wrap {
+            display: flex;
+            flex-wrap: wrap;
+
+            p {
+                flex: 1 0 100%;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            label {
+                flex: 1 0 50%;
+                display: flex;
+                box-sizing: border-box;
+                padding: 0rem 1rem 1rem 0;
+
+                &.hidden {
+                    display: none;
+                }
+
+                input, textarea, span {
+                    width: 100%;
+                }
+
+                input, textarea, .select2-selection--single  {
+                    padding: 1rem;
+                    border: none;
+                    background: v.$input-bg;
+                    border-radius: 5px;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: v.$f-14;
+                    line-height: 130%;
+                    color: v.$black;
+                    min-height: 51px;
+                    max-height: 51px;
+                    max-width: 100%;
+
+                    &::placeholder {
+                        color: v.$black;
+                    }
+                }
+
+                .select2-selection--single {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                }
+
+                .select2-container {
+                    width: 100% !important;
+                }
+
+                .select2-selection__arrow {
+                    width: 20px !important;
+                    top: 25% !important;
+                }
+            }
+        }
     }
 }

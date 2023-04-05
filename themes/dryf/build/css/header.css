@@ -40,7 +40,7 @@ header .mail-link {
       align-items: center;
   -ms-flex-pack: start;
       justify-content: flex-start;
-  margin-right: 2.5rem;
+  margin-right: 2%;
 }
 header .mail-link svg {
   margin-right: 10px;
@@ -94,6 +94,12 @@ header .messenger-block a:hover svg * {
 header .phone-dropdown {
   position: relative;
   margin-right: 3%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
 }
 header .phone-dropdown .phone-toogle {
   display: -ms-flexbox;
@@ -102,6 +108,7 @@ header .phone-dropdown .phone-toogle {
       align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
+  margin-right: 5%;
 }
 header .phone-dropdown .phone-toogle svg {
   margin-top: -3px;

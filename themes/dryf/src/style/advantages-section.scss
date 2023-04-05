@@ -2,11 +2,14 @@
 
 .advantages-section {
 
-  /*Container*/
   .advantages-container {
     width: 100%;
     margin: 7.5rem auto;
     /*height: 24.5rem;/*392px*/
+
+    .advantages-heading {
+      max-width: 45%;
+    }
 
     /*Heading*/
     .advantages-heading {
@@ -17,23 +20,13 @@
     .advantages-p {
       margin-bottom: 3.75rem; /*60px*/
     }
-
-    /*Row*/
-    .row-cols-5{
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      padding: 0;
-      gap: 25px;
-
       /*Row columns*/
       .col-20{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding: 1.5625rem;/*25px*/
-        gap: 2.5rem;/*40px*/
+        padding: 1.5625rem;
+        gap: 2.5rem;
         border-radius: 5px;
         width: 18.30%;
         transition: v.$transition;
@@ -41,8 +34,10 @@
         &:hover {
           box-shadow: 0 5px 65px rgba(39, 41, 48, 0.15);
           transition: v.$transition;
+          transition: v.$transition;
           svg {
             * {
+              transition: all 0.2s ease-in-out;
               transition: all 0.2s ease-in-out;
               fill: v.$blue;
             }
@@ -50,15 +45,15 @@
         }
 
         div{
-          width: 18.51%;/*40px or 2.5rem*/
-          height: 18.51%;/*40px or 2.5rem*/
+          width: 18.51%;
+          height: 18.51%;
           display: flex;
           justify-content: center;
           align-items: center;
           svg{
             * {
-              transition: all 0.1s ease-in-out;
-              fill: #BDC2D1;
+              transition: all 0.2s ease-in-out;
+              fill: v.$grey;
             }
           }
         }
@@ -68,7 +63,7 @@
           font-style: normal;
           font-weight: 400;
           font-size: v.$f-16;
-          line-height: 156%;/* or 25px */
+          line-height: 156%;
           color: v.$black;
         }
 
@@ -76,6 +71,6 @@
           background: v.$dark-grey;
         }
       }
-    }
+
   }
 }

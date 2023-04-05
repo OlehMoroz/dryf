@@ -8,6 +8,7 @@
 
 ---------------------------*/
 .contact-section {
+  margin: 2.8125rem auto 7.5rem;
   /* Container */
 }
 .contact-section .contact-container {
@@ -23,12 +24,12 @@
   /*justify-content: center;*/
 }
 .contact-section .contact-container .container-inner {
-  padding: 1.875rem 3.75rem 1.875rem 3.75rem;
-  /*30px 60px 30px 60px*/
-  gap: 3.25rem;
-  /*52px*/
+  padding: 1.875rem 2%;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  width: 100%;
 }
 .contact-section .contact-container .container-inner .contact-container-text {
   display: -ms-flexbox;
@@ -37,9 +38,6 @@
   /*5px 0 5px 0*/
 }
 .contact-section .contact-container .container-inner .contact-container-text .contact-container-p {
-  /*width: 28.125rem; or 461px*/
-  height: 1.625rem;
-  /*26px*/
   font-family: "Onest";
   font-style: normal;
   font-weight: 500;

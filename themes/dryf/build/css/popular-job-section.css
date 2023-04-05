@@ -1,0 +1,95 @@
+/* 
+    Font size
+
+---------------------------*/
+/*Base font*/
+/* 
+    Color
+
+---------------------------*/
+.popular-job-section {
+  /*Feedback block*/
+}
+.popular-job-section .heading {
+  width: 65%;
+}
+.popular-job-section .swiper-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: stretch;
+      align-items: stretch;
+  margin-bottom: -2rem;
+  padding-bottom: 2rem;
+}
+.popular-job-section .popular-job-column {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  height: 70.23%;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+  margin-top: 3.75rem;
+  height: auto;
+}
+.popular-job-section .popular-job-column:hover {
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 5px 65px rgba(39, 41, 48, 0.15);
+  -webkit-transform: translateY(-0.625rem);
+          transform: translateY(-0.625rem);
+}
+.popular-job-section .popular-job-column .popular-job-block {
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
+}
+.popular-job-section .popular-job-column .popular-job-block .vacancy-img {
+  height: 100%;
+}
+.popular-job-section .popular-job-column .popular-job-block .text-block {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  padding: 1.5625rem;
+}
+.popular-job-section .popular-job-column .popular-job-block .text-block .vacancy-heading {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(16px, 0.8333333333vw, 18px);
+  height: 3rem;
+  line-height: 150%;
+  color: #272930;
+  margin-bottom: 0.625rem;
+  overflow: hidden;
+}
+.popular-job-section .popular-job-column .popular-job-block .text-block .price {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.31rem;
+  line-height: 150%;
+  color: #007FF4;
+  margin-bottom: 0.625rem;
+}
+
+.places {
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.more-cities {
+  color: #BDC2D1;
+  display: none;
+  font-size: 0.75rem;
+}

@@ -1,0 +1,27 @@
+@use 'variable'as v;
+
+.employer-form-section {
+  margin: 0 auto 0;
+  box-sizing: border-box;
+  padding: 3.125rem;
+  background: v.$white;
+  display: flex;
+  flex-direction: column;
+  .heading{
+    width: 65%;
+    margin-bottom: 3.1875rem;
+  }
+  .form-section{
+    margin-bottom: 1.875rem;
+  }
+
+  form {
+    label {
+      span {
+        textarea {
+          max-height: 160px;
+        }
+      }
+    }
+  }
+}

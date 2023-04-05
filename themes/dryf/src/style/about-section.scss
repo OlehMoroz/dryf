@@ -1,7 +1,6 @@
 @use 'variable'as v;
 
 .about-section {
-  margin: 3.75rem auto 7.5rem;
   position: relative;
   overflow: hidden;
   background: v.$white;
@@ -20,19 +19,18 @@
 
 
   /* Container parts*/
-  h2.base-title {
+  .heading {
     width: 74%;
+    margin-bottom: 0;
   }
 
 
   /* Scroll-box */
   .scroll-box {
     width: 95%;
-    /*30.875rem*/
     max-height: 23.45rem;
     overflow: hidden;
     overflow-y: scroll;
-    /*23.43rem*/
     margin: 2.5rem 0;
 
     p {
@@ -44,7 +42,6 @@
       font-weight: 400;
       font-size: v.$f-16;
       line-height: 169%;
-      /* or 169% or 27px*/
       color: v.$black;
     }
   }
@@ -62,7 +59,6 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 1.5625rem;
-    /*14.375rem*/
     background: v.$blue;
     border-radius: 0.3125rem;
     position: absolute;
@@ -71,11 +67,35 @@
 
     svg {
       margin-bottom: 2.8rem;
+      animation: heart 2s infinite linear;
+      display: block;
 
       * {
         fill: v.$white !important;
       }
     }
+
+  @keyframes heart {
+      0% {
+          transform: scale(1);
+      }
+
+      50% {
+          transform: scale(1.1);
+      }
+
+      65% {
+        transform: scale(1);
+      }
+
+      85% {
+        transform: scale(1.1);
+      }
+
+      100% {
+          transform: scale(1);
+      }
+  }
 
     .text-box-text {
       font-family: v.$f-onest;
@@ -83,9 +103,8 @@
       font-weight: 500;
       font-size: v.$f-14;
       line-height: 150%;
-      /* or 150% or 21px*/
       color: v.$white;
-      /* Inside auto layout */
+
     }
   }
 

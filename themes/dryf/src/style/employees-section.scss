@@ -3,138 +3,91 @@
 .employees-section {
   margin: 7.5rem auto 2.8125rem;
 
-  /*Container*/
-  .employees-container {
-    width: 100%;
-    /*height: 28.625rem;/*458px*/
-    /*background: #46b450; /* just to test */
+  .swiper-wrapper {
+    align-items: stretch;
+  }
 
-    /*Row (heading and buttons)*/
-    .row-cols-2 {
+  .heading {
+    width: 97%;
+  }
+
+  /*Slider block*/
+  .col-20 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: v.$white;
+    border-radius: 5px;
+    transition: v.$transition;
+    margin-top: 3.75rem;
+    &:hover {
+      transition: v.$transition;
+      box-shadow: 0 5px 65px rgba(39, 41, 48, 0.15);
+    }
+    :nth-child(1){
+      height: 100%;
       width: 100%;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      padding: 0;
+      border-radius: 5px;
+    }
+    .name-container {
+      box-sizing: border-box;
+      padding: 1.5625rem;
+      width: 100%;
 
-      .col-50 {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-      }
-
-      /*heading*/
-      .heading {
-        max-width: 97%; /*557px*/
+      /*Name*/
+      .employee-name {
         font-family: v.$f-onest;
         font-style: normal;
         font-weight: 500;
-        font-size: v.$f-28;
-        line-height: 150%; /*36px or 2.25rem*/
+        font-size: v.$f-16;
+        line-height: 150%;
         color: v.$black;
-        margin-bottom: 0.625rem; /*10px*/
+        margin-bottom: 0.3125rem;
+        white-space: nowrap;
       }
 
-      .cl2 { /*Column 2 (buttons)*/
-        display: inline-flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        box-sizing: border-box;
-        padding-top: 0.75rem; /*12px*/
-        gap: 1.5625rem; /*25px*/
+      /*Job*/
+      .employee-job {
+        font-family: v.$f-onest;
+        font-style: normal;
+        font-weight: 400;
+        font-size: v.$f-14;
+        line-height: 150%;
+        color: v.$grey;
       }
     }
-    /*Underheading text*/
-    .underheading-text {
-      font-family: v.$f-onest;
-      font-style: normal;
-      font-weight: 400;
-      font-size: v.$f-16;
-      line-height: 150%; /*20px or 1.25rem*/
-      color: v.$grey;
-      margin-bottom: 3.75rem; /*60px*/
-    }
+  }
 
-    /*Row (team)*/
-    .row-cols-5 {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      padding: 0;
-      gap: 1.5625rem; /*25px*/
+  .single-contact {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: 500;
+    font-size: .87rem;
+    line-height: 150%;
+    transition: v.$transition;
+    margin-top: .5rem;
 
-      /*Columns*/
-      .col-20 {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 18.30%;
-        background: v.$white;
-        border-radius: 5px;
+    svg {
+      max-width: 16px;
+      margin-right: 10px;
+
+      * {
+        fill: v.$grey;
         transition: v.$transition;
+      }
+    }
 
-        &:hover {
-          transition: v.$transition;
-          box-shadow: 0 5px 65px rgba(39, 41, 48, 0.15);
-        }
+    &:hover {
+      color: v.$blue;
 
-        /*Photo*/
-        .employee-img {
-          width: 100%;
-          border-radius: 5px;
-        }
-
-        .name-container {
-          box-sizing: border-box;
-          padding: 1.5625rem; /*25px*/
-          width: 100%;
-
-          /*Name*/
-          .employee-name {
-            font-family: v.$f-onest;
-            font-style: normal;
-            font-weight: 500;
-            font-size: v.$f-onest;
-            line-height: 150%; /*20px or 1.25rem*/
-            color: v.$black;
-            margin-bottom: 0.3125rem;
-          }
-
-          /*Job*/
-          .employee-job {
-            font-family: v.$f-onest;
-            font-style: normal;
-            font-weight: 400;
-            font-size: v.$f-14;
-            line-height: 150%; /*18px or 1.125rem*/
-            color: v.$grey;
-          }
+      svg {
+        * {
+          fill: v.$blue;
         }
       }
     }
+
   }
-
-  /*Slider*/
-
-  /*Swipe buttons*/
-  .swiper-buttons {
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    box-sizing: border-box;
-    gap: 0.9375rem; /*15px*/
-    .swiper-button-prev {
-      position: static;
-      margin-top: 0;
-    }
-
-    .swiper-button-next {
-      position: static;
-      margin-top: 0;
-    }
-  }
-  /*Slider block*/
-
-
 }
+

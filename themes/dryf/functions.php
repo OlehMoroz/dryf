@@ -52,20 +52,20 @@ add_action('init', 'my_custom_init');
 function my_custom_init()
 {
 
-	register_post_type('services', array(
+	register_post_type('jobs', array(
 		'labels'             => array(
-			'name'               => 'Послуги',
-			'singular_name'      => 'Послуги',
-			'add_new'            => 'Добавити послугу',
-			'add_new_item'       => 'Добавити послугу',
-			'edit_item'          => 'Редагувати послугу',
-			'new_item'           => 'Нові послуги',
-			'view_item'          => 'Подивитись послугу',
-			'search_items'       => 'Знайти послугу',
-			'not_found'          =>  'Послуг не знайдено',
-			'not_found_in_trash' => 'В корзині послуг не знайдено',
+			'name'               => 'Jobs',
+			'singular_name'      => 'Jobs',
+			'add_new'            => 'Add new job',
+			'add_new_item'       => 'Add new job',
+			'edit_item'          => 'Edit new job',
+			'new_item'           => 'New jobs',
+			'view_item'          => 'New jobs',
+			'search_items'       => 'Find job',
+			'not_found'          =>  'Job not found',
+			'not_found_in_trash' => 'Job not found',
 			'parent_item_colon'  => '',
-			'menu_name'          => 'Послуги'
+			'menu_name'          => 'Jobs'
 
 		),
 		'public'             => true,
@@ -80,43 +80,73 @@ function my_custom_init()
 		'menu_position'      => 4,
 		'supports'           => array('title', 'thumbnail', 'excerpt', 'editor'),
 		'menu_icon'			 => 'dashicons-open-folder',
-		'taxonomies'         => array('animal_category', '')
+		'taxonomies'         => array('job_category', '')
 	));
 
-	register_taxonomy('animal_category', ['animal'], [
-		'label' => __('Category', 'txtdomain'),
-		'hierarchical' => false,
-		'rewrite'      =>  array('slug' => '/animal-category', 'with_front' => false),
-		'show_admin_column' => true,
-		'has_archive'       =>  true,
-		'public'            =>  true,
-        'publicly_queryable'=>  true,
-        'show_ui'           =>  true, 
-        'query_var'         =>  true,
-        'show_in_nav_menus' =>  false,
-        'capability_type'   =>  'animal',
-        'hierarchical'      =>  false,
-		'labels' => [
-			'singular_name' => __('Category', 'txtdomain'),
-			'all_items' => __('All Category', 'txtdomain'),
-			'edit_item' => __('Edit Category', 'txtdomain'),
-			'view_item' => __('View Category', 'txtdomain'),
-			'update_item' => __('Update Category', 'txtdomain'),
-			'add_new_item' => __('Add New Category', 'txtdomain'),
-			'new_item_name' => __('New Category Name', 'txtdomain'),
-			'search_items' => __('Search Category', 'txtdomain'),
-			'popular_items' => __('Popular Category', 'txtdomain'),
-			'separate_items_with_commas' => __('Separate authors with comma', 'txtdomain'),
-			'choose_from_most_used' => __('Choose from most used Authors', 'txtdomain'),
-			'not_found' => __('No Authors found', 'txtdomain'),
-		]
-	]);
-	register_taxonomy_for_object_type('animal_category', 'services');
+	register_post_type('team', array(
+		'labels'             => array(
+			'name'               => 'Team',
+			'singular_name'      => 'Team',
+			'add_new'            => 'Add new worker',
+			'add_new_item'       => 'Add new worker',
+			'edit_item'          => 'Edit new worker',
+			'new_item'           => 'New worker',
+			'view_item'          => 'New worker',
+			'search_items'       => 'Find worker',
+			'not_found'          =>  'Worker not found',
+			'not_found_in_trash' => 'Worker not found',
+			'parent_item_colon'  => '',
+			'menu_name'          => 'Team'
 
-	register_taxonomy('animal_category_new', ['animal'], [
+		),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 4,
+		'supports'           => array('title', 'thumbnail', 'excerpt', 'editor'),
+		'menu_icon'			 => 'dashicons-open-folder',
+	));
+
+	register_post_type('reviews', array(
+		'labels'             => array(
+			'name'               => 'Reviews',
+			'singular_name'      => 'Reviews',
+			'add_new'            => 'Add new review',
+			'add_new_item'       => 'Add new review',
+			'edit_item'          => 'Edit new review',
+			'new_item'           => 'New review',
+			'view_item'          => 'New review',
+			'search_items'       => 'Find review',
+			'not_found'          =>  'Review not found',
+			'not_found_in_trash' => 'Review not found',
+			'parent_item_colon'  => '',
+			'menu_name'          => 'Reviews'
+
+		),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 4,
+		'supports'           => array('title', 'thumbnail', 'excerpt', 'editor'),
+		'menu_icon'			 => 'dashicons-open-folder',
+	));
+
+	register_taxonomy('job_category', ['jobs'], [
 		'label' => __('Category', 'txtdomain'),
 		'hierarchical' => false,
-		'rewrite'      =>  array('slug' => '/animal-category', 'with_front' => false),
+		'rewrite'      =>  array('slug' => '/job-category', 'with_front' => false),
 		'show_admin_column' => true,
 		'has_archive'       =>  true,
 		'public'            =>  true,
@@ -124,7 +154,7 @@ function my_custom_init()
         'show_ui'           =>  true, 
         'query_var'         =>  true,
         'show_in_nav_menus' =>  false,
-        'capability_type'   =>  'animal',
+        'capability_type'   =>  'jobs',
         'hierarchical'      =>  false,
 		'labels' => [
 			'singular_name' => __('Category', 'txtdomain'),
@@ -141,10 +171,70 @@ function my_custom_init()
 			'not_found' => __('No Authors found', 'txtdomain'),
 		]
 	]);
-	register_taxonomy_for_object_type('animal_category_new', 'services');
+	register_taxonomy_for_object_type('job_category', 'jobs');
+
+	register_taxonomy('job_city', ['jobs'], [
+		'label' => __('City', 'txtdomain'),
+		'hierarchical' => false,
+		'rewrite'      =>  array('slug' => '/job-city', 'with_front' => false),
+		'show_admin_column' => true,
+		'has_archive'       =>  true,
+		'public'            =>  true,
+        'publicly_queryable'=>  true,
+        'show_ui'           =>  true, 
+        'query_var'         =>  true,
+        'show_in_nav_menus' =>  false,
+        'capability_type'   =>  'jobs',
+        'hierarchical'      =>  false,
+		'labels' => [
+			'singular_name' => __('City', 'txtdomain'),
+			'all_items' => __('All City', 'txtdomain'),
+			'edit_item' => __('Edit City', 'txtdomain'),
+			'view_item' => __('View City', 'txtdomain'),
+			'update_item' => __('Update City', 'txtdomain'),
+			'add_new_item' => __('Add New City', 'txtdomain'),
+			'new_item_name' => __('New City Name', 'txtdomain'),
+			'search_items' => __('Search City', 'txtdomain'),
+			'popular_items' => __('Popular City', 'txtdomain'),
+			'separate_items_with_commas' => __('Separate authors with comma', 'txtdomain'),
+			'choose_from_most_used' => __('Choose from most used Authors', 'txtdomain'),
+			'not_found' => __('No Authors found', 'txtdomain'),
+		]
+	]);
+	register_taxonomy_for_object_type('job_city', 'jobs');
+	
+	register_taxonomy('job_feautered', ['jobs'], [
+		'label' => __('Feautered', 'txtdomain'),
+		'hierarchical' => false,
+		'rewrite'      =>  array('slug' => '/job-feautered', 'with_front' => false),
+		'show_admin_column' => true,
+		'has_archive'       =>  true,
+		'public'            =>  true,
+        'publicly_queryable'=>  true,
+        'show_ui'           =>  true, 
+        'query_var'         =>  true,
+        'show_in_nav_menus' =>  false,
+        'capability_type'   =>  'jobs',
+        'hierarchical'      =>  false,
+		'labels' => [
+			'singular_name' => __('Feautered', 'txtdomain'),
+			'all_items' => __('All Feautered', 'txtdomain'),
+			'edit_item' => __('Edit Feautered', 'txtdomain'),
+			'view_item' => __('View Feautered', 'txtdomain'),
+			'update_item' => __('Update Feautered', 'txtdomain'),
+			'add_new_item' => __('Add New Feautered', 'txtdomain'),
+			'new_item_name' => __('New Feautered Name', 'txtdomain'),
+			'search_items' => __('Search Feautered', 'txtdomain'),
+			'popular_items' => __('Popular Feautered', 'txtdomain'),
+			'separate_items_with_commas' => __('Separate authors with comma', 'txtdomain'),
+			'choose_from_most_used' => __('Choose from most used Authors', 'txtdomain'),
+			'not_found' => __('No Authors found', 'txtdomain'),
+		]
+	]);
+	register_taxonomy_for_object_type('job_feautered', 'jobs');
 }
 
-add_theme_support('post-thumbnails', array('post', 'services',));
+add_theme_support('post-thumbnails', array('post', 'page', 'jobs', 'team'));
 add_theme_support('widgets');
 
 add_theme_support('custom-logo', [

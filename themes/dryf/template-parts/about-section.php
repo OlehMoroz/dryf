@@ -2,10 +2,10 @@
 
 <?php if (have_rows('about')) :
 while (have_rows('about')) : the_row(); ?>
-<section class="about-section">
+<section class="about-section section">
     <div class="about-container">
         <div class="col-50">
-            <h2 class="base-title"><?= _e( $about_section_title ); ?></h2>
+            <h2 class="base-title heading"><?= _e( $about_section_title ); ?></h2>
             <div class="scroll-box">
                 <?php if (get_sub_field('text')) { ?>
                     <p><?= get_sub_field('text'); ?></p>

@@ -17,8 +17,21 @@
   /* Background image (dude)*/
   /* Top-left triangle*/
 }
+.cta-section .base-title {
+  max-width: 72%;
+}
 .cta-section .form-tabs {
   margin-top: 1.6rem;
+}
+.cta-section .col-50 {
+  -ms-flex: 0 0 60%;
+      flex: 0 0 60%;
+  max-width: 58%;
+}
+.cta-section .col-50.pattern-container {
+  -ms-flex: 0 0 41%;
+      flex: 0 0 41%;
+  max-width: 58%;
 }
 .cta-section .form-tabs_text {
   font-family: "Onest";
@@ -54,6 +67,9 @@
   left: 0;
   top: 0;
   border-radius: 15px;
+}
+.cta-section .form-tabs_row.change::before {
+  left: 50%;
 }
 .cta-section .form-tabs_row .form-tab {
   display: -ms-flexbox;
@@ -101,6 +117,171 @@
 .cta-section .form-tabs_row.tab-changed::before {
   left: 50%;
 }
+.cta-section .form-content {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s ease-out;
+}
+.cta-section .form-content.tab_content-display {
+  display: block;
+}
+.cta-section .form-content.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+.cta-section .form-content .messenger-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  margin-bottom: 2rem;
+}
+.cta-section .form-content .messenger-row span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.87rem;
+  line-height: 130%;
+  color: #272930;
+}
+.cta-section .form-content .messenger-row .messenger-item {
+  background: #F3F6FF;
+  border-radius: 65px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 130%;
+  padding: 5.5px 10px;
+  margin: 0 0 0 0.75rem;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  transition: all 0.4s ease-in-out;
+}
+.cta-section .form-content .messenger-row .messenger-item.active {
+  background: #E7EAF2;
+}
+.cta-section .form-content .messenger-row .messenger-item::before {
+  content: "";
+  margin-right: 5px;
+  margin-bottom: -5px;
+}
+.cta-section .form-content .messenger-row .messenger-item.telegram p {
+  text-transform: capitalize;
+  color: #259CD8;
+}
+.cta-section .form-content .messenger-row .messenger-item.telegram::before {
+  content: url("/wp-content/themes/dryf/images/telegram.svg");
+}
+.cta-section .form-content .messenger-row .messenger-item.viber p {
+  text-transform: capitalize;
+  color: #6359A2;
+}
+.cta-section .form-content .messenger-row .messenger-item.viber::before {
+  content: url("/wp-content/themes/dryf/images/viber.svg");
+}
+.cta-section .form-content .messenger-row .messenger-item.whatsapp p {
+  text-transform: capitalize;
+  color: #1AD03F;
+}
+.cta-section .form-content .messenger-row .messenger-item.whatsapp::before {
+  content: url("/wp-content/themes/dryf/images/whatsapp.svg");
+}
+.cta-section .form-content .base-btn::after {
+  content: url("/wp-content/themes/dryf/images/arrow.svg");
+  margin-left: 5px;
+  margin-bottom: -5px;
+}
+.cta-section .form-content .base-btn:hover::after {
+  content: url("/wp-content/themes/dryf/images/arrow-wh.svg");
+}
+.cta-section .cta-form-image {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  margin-right: -5rem;
+  transition: all 1s ease-out;
+  -webkit-transform: translateX(30%);
+          transform: translateX(30%);
+}
+.cta-section .cta-form-image.tab_content-display {
+  display: block;
+}
+.cta-section .cta-form-image.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+.cta-section .text-box {
+  max-width: 9.5rem;
+  z-index: 1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding: 1.5625rem;
+  background: #007FF4;
+  border-radius: 0.3125rem;
+  position: absolute;
+  left: 10%;
+  top: 0;
+}
+.cta-section .text-box.orange {
+  background: #FF6B00;
+}
+.cta-section .text-box svg {
+  margin-bottom: 2.8rem;
+  display: block;
+  -webkit-animation: time 2s infinite linear;
+          animation: time 2s infinite linear;
+}
+@-webkit-keyframes time {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+@keyframes time {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+.cta-section .text-box .text-box-text {
+  font-family: Onest;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.87rem;
+  line-height: 150%;
+  color: #fff;
+}
 .cta-section .cta-container {
   width: 100%;
   position: relative;
@@ -114,7 +295,7 @@
   padding: 5rem;
 }
 .cta-section .background-img {
-  z-index: 1;
+  z-index: 0;
 }
 .cta-section::before {
   content: "";
@@ -127,4 +308,90 @@
   left: 5rem;
   top: 0;
   z-index: 1;
+}
+
+.select2-dropdown {
+  border: none;
+  background: #E7EAF2;
+  color: #272930;
+}
+.select2-dropdown.select2-dropdown--above {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+.select2-dropdown.select2-dropdown--below {
+  margin-top: -4px;
+}
+
+body form {
+  margin-top: 2rem;
+}
+body form .form-wrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+body form .form-wrap p {
+  -ms-flex: 1 0 100%;
+      flex: 1 0 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+body form .form-wrap label {
+  -ms-flex: 1 0 50%;
+      flex: 1 0 50%;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  padding: 0rem 1rem 1rem 0;
+}
+body form .form-wrap label.hidden {
+  display: none;
+}
+body form .form-wrap label input, body form .form-wrap label textarea, body form .form-wrap label span {
+  width: 100%;
+}
+body form .form-wrap label input, body form .form-wrap label textarea, body form .form-wrap label .select2-selection--single {
+  padding: 1rem;
+  border: none;
+  background: #E7EAF2;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.87rem;
+  line-height: 130%;
+  color: #272930;
+  min-height: 51px;
+  max-height: 51px;
+  max-width: 100%;
+}
+body form .form-wrap label input::-webkit-input-placeholder, body form .form-wrap label textarea::-webkit-input-placeholder, body form .form-wrap label .select2-selection--single::-webkit-input-placeholder {
+  color: #272930;
+}
+body form .form-wrap label input:-ms-input-placeholder, body form .form-wrap label textarea:-ms-input-placeholder, body form .form-wrap label .select2-selection--single:-ms-input-placeholder {
+  color: #272930;
+}
+body form .form-wrap label input::-ms-input-placeholder, body form .form-wrap label textarea::-ms-input-placeholder, body form .form-wrap label .select2-selection--single::-ms-input-placeholder {
+  color: #272930;
+}
+body form .form-wrap label input::placeholder, body form .form-wrap label textarea::placeholder, body form .form-wrap label .select2-selection--single::placeholder {
+  color: #272930;
+}
+body form .form-wrap label .select2-selection--single {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+}
+body form .form-wrap label .select2-container {
+  width: 100% !important;
+}
+body form .form-wrap label .select2-selection__arrow {
+  width: 20px !important;
+  top: 25% !important;
 }

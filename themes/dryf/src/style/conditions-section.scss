@@ -1,0 +1,36 @@
+@use 'variable'as v;
+
+.conditions-section {
+  margin-bottom: 6rem;
+  .heading{
+    margin-bottom: 2.5rem;
+  }
+  .conditions-row{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 6.25rem;
+    .column{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.625rem;
+      .conditions-heading{
+        font-family: v.$f-onest;
+        font-style: normal;
+        font-weight: 400;
+        font-size: v.$f-18;
+        line-height: 150%;
+        color: v.$blue;
+      }
+      .text{
+        font-family: v.$f-onest;
+        font-style: normal;
+        font-weight: 500;
+        font-size: v.$f-26;
+        line-height: 150%;
+        color: v.$black;
+      }
+    }
+  }
+}

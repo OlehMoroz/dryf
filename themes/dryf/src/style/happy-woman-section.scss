@@ -1,0 +1,104 @@
+@use 'variable'as v;
+
+.happy-woman-section {
+  position: relative;
+  background: v.$white;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  z-index: 0;
+  justify-content: space-between;
+  .text-col{
+    display: flex;
+    flex-direction: column;
+    padding: 7.5rem 0 7.5rem 7.5rem;
+    width: 38.67%;
+    .credo{
+      font-family: v.$f-onest;
+      font-style: normal;
+      font-weight: 500;
+      font-size: v.$f-14;
+      line-height: 150%;
+      color: v.$orange;
+      margin-bottom: 0.9375rem;
+    }
+    .heading{
+      line-height: 147.5%;
+      margin-bottom: 0.9375rem;
+    }
+    .happy-woman-text{
+      line-height: 169%;
+      color: v.$black;
+      margin-bottom: 2.5rem;
+    }
+  }
+  .img-col{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 53.96%;
+    width: 46.96%;
+    margin: 0 3% 0 auto;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 12.23%;
+      top: 14.10%;
+      z-index: 1;
+      background-image: url('/wp-content/themes/dryf/images/common/about-section-pattern.png');
+      width: 31%;
+      height: 56.05%;
+      background-repeat: no-repeat;
+    }
+    .text-box {
+      max-width: 10.37rem;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.5625rem;
+      background: v.$orange;
+      border-radius: 0.3125rem;
+      position: absolute;
+      top: 21.34%;
+      left: -5%;
+      svg {
+        margin-bottom: 2.8rem;
+        animation: heart 2s infinite linear;
+        display: block;
+        * {
+          fill: v.$white !important;
+        }
+      }
+      .text-box-text {
+        font-family: v.$f-onest;
+        font-style: normal;
+        font-weight: 500;
+        font-size: v.$f-14;
+        line-height: 150%;
+        color: v.$white;
+      }
+    }
+    .background-img{
+      position: relative;
+      right: 0;
+      z-index: 3;
+      max-width: 100%;
+      object-fit: contain;
+      margin-top: auto;
+    }
+  }
+  &::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 0 solid transparent;
+    border-right: 10.15rem solid transparent;
+    border-top: 2.81rem solid v.$background;
+    position: absolute;
+    left: 7.5rem;
+    top: 0;
+    z-index: 1;
+  }
+}
