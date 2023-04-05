@@ -34,8 +34,9 @@
 
                 <div class="phone-dropdown">
                     <?php  while (have_rows('phones', $contact_page_id)) : the_row();
-                        if (get_sub_field('phone_0')) { 
-                            while (have_rows('phone_0')) : the_row(); ?>
+                        for ($x = 0; $x <= $count_phones; ++$x) {
+                        if (get_sub_field('phone_' . $x)) { 
+                            while (have_rows('phone_' . $x)) : the_row(); ?>
                             <div class="phone-toogle">
                                 <div class="phone-name">
                                     <?= get_sub_field('account_name'); ?>
@@ -43,30 +44,8 @@
                                 <a href="tel:<?= get_sub_field('phone_number'); ?>">
                                     <?= get_sub_field('phone_number'); ?>
                                 </a>
-                                <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <use xlink:href="#arrow-down"></use>
-                                </svg>
                             </div>
-                        <?php endwhile; };
-
-                        if ($count_phones > 1) { ?>
-                            <div class="phone-list">
-                                <?php for ($x = 0; $x <= $count_phones; ++$x) {
-                                    if (get_sub_field('phone_' . $x)) { 
-                                        while (have_rows('phone_' . $x)) : the_row(); ?>
-                                            <div class="phone-list_item">
-                                                <div class="phone-name">
-                                                    <?= get_sub_field('account_name'); ?>
-                                                </div>
-                                                <a href="tel:<?= get_sub_field('phone_number'); ?>">
-                                                <?= get_sub_field('phone_number'); ?>
-                                                </a>
-                                            </div>
-                                <?php endwhile; } 
-                                } ?>
-                            </div>
-                        <?php 
-                        } endwhile; ?>
+                        <?php endwhile; } } endwhile; ?>
                 </div>
 
             <?php endif; ?>
@@ -121,6 +100,10 @@
                     <?php endif; ?>
                 </div>
             </div>
+
+            <button class="mobile-menu_button">
+                <div></div>
+            </button>
         </div>
     </header>
 

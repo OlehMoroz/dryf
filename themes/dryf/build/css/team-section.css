@@ -1,0 +1,90 @@
+/* 
+    Font size
+
+---------------------------*/
+/*Base font*/
+/* 
+    Color
+
+---------------------------*/
+.team-section {
+  margin: 2.5rem auto 7.5rem;
+}
+.team-section .heading {
+  width: 38.76%;
+  margin-bottom: 3.125rem;
+}
+.team-section .single-block {
+  -ms-flex-direction: row;
+      flex-direction: row;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.team-section .single-block .employee-position {
+  color: #007FF4;
+  margin-bottom: 0.3125rem;
+}
+.team-section .single-block .employee-name {
+  margin-bottom: 1.5625rem;
+}
+.team-section .single-block :nth-child(3) {
+  width: 51%;
+  margin-bottom: 1.5625rem;
+}
+.team-section .single-block .contacts {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  gap: 0.625rem;
+}
+.team-section .single-block .contacts .single-contact {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  gap: 0.625rem;
+  -ms-flex-align: center;
+      align-items: center;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+.team-section .single-block .contacts .single-contact .phone-svg * {
+  fill: #BDC2D1;
+  transition: all 0.4s ease-in-out;
+}
+.team-section .single-block .contacts .single-contact .email-svg * {
+  stroke: #BDC2D1;
+  stroke-width: 2;
+  transition: all 0.4s ease-in-out;
+}
+.team-section .single-block .contacts .single-contact .contact-text {
+  font-weight: 500;
+  font-size: 0.87rem;
+  line-height: 150%;
+  transition: all 0.4s ease-in-out;
+}
+.team-section .single-block .contacts .single-contact:hover .contact-text {
+  color: #007FF4;
+}
+.team-section .single-block .contacts .single-contact:hover .phone-svg * {
+  fill: #007FF4;
+}
+.team-section .single-block .contacts .single-contact:hover .email-svg * {
+  stroke: #007FF4;
+}
+.team-section .single-block .col {
+  margin-right: -70%;
+}
+.team-section .single-block .post-img {
+  width: auto;
+  z-index: 2;
+  max-width: 65%;
+  margin: -3.75rem -5% -5rem auto;
+  display: block;
+  object-fit: cover;
+  min-height: 100%;
+  z-index: -1;
+  min-width: 65%;
+}

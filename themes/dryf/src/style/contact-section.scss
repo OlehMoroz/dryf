@@ -1,113 +1,166 @@
-@use 'variable' as v;
+@use 'variable'as v;
 
 .contact-section {
+  margin: 2.8125rem auto 7.5rem;
 
   /* Container */
-  .contact-container{
-    width:100%;/* 1179px or 73.68rem*/
-    height: 6rem;
+  .contact-container {
+    width: 100%;
+    /* 1179px or 73.68rem*/
+    /*height: 6rem;*/
+    margin: 7.5rem auto;
     background: v.$orange;
-    border-radius: 5px;/*0.3125rem*/
+    border-radius: 5px;
+    /*0.3125rem*/
     display: flex;
+
     /*justify-content: center;*/
-      .container-inner{
-        padding: 1.875rem 3.75rem 1.875rem 3.75rem;/*30px 60px 30px 60px*/
-        gap: 3.25rem;/*52px*/
+    .container-inner {
+      padding: 1.875rem 2%;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      .contact-container-text {
         display: flex;
-        .contact-container-text{
-          display: flex;
-          padding: 0.3125rem 0 0.3125rem 0;/*5px 0 5px 0*/
-          .contact-container-p{
-            /*width: 28.125rem; or 461px*/
-            height: 1.625rem;/*26px*/
-            font-family: v.$f-onest;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 1.125rem;
-            line-height: 150%;/*25px or 1.5625rem 26.04%*/
-            /* identical to box height */
-            color: v.$white;
-          }
+        padding: 0.3125rem 0 0.3125rem 0;
+
+        /*5px 0 5px 0*/
+        .contact-container-p {
+          font-family: v.$f-onest;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 1.125rem;
+          line-height: 150%;
+          /*25px or 1.5625rem 26.04%*/
+          /* identical to box height */
+          color: v.$white;
         }
-        .contacts{
+      }
+
+      .contacts {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        gap: 1.5625rem;
+
+        /*25px*/
+        /*width: 34.125rem;/*546px*/
+        /*height: 2.25rem;/*36px*/
+        .phone-number {
           display: flex;
           flex-direction: row;
           align-items: center;
           padding: 0;
-          gap: 1.5625rem;/*25px*/
-          /*width: 34.125rem;/*546px*/
+          gap: 0.625rem;
+
+          /*10px*/
+          /*width: 12.0625rem;/*193px*/
           /*height: 2.25rem;/*36px*/
-          .phone-number{
+          /* Inside auto layout */
+          .phone-circle {
             display: flex;
-            flex-direction: row;
+            box-sizing: border-box;
+            width: 2.25rem;
+            /*36px*/
+            height: 2.25rem;
+            /*36px*/
+            padding: 0.7rem 0.63rem 0.63rem 0.7rem;
+            /*12.34px 11.31px 11.31px 12.34px*/
+            border: 0.0625rem solid #FF8D3A;
+            border-radius: 50%;
             align-items: center;
-            padding: 0;
-            gap: 0.625rem;/*10px*/
-            /*width: 12.0625rem;/*193px*/
-            /*height: 2.25rem;/*36px*/
-            /* Inside auto layout */
-            .phone-circle{
-              display: flex;
-              box-sizing: border-box;
-              width: 2.25rem;/*36px*/
-              height: 2.25rem;/*36px*/
-              padding: 0.7rem 0.63rem 0.63rem 0.7rem;/*12.34px 11.31px 11.31px 12.34px*/
-              border: 0.0625rem solid #FF8D3A;
-              border-radius: 50%;
-              align-items: center;
-              justify-content: center;
-              .svg{
+            justify-content: center;
+            transition: v.$transition;
+
+            svg {
+              * {
+                transition: v.$transition;
+                fill: v.$white;
+              }
+            }
+          }
+
+          &:hover {
+            .phone-circle {
+              background: v.$white;
+
+              svg {
                 * {
-                  transition: v.$transition;
-                  fill: v.$white;
+                  fill: v.$blue !important;
                 }
               }
             }
-            .phone-number-text{
-              width: 9.1875rem;/*147px*/
-              /*height: 1.125rem;/*18px*/
-              font-family: v.$f-onest;
-              font-style: normal;
-              font-weight: 500;
-              font-size: v.$f-14;
-              line-height: 18.75%;/*18px or 1.125rem*/
-              /* identical to box height */
-              color: v.$white;
-              /* Inside auto layout */
+          }
+
+          .phone-number-text {
+            width: 9.1875rem;
+            /*147px*/
+            /*height: 1.125rem;/*18px*/
+            font-family: v.$f-onest;
+            font-style: normal;
+            font-weight: 500;
+            font-size: v.$f-14;
+            line-height: 18.75%;
+            /*18px or 1.125rem*/
+            /* identical to box height */
+            color: v.$white;
+            /* Inside auto layout */
+          }
+
+        }
+
+        .contact-social {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          padding: 0;
+          gap: 0.625rem;
+
+          /*10px*/
+          /*width: 6.875rem;/*110px*/
+          /*height: 2.25rem;/*36px*/
+          /* Inside auto layout */
+          .contact-social-links {
+            box-sizing: border-box;
+            /* Auto layout */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0.5rem 0.9375rem;
+            /*8px 15px*/
+            gap: 0.9375rem;
+            /*15px*/
+            width: 3.125rem;
+            /*50px*/
+            height: 2.25rem;
+            /*36px*/
+            border: 0.0625rem solid #FF8D3A;
+            border-radius: 44px;
+            /*2.75rem*/
+            /* Inside auto layout */
+            justify-content: center;
+            transition: v.$transition;
+
+            svg {
+              * {
+                transition: v.$transition;
+                fill: v.$white;
+              }
             }
 
-          }.contact-social{
-             display: flex;
-             flex-direction: row;
-             align-items: flex-start;
-             padding: 0;
-             gap: 0.625rem;/*10px*/
-             /*width: 6.875rem;/*110px*/
-             /*height: 2.25rem;/*36px*/
-             /* Inside auto layout */
-             .contact-social-links{
-               box-sizing: border-box;
-               /* Auto layout */
-               display: flex;
-               flex-direction: row;
-               align-items: center;
-               padding: 0.5rem 0.9375rem;/*8px 15px*/
-               gap: 0.9375rem;/*15px*/
-               width: 3.125rem;/*50px*/
-               height: 2.25rem;/*36px*/
-               border: 0.0625rem solid #FF8D3A;
-               border-radius: 44px;/*2.75rem*/
-               /* Inside auto layout */
-               justify-content: center;
-                 svg {
-                   * {
-                     transition: v.$transition;
-                     fill: v.$white;
-                   }
-                 }
-             }
-           }
+            &:hover {
+              background: v.$white;
+              svg {
+                * {
+                  fill: v.$blue;
+                }
+              }
+            }
+          }
         }
       }
+    }
   }
 }

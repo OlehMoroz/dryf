@@ -65,7 +65,7 @@
   position: relative;
 }
 .main-slider_section .main-slider .slide-caption h2 {
-  max-width: 71%;
+  max-width: 85%;
   font-family: "Onest";
   font-style: normal;
   font-weight: 500;
@@ -129,6 +129,16 @@
       justify-content: center;
   background: #F2F5F9;
   transition: all 0.4s ease-in-out;
+}
+.swiper-button svg * {
+  fill: #BDC2D1;
+  transition: all 0.4s ease-in-out;
+}
+.swiper-button:hover {
+  background: #007FF4;
+}
+.swiper-button:hover svg * {
+  fill: #fff;
 }
 .swiper-button::after {
   content: "";

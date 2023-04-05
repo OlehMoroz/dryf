@@ -1,112 +1,35 @@
 <?php include __DIR__ . '/../lang/language.php'; ?>
 
 <?php if (have_rows('advantages')) :
-while (have_rows('advantages')) : the_row(); ?>
-<section class="advantages-section">
-    <div class="advantages-container">
-        <?php if (get_sub_field('heading')) { ?>
-            <p class="advantages-heading">
-                <?= get_sub_field('heading'); ?>
+    while (have_rows('advantages')) : the_row(); 
+    $count_adventage = count(get_field('advantages'));?>
+    <section class="advantages-section">
+        <div class="advantages-container">
+            <h2 class="base-title advantages-heading">
+                <?= __($advantage_title); ?>
+            </h2>
+            <p class="subtitle advantages-p">
+                <?= __($advantage_sub_title); ?>
             </p>
-        <?php } ?>
-        <?php if (get_sub_field('underheading-text')) { ?>
-        <p class="advantages-p">
-            <?= get_sub_field('underheading-text'); ?>
-        </p>
-        <?php } ?>
-        <div class="row row-cols-5">
-            <div class="col-20 cl-1">
-                <div>
-                    <?php if (get_sub_field('first-column')) {
-                        while (have_rows('first-column')) : the_row();?>
-                    <svg width="30" height="34" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <?= get_sub_field('first-column-svg'); ?>
-                    </svg>
-                        <?php endwhile;} ?>
-                    <?php ?>
-                </div>
-                <?php if (get_sub_field('first-column')) {
-                    while (have_rows('first-column')) : the_row();?>
-                <p>
-                    <?= get_sub_field('first-column-text'); ?>
-                </p>
-                    <?php endwhile;} ?>
-                <?php ?>
-            </div>
-            <div class="col-20 cl-2">
-                <div>
-                    <?php if (get_sub_field('second-column')) {
-                        while (have_rows('second-column')) : the_row();?>
-                    <svg width="27" height="38" viewBox="0 0 27 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <?= get_sub_field('second-column-svg'); ?>
-                    </svg>
-                        <?php endwhile;} ?>
-                    <?php ?>
-                </div>
-                <?php if (get_sub_field('second-column')) {
-                    while (have_rows('second-column')) : the_row();?>
-                    <p>
-                        <?= get_sub_field('second-column-text'); ?>
-                    </p>
-                    <?php endwhile;} ?>
-                <?php ?>
-            </div>
-            <div class="col-20 cl-1">
-                <div>
-                    <?php if (get_sub_field('third-column')) {
-                        while (have_rows('third-column')) : the_row();?>
-                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <?= get_sub_field('third-column-svg'); ?>
-                    </svg>
-                        <?php endwhile;} ?>
-                    <?php ?>
-                </div>
-                <?php if (get_sub_field('third-column')) {
-                    while (have_rows('third-column')) : the_row();?>
-                    <p>
-                        <?= get_sub_field('third-column-text'); ?>
-                    </p>
-                    <?php endwhile;} ?>
-                <?php ?>
-            </div>
-            <div class="col-20 cl-2">
-                <div>
-                    <?php if (get_sub_field('fourth-column')) {
-                        while (have_rows('fourth-column')) : the_row();?>
-                    <svg width="34" height="40" viewBox="0 0 34 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <?= get_sub_field('fourth-column-svg'); ?>
-                    </svg>
-                        <?php endwhile;} ?>
-                    <?php ?>
-                </div>
-                <?php if (get_sub_field('fourth-column')) {
-                    while (have_rows('fourth-column')) : the_row();?>
-                    <p>
-                        <?= get_sub_field('fourth-column-text'); ?>
-                    </p>
-                    <?php endwhile;} ?>
-                <?php ?>
-            </div>
-            <div class="col-20 cl-1">
-                <div>
-                    <?php if (get_sub_field('fifth-column')) {
-                        while (have_rows('fifth-column')) : the_row();?>
-                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <?= get_sub_field('fifth-column-svg'); ?>
-                    </svg>
-                        <?php endwhile;} ?>
-                    <?php ?>
-                </div>
-                <?php if (get_sub_field('fifth-column')) {
-                    while (have_rows('fifth-column')) : the_row();?>
-                    <p>
-                        <?= get_sub_field('fifth-column-text'); ?>
-                    </p>
-                    <?php endwhile;} ?>
-                <?php ?>
+            <div class="row row-cols-5">
+                <?php for ($x = 0; $x <= $count_adventage; ++$x) { 
+                    if (get_sub_field('advantage_item_' . $x)) {
+                        while (have_rows('advantage_item_' . $x)) : the_row();
+                            if (get_sub_field('advantage_text')) { ?>
+                                <div class="col-20 cl-1">
+                                    <div>
+                                        <?= get_sub_field('advantage_icon'); ?>
+                                    </div>
+                                    <p>
+                                        <?= get_sub_field('advantage_text'); ?>
+                                    </p>
+                                </div>
+                            <? }
+                        endwhile; 
+                    }
+                } ?>
             </div>
         </div>
-    </div>
-</section>
-<?php endwhile; ?>
-<?php endif; ?>
+    </section>
+<? endwhile; 
+endif; ?>

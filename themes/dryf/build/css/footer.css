@@ -57,7 +57,7 @@ footer .width-container .copyring-text a svg,
 footer .width-container .powered-text a svg {
   margin-left: 5px;
 }
-footer .footer-menu-list ul {
+footer .footer-menu-list {
   padding: 0;
   list-style: none;
   display: -ms-flexbox;
@@ -67,10 +67,10 @@ footer .footer-menu-list ul {
   -ms-flex-pack: center;
       justify-content: center;
 }
-footer .footer-menu-list ul li {
+footer .footer-menu-list li {
   margin: 0 20px;
 }
-footer .footer-menu-list ul li a {
+footer .footer-menu-list li a {
   font-style: normal;
   font-weight: 400;
   font-size: 0.75rem;
@@ -78,6 +78,6 @@ footer .footer-menu-list ul li a {
   color: #BDC2D1;
   transition: all 0.4s ease-in-out;
 }
-footer .footer-menu-list ul li a:hover {
+footer .footer-menu-list li a:hover {
   color: #fff;
 }

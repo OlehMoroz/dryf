@@ -1,6 +1,6 @@
 <?php include __DIR__ . '/../lang/language.php'; ?>
 
-<div class="side-bar">
+<aside class="side-bar">
 	<?php wp_nav_menu(array(
 		'theme_location' => 'header_menu',
 		'container' => 'div',
@@ -59,4 +59,44 @@
             <?php pll_the_languages(array('show_flags' => 0, 'show_names' => 0,)); ?>
         </ul>
     </div>
-</div>
+
+    <?php if (have_rows('phones', $contact_page_id)) : 
+                $count_phones = count(get_field('phones', $contact_page_id)); ?>
+
+                <div class="phone-dropdown">
+                    <?php  while (have_rows('phones', $contact_page_id)) : the_row();
+                        for ($x = 0; $x <= $count_phones; ++$x) {
+                        if (get_sub_field('phone_' . $x)) { 
+                            while (have_rows('phone_' . $x)) : the_row(); ?>
+                            <div class="phone-toogle">
+                                <div class="phone-name">
+                                    <?= get_sub_field('account_name'); ?>
+                                </div>
+                                <a href="tel:<?= get_sub_field('phone_number'); ?>">
+                                    <?= get_sub_field('phone_number'); ?>
+                                </a>
+                            </div>
+                        <?php endwhile; } } endwhile; ?>
+                </div>
+
+            <?php endif; ?>
+
+            <?php if (have_rows('emails', $contact_page_id)) : 
+                $count_emails = count(get_field('emails', $contact_page_id)); 
+                while (have_rows('emails', $contact_page_id)) : the_row();
+                    for ($x = 0; $x <= $count_emails; ++$x) {
+                        if (get_sub_field('email_' . $x)) { ?>
+                                <div class="mail-link">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <use xlink:href="#mail"></use>
+                                    </svg>
+                                    <a href="mailto:<?= get_sub_field('email_' . $x); ?>">
+                                        <?= get_sub_field('email_' . $x); ?>
+                                    </a>
+                                </div>
+                            <?php 
+                        } 
+                    } 
+                endwhile; ?>
+            <?php endif; ?>
+</aside>

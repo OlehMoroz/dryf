@@ -29,7 +29,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        margin-right: 2.5rem;
+        margin-right: 2%;
 
         svg {
             margin-right: 10px;
@@ -96,11 +96,15 @@ header {
     .phone-dropdown {
         position: relative;
         margin-right: 3%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
 
         .phone-toogle {
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-right: 5%;
 
             svg {
                 margin-top: -3px;

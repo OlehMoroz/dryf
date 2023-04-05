@@ -1,0 +1,191 @@
+@use 'variable' as v;
+
+.many-vacancies-section {
+  margin: 2.5rem auto 7.5rem;
+  .vacancy-row{
+    margin-bottom: 3.75rem;
+    .heading{
+      width: 76.85%;
+      margin-bottom: 0;
+    }
+  }
+  .date-col{
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    height: 100%;
+    .classify-container{
+      display: flex;
+      flex-direction:row;
+      gap: 3.125rem;
+      .classify-btn{
+        background: transparent;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.9375rem;
+        font-family: v.$f-onest;
+        font-style: normal;
+        font-weight: 500;
+        font-size: v.$f-14;
+        line-height: 150%;
+        color: v.$black;
+        transition: v.$transition;
+        cursor: pointer;
+        .classify-svg{
+          transition: v.$transition;
+          stroke: v.$grey;
+          stroke-width: 3;
+        }
+        .filter-svg{
+          transition: v.$transition;
+          stroke: v.$grey;
+          stroke-width: 2;
+        }
+        &:hover{
+          transition: v.$transition;
+          color: v.$orange;
+          svg{
+            transition: v.$transition;
+            stroke: v.$orange;
+          }
+        }
+      }
+    }
+  }
+  .page-vacancy{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.5625rem;
+    row-gap: 0.9375rem;
+    align-items: stretch;
+
+      .vacancy-block{
+        flex: 1 0 31.5%;
+        max-width: 31.5%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: v.$white;
+        border-radius: 5px;
+        transition: v.$transition;
+        margin-top: 0.625rem;
+        overflow: hidden;
+
+        &:hover{
+          transition: v.$transition;
+          box-shadow: 0 5px 65px rgba(39, 41, 48, 0.15);
+          transform: translateY(-.5rem);
+        }
+
+        .vacancy-img{
+          max-width: 100%;
+          object-fit: cover;
+          max-height: 230px;
+        }
+        .text-block{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 1.5625rem;
+          .vacancy-heading{
+            font-family: v.$f-onest;
+            font-style: normal;
+            font-weight: 400;
+            font-size: v.$f-16;
+            height: 3rem;
+            line-height: 150%;
+            color: v.$black;
+            margin-bottom: 0.625rem;
+          }
+          .price{
+            font-family: v.$f-onest;
+            font-style: normal;
+            font-weight: 500;
+            font-size: v.$f-21;
+            line-height: 150%;
+            color: v.$blue;
+            margin-bottom: 0.625rem;
+          }
+        }
+      }
+  }
+}
+
+.sort-drpdown {
+  position: relative;
+
+  .classify-btn {
+    &.active {
+      color: v.$orange !important;
+      svg {
+        * {
+          stroke: v.$orange !important;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .classify-btn {
+      color: v.$orange !important;
+      svg {
+        * {
+          stroke: v.$orange !important;
+        }
+      }
+    }
+
+    #sort-form {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  #sort-form {
+    position: absolute;
+    padding: 1.25rem 1.56rem;
+    background: v.$white;
+    box-shadow: 0px 5px 65px rgba(39, 41, 48, 0.15);
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 0;
+    transition: v.$transition;
+    opacity: 0;
+    visibility: hidden;
+    left: 50%;
+    top: 135%;
+    transform: translateX(-50%);
+    min-width: 260px;
+
+    &.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    label {
+      font-style: normal;
+      font-weight: 500;
+      font-size: v.$f-14;
+      line-height: 130%;
+      color: v.$black;
+      margin-bottom: 1rem;
+      cursor: pointer;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+  
+    input[selected="selected"] ~ span {
+      color: v.$orange;
+    }
+  }
+}

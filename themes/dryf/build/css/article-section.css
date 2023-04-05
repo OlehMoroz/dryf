@@ -1,0 +1,168 @@
+/* 
+    Font size
+
+---------------------------*/
+/*Base font*/
+/* 
+    Color
+
+---------------------------*/
+.article-section {
+  margin: 2.5rem auto 7.5rem;
+}
+.article-section .top-page-title {
+  margin-bottom: 2.5rem;
+}
+.article-section .description {
+  margin-bottom: 3.125rem;
+  line-height: 162%;
+}
+.article-section .description img {
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 5px;
+  margin: 3rem 0;
+}
+.article-section .description p {
+  font-weight: 400;
+  font-size: clamp(16px, 0.8333333333vw, 18px);
+  line-height: 162%;
+  color: #272930;
+  margin-bottom: 1.5rem;
+}
+.article-section .description ul, .article-section .description ol {
+  padding-left: 2rem;
+}
+.article-section .date-col {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+.article-section .date-col .article-date {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  padding-top: 0.4375rem;
+  gap: 0.9375rem;
+}
+.article-section .date-col .article-date svg * {
+  fill: #BDC2D1;
+}
+.article-section .date-col .article-date .date-text {
+  font-size: 0.75rem;
+  color: #BDC2D1;
+}
+.article-section .article-img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 3.125rem;
+}
+.article-section .main-content {
+  margin-bottom: 3.125rem;
+}
+.article-section .under-article-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+.article-section .under-article-row .social-col {
+  gap: 1.5625rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.article-section .under-article-row .social-col .article-social-text {
+  font-size: 0.87rem;
+  color: #BDC2D1;
+}
+.article-section .under-article-row .social-col .row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  gap: 0.625rem;
+}
+.article-section .under-article-row .social-col .row .social-circle {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 50%;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  border: 1px solid #E2E6EC;
+  transition: all 0.4s ease-in-out;
+}
+.article-section .under-article-row .social-col .row .social-circle svg * {
+  fill: #BDC2D1;
+  transition: all 0.4s ease-in-out;
+}
+.article-section .under-article-row .social-col .row .social-circle:hover {
+  background: #007FF4;
+  border: 1px solid #007FF4;
+}
+.article-section .under-article-row .social-col .row .social-circle:hover svg * {
+  fill: #fff;
+}
+.article-section .under-article-row .copy-col {
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+.article-section .under-article-row .copy-col .copy-article {
+  padding-top: 0.375rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  background: transparent;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.article-section .under-article-row .copy-col .copy-article .inner-div {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  gap: 0.3125rem;
+}
+.article-section .under-article-row .copy-col .copy-article .inner-div .svg-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.article-section .under-article-row .copy-col .copy-article .inner-div .svg-container svg * {
+  fill: #BDC2D1;
+  transition: all 0.4s ease-in-out;
+}
+.article-section .under-article-row .copy-col .copy-article .inner-div .copy-text {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  font-size: 0.87rem;
+  color: #BDC2D1;
+  transition: all 0.4s ease-in-out;
+}
+.article-section .under-article-row .copy-col .copy-article:hover .copy-text, .article-section .under-article-row .copy-col .copy-article.copied .copy-text {
+  color: #007FF4;
+}
+.article-section .under-article-row .copy-col .copy-article:hover .svg-container svg *, .article-section .under-article-row .copy-col .copy-article.copied .svg-container svg * {
+  fill: #007FF4;
+}

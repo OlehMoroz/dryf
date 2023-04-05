@@ -1,0 +1,15 @@
+@use 'variable'as v;
+
+.description-scroll-section {
+  .heading{
+    width: 38%;
+  }
+  .scroll-box{
+    max-height: 8.6rem;
+    overflow: hidden;
+    overflow-y: scroll;
+    .text{
+      width: 96.26%;
+    }
+  }
+}

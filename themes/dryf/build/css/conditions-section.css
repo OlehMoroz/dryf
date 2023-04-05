@@ -1,0 +1,49 @@
+/* 
+    Font size
+
+---------------------------*/
+/*Base font*/
+/* 
+    Color
+
+---------------------------*/
+.conditions-section {
+  margin-bottom: 6rem;
+}
+.conditions-section .heading {
+  margin-bottom: 2.5rem;
+}
+.conditions-section .conditions-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  gap: 6.25rem;
+}
+.conditions-section .conditions-row .column {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  gap: 0.625rem;
+}
+.conditions-section .conditions-row .column .conditions-heading {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 150%;
+  color: #007FF4;
+}
+.conditions-section .conditions-row .column .text {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.625rem;
+  line-height: 150%;
+  color: #272930;
+}
