@@ -374,3 +374,25 @@ let openMobileMenu = function() {
         });
     }
 }*/
+
+/*function addUtmTarget(...inputNames) {
+    let forms = document.querySelectorAll('form');
+    let url = window.location.toString().replaceAll("_", "|");
+    forms.forEach(form => {
+        inputNames.forEach(inputName => {
+            if (inputName == 'url') {
+                let urlInput = form.querySelector('input[name="url"]');
+                if (urlInput) {
+                    urlInput.setAttribute('value', url);
+                }
+                return;
+            }
+            let inputField = form.querySelector('input[name=' + inputName + ']');
+            if (inputField) {
+                let sourceValue = inputField.getAttribute('value').toString().replaceAll("_", "|");
+                inputField.setAttribute('value', sourceValue);
+            }
+        });
+    })
+}
+addUtmTarget("utm_source", "utm_medium", "url");*/
